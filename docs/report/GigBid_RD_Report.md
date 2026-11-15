@@ -1,6 +1,7 @@
 ---
 title: "GigBid: engineering design review"
 subtitle: "AI-4016 Assignment II - multi-agent freelancer copilot"
+author: "Ahmed Siddiqui | CS-C | 23K-0664"
 date: "15 November 2026"
 geometry: margin=2cm
 fontsize: 10pt
