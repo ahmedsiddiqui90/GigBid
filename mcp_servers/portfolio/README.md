@@ -8,7 +8,7 @@ Read-only. Built with the official MCP Python SDK.
 
 ```bash
 # from the GigBid repository
-uvx --from git+https://github.com/<you>/gigbid gigbid-portfolio-mcp --dir ./my_portfolio
+uvx --from git+https://github.com/ahmedsiddiqui90/GigBid gigbid-portfolio-mcp --dir ./my_portfolio
 # or, inside a clone
 pip install -e . && gigbid-portfolio-mcp --persona ai_ml          # bundled synthetic demo persona
 gigbid-portfolio-mcp --dir ./my_portfolio --http                     # streamable HTTP on :8101 (bearer MCP_BEARER_TOKEN)
@@ -18,7 +18,7 @@ Claude Desktop (`claude_desktop_config.json`):
 
 ```json
 { "mcpServers": { "portfolio": { "command": "uvx",
-  "args": ["--from", "git+https://github.com/<you>/gigbid", "gigbid-portfolio-mcp", "--dir", "C:/me/portfolio"] } } }
+  "args": ["--from", "git+https://github.com/ahmedsiddiqui90/GigBid", "gigbid-portfolio-mcp", "--dir", "C:/me/portfolio"] } } }
 ```
 
 ## Your portfolio folder
