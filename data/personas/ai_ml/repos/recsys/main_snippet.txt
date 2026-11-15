@@ -1,0 +1,14 @@
+---
+id: "code-ai_ml-recsys"
+type: "code"
+persona: "ai_ml"
+project: "recsys"
+skills: ["recommendation systems", "implicit", "Python", "Redis"]
+date: "2024-10-01"
+client_industry: "media"
+synthetic: true
+---
+# recsys core module
+from implicit.als import AlternatingLeastSquares
+# ... (excerpt)
+

@@ -1,0 +1,14 @@
+---
+id: "code-ai_ml-fraud"
+type: "code"
+persona: "ai_ml"
+project: "fraud"
+skills: ["anomaly detection", "XGBoost", "SQL", "imbalanced learning"]
+date: "2023-10-01"
+client_industry: "fintech"
+synthetic: true
+---
+# fraud core module
+from imblearn.over_sampling import SMOTE
+# ... (excerpt)
+

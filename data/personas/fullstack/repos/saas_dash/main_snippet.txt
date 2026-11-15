@@ -1,0 +1,14 @@
+---
+id: "code-fullstack-saas_dash"
+type: "code"
+persona: "fullstack"
+project: "saas_dash"
+skills: ["Next.js", "TypeScript", "Tailwind", "PostgreSQL"]
+date: "2025-10-01"
+client_industry: "saas"
+synthetic: true
+---
+# saas_dash core module
+export default async function Page() {
+# ... (excerpt)
+

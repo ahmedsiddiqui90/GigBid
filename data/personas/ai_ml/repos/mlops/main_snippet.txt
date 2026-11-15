@@ -1,0 +1,14 @@
+---
+id: "code-ai_ml-mlops"
+type: "code"
+persona: "ai_ml"
+project: "mlops"
+skills: ["MLflow", "Docker", "CI/CD", "Kubernetes"]
+date: "2024-10-01"
+client_industry: "healthcare"
+synthetic: true
+---
+# mlops core module
+import mlflow; mlflow.autolog()
+# ... (excerpt)
+

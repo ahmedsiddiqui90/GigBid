@@ -1,0 +1,767 @@
+[
+ {
+  "id": "pp-data_analyst-000",
+  "type": "proposal",
+  "persona": "data_analyst",
+  "project": null,
+  "skills": [],
+  "client_industry": "nonprofit",
+  "date": "2024-08-10",
+  "outcome": "replied",
+  "job_title": "Need a donor survey analysis",
+  "text": "Dear Hiring Manager, I am writing to apply for your project. I am a hard-working professional with many years of experience and I can deliver high quality work on time. Please message me.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-data_analyst-001",
+  "type": "proposal",
+  "persona": "data_analyst",
+  "project": null,
+  "skills": [],
+  "client_industry": "retail",
+  "date": "2023-08-10",
+  "outcome": "ignored",
+  "job_title": "Need a inventory forecasting workbook",
+  "text": "Dear Hiring Manager, I am writing to apply for your project. I am a hard-working professional with many years of experience and I can deliver high quality work on time. Please message me.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-data_analyst-002",
+  "type": "proposal",
+  "persona": "data_analyst",
+  "project": null,
+  "skills": [],
+  "client_industry": "marketing",
+  "date": "2025-06-10",
+  "outcome": "ignored",
+  "job_title": "Need a ga4 marketing analytics",
+  "text": "Dear Hiring Manager, I am writing to apply for your project. I am a hard-working professional with many years of experience and I can deliver high quality work on time. Please message me.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-data_analyst-003",
+  "type": "proposal",
+  "persona": "data_analyst",
+  "project": null,
+  "skills": [],
+  "client_industry": "nonprofit",
+  "date": "2025-08-10",
+  "outcome": "ignored",
+  "job_title": "Need a donor survey analysis",
+  "text": "Dear Hiring Manager, I am writing to apply for your project. I am a hard-working professional with many years of experience and I can deliver high quality work on time. Please message me.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-data_analyst-004",
+  "type": "proposal",
+  "persona": "data_analyst",
+  "project": "sales_bi",
+  "skills": [
+   "Power BI",
+   "DAX",
+   "SQL",
+   "Excel"
+  ],
+  "client_industry": "retail",
+  "date": "2023-07-10",
+  "outcome": "ignored",
+  "job_title": "Need a retail sales dashboard",
+  "text": "Your retail team needs a retail sales dashboard that works in production. I recently built one that replaced 12 weekly Excel reports with one Power BI dashboard used by 40 store managers. I would start by reviewing your data and setup, then deliver in weekly milestones using Power BI, DAX, SQL.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-data_analyst-005",
+  "type": "proposal",
+  "persona": "data_analyst",
+  "project": null,
+  "skills": [],
+  "client_industry": "nonprofit",
+  "date": "2025-07-10",
+  "outcome": "ignored",
+  "job_title": "Need a donor survey analysis",
+  "text": "Dear Hiring Manager, I am writing to apply for your project. I am a hard-working professional with many years of experience and I can deliver high quality work on time. Please message me.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-data_analyst-006",
+  "type": "proposal",
+  "persona": "data_analyst",
+  "project": "finmodel",
+  "skills": [
+   "Excel",
+   "financial modeling",
+   "VBA"
+  ],
+  "client_industry": "finance",
+  "date": "2023-08-10",
+  "outcome": "ignored",
+  "job_title": "Need a startup financial model",
+  "text": "Your finance team needs a startup financial model that works in production. I recently built one that built a three-statement model used in a successful seed round. I would start by reviewing your data and setup, then deliver in weekly milestones using Excel, financial modeling, VBA.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-data_analyst-007",
+  "type": "proposal",
+  "persona": "data_analyst",
+  "project": null,
+  "skills": [],
+  "client_industry": "nonprofit",
+  "date": "2023-06-10",
+  "outcome": "ignored",
+  "job_title": "Need a donor survey analysis",
+  "text": "Dear Hiring Manager, I am writing to apply for your project. I am a hard-working professional with many years of experience and I can deliver high quality work on time. Please message me.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-data_analyst-008",
+  "type": "proposal",
+  "persona": "data_analyst",
+  "project": "tableau",
+  "skills": [
+   "Tableau",
+   "operations analytics",
+   "SQL"
+  ],
+  "client_industry": "healthcare",
+  "date": "2023-01-10",
+  "outcome": "ignored",
+  "job_title": "Need a hospital operations dashboards",
+  "text": "Your healthcare team needs a hospital operations dashboards that works in production. I recently built one that helped cut average emergency wait time by 18 minutes through bed-occupancy dashboards. I would start by reviewing your data and setup, then deliver in weekly milestones using Tableau, operations analytics, SQL.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-data_analyst-009",
+  "type": "proposal",
+  "persona": "data_analyst",
+  "project": "tableau",
+  "skills": [
+   "Tableau",
+   "operations analytics",
+   "SQL"
+  ],
+  "client_industry": "healthcare",
+  "date": "2024-01-10",
+  "outcome": "ignored",
+  "job_title": "Need a hospital operations dashboards",
+  "text": "Your healthcare team needs a hospital operations dashboards that works in production. I recently built one that helped cut average emergency wait time by 18 minutes through bed-occupancy dashboards. I would start by reviewing your data and setup, then deliver in weekly milestones using Tableau, operations analytics, SQL.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-data_analyst-010",
+  "type": "proposal",
+  "persona": "data_analyst",
+  "project": null,
+  "skills": [],
+  "client_industry": "retail",
+  "date": "2024-07-10",
+  "outcome": "replied",
+  "job_title": "Need a retail sales dashboard",
+  "text": "Dear Hiring Manager, I am writing to apply for your project. I am a hard-working professional with many years of experience and I can deliver high quality work on time. Please message me.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-data_analyst-011",
+  "type": "proposal",
+  "persona": "data_analyst",
+  "project": "dbt",
+  "skills": [
+   "dbt",
+   "Snowflake",
+   "SQL",
+   "data modeling"
+  ],
+  "client_industry": "saas",
+  "date": "2023-03-10",
+  "outcome": "won",
+  "job_title": "Need a dbt warehouse models",
+  "text": "Your saas team needs a dbt warehouse models that works in production. I recently built one that built 85 tested dbt models and cut dashboard query time by 70%. I would start by reviewing your data and setup, then deliver in weekly milestones using dbt, Snowflake, SQL.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-data_analyst-012",
+  "type": "proposal",
+  "persona": "data_analyst",
+  "project": null,
+  "skills": [],
+  "client_industry": "logistics",
+  "date": "2024-03-10",
+  "outcome": "ignored",
+  "job_title": "Need a shipment etl pipelines",
+  "text": "Dear Hiring Manager, I am writing to apply for your project. I am a hard-working professional with many years of experience and I can deliver high quality work on time. Please message me.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-data_analyst-013",
+  "type": "proposal",
+  "persona": "data_analyst",
+  "project": null,
+  "skills": [],
+  "client_industry": "healthcare",
+  "date": "2024-06-10",
+  "outcome": "ignored",
+  "job_title": "Need a hospital operations dashboards",
+  "text": "Dear Hiring Manager, I am writing to apply for your project. I am a hard-working professional with many years of experience and I can deliver high quality work on time. Please message me.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-data_analyst-014",
+  "type": "proposal",
+  "persona": "data_analyst",
+  "project": null,
+  "skills": [],
+  "client_industry": "finance",
+  "date": "2024-08-10",
+  "outcome": "ignored",
+  "job_title": "Need a startup financial model",
+  "text": "Dear Hiring Manager, I am writing to apply for your project. I am a hard-working professional with many years of experience and I can deliver high quality work on time. Please message me.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-data_analyst-015",
+  "type": "proposal",
+  "persona": "data_analyst",
+  "project": null,
+  "skills": [],
+  "client_industry": "healthcare",
+  "date": "2025-04-10",
+  "outcome": "ignored",
+  "job_title": "Need a hospital operations dashboards",
+  "text": "Dear Hiring Manager, I am writing to apply for your project. I am a hard-working professional with many years of experience and I can deliver high quality work on time. Please message me.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-data_analyst-016",
+  "type": "proposal",
+  "persona": "data_analyst",
+  "project": "tableau",
+  "skills": [
+   "Tableau",
+   "operations analytics",
+   "SQL"
+  ],
+  "client_industry": "healthcare",
+  "date": "2023-03-10",
+  "outcome": "ignored",
+  "job_title": "Need a hospital operations dashboards",
+  "text": "Your healthcare team needs a hospital operations dashboards that works in production. I recently built one that helped cut average emergency wait time by 18 minutes through bed-occupancy dashboards. I would start by reviewing your data and setup, then deliver in weekly milestones using Tableau, operations analytics, SQL.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-data_analyst-017",
+  "type": "proposal",
+  "persona": "data_analyst",
+  "project": null,
+  "skills": [],
+  "client_industry": "healthcare",
+  "date": "2025-06-10",
+  "outcome": "replied",
+  "job_title": "Need a hospital operations dashboards",
+  "text": "Dear Hiring Manager, I am writing to apply for your project. I am a hard-working professional with many years of experience and I can deliver high quality work on time. Please message me.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-data_analyst-018",
+  "type": "proposal",
+  "persona": "data_analyst",
+  "project": null,
+  "skills": [],
+  "client_industry": "nonprofit",
+  "date": "2024-06-10",
+  "outcome": "replied",
+  "job_title": "Need a donor survey analysis",
+  "text": "Dear Hiring Manager, I am writing to apply for your project. I am a hard-working professional with many years of experience and I can deliver high quality work on time. Please message me.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-data_analyst-019",
+  "type": "proposal",
+  "persona": "data_analyst",
+  "project": null,
+  "skills": [],
+  "client_industry": "finance",
+  "date": "2025-02-10",
+  "outcome": "ignored",
+  "job_title": "Need a startup financial model",
+  "text": "Dear Hiring Manager, I am writing to apply for your project. I am a hard-working professional with many years of experience and I can deliver high quality work on time. Please message me.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-data_analyst-020",
+  "type": "proposal",
+  "persona": "data_analyst",
+  "project": null,
+  "skills": [],
+  "client_industry": "logistics",
+  "date": "2023-06-10",
+  "outcome": "ignored",
+  "job_title": "Need a shipment etl pipelines",
+  "text": "Dear Hiring Manager, I am writing to apply for your project. I am a hard-working professional with many years of experience and I can deliver high quality work on time. Please message me.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-data_analyst-021",
+  "type": "proposal",
+  "persona": "data_analyst",
+  "project": "survey",
+  "skills": [
+   "survey analysis",
+   "R",
+   "statistics"
+  ],
+  "client_industry": "nonprofit",
+  "date": "2024-04-10",
+  "outcome": "won",
+  "job_title": "Need a donor survey analysis",
+  "text": "Your nonprofit team needs a donor survey analysis that works in production. I recently built one that analysed 6,000 survey responses and identified three donor segments. I would start by reviewing your data and setup, then deliver in weekly milestones using survey analysis, R, statistics.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-data_analyst-022",
+  "type": "proposal",
+  "persona": "data_analyst",
+  "project": "finmodel",
+  "skills": [
+   "Excel",
+   "financial modeling",
+   "VBA"
+  ],
+  "client_industry": "finance",
+  "date": "2023-06-10",
+  "outcome": "replied",
+  "job_title": "Need a startup financial model",
+  "text": "Your finance team needs a startup financial model that works in production. I recently built one that built a three-statement model used in a successful seed round. I would start by reviewing your data and setup, then deliver in weekly milestones using Excel, financial modeling, VBA.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-data_analyst-023",
+  "type": "proposal",
+  "persona": "data_analyst",
+  "project": null,
+  "skills": [],
+  "client_industry": "nonprofit",
+  "date": "2023-09-10",
+  "outcome": "ignored",
+  "job_title": "Need a donor survey analysis",
+  "text": "Dear Hiring Manager, I am writing to apply for your project. I am a hard-working professional with many years of experience and I can deliver high quality work on time. Please message me.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-data_analyst-024",
+  "type": "proposal",
+  "persona": "data_analyst",
+  "project": "dbt",
+  "skills": [
+   "dbt",
+   "Snowflake",
+   "SQL",
+   "data modeling"
+  ],
+  "client_industry": "saas",
+  "date": "2024-03-10",
+  "outcome": "won",
+  "job_title": "Need a dbt warehouse models",
+  "text": "Your saas team needs a dbt warehouse models that works in production. I recently built one that built 85 tested dbt models and cut dashboard query time by 70%. I would start by reviewing your data and setup, then deliver in weekly milestones using dbt, Snowflake, SQL.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-data_analyst-025",
+  "type": "proposal",
+  "persona": "data_analyst",
+  "project": "dbt",
+  "skills": [
+   "dbt",
+   "Snowflake",
+   "SQL",
+   "data modeling"
+  ],
+  "client_industry": "saas",
+  "date": "2025-07-10",
+  "outcome": "won",
+  "job_title": "Need a dbt warehouse models",
+  "text": "Your saas team needs a dbt warehouse models that works in production. I recently built one that built 85 tested dbt models and cut dashboard query time by 70%. I would start by reviewing your data and setup, then deliver in weekly milestones using dbt, Snowflake, SQL.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-data_analyst-026",
+  "type": "proposal",
+  "persona": "data_analyst",
+  "project": "sales_bi",
+  "skills": [
+   "Power BI",
+   "DAX",
+   "SQL",
+   "Excel"
+  ],
+  "client_industry": "retail",
+  "date": "2023-06-10",
+  "outcome": "won",
+  "job_title": "Need a retail sales dashboard",
+  "text": "Your retail team needs a retail sales dashboard that works in production. I recently built one that replaced 12 weekly Excel reports with one Power BI dashboard used by 40 store managers. I would start by reviewing your data and setup, then deliver in weekly milestones using Power BI, DAX, SQL.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-data_analyst-027",
+  "type": "proposal",
+  "persona": "data_analyst",
+  "project": "etl",
+  "skills": [
+   "Airflow",
+   "ETL",
+   "Python",
+   "PostgreSQL"
+  ],
+  "client_industry": "logistics",
+  "date": "2023-06-10",
+  "outcome": "ignored",
+  "job_title": "Need a shipment etl pipelines",
+  "text": "Your logistics team needs a shipment etl pipelines that works in production. I recently built one that automated 14 daily data feeds with 99.7% on-time pipeline runs. I would start by reviewing your data and setup, then deliver in weekly milestones using Airflow, ETL, Python.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-data_analyst-028",
+  "type": "proposal",
+  "persona": "data_analyst",
+  "project": null,
+  "skills": [],
+  "client_industry": "mobile apps",
+  "date": "2023-01-10",
+  "outcome": "ignored",
+  "job_title": "Need a mobile app retention cohorts",
+  "text": "Dear Hiring Manager, I am writing to apply for your project. I am a hard-working professional with many years of experience and I can deliver high quality work on time. Please message me.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-data_analyst-029",
+  "type": "proposal",
+  "persona": "data_analyst",
+  "project": null,
+  "skills": [],
+  "client_industry": "nonprofit",
+  "date": "2024-03-10",
+  "outcome": "ignored",
+  "job_title": "Need a donor survey analysis",
+  "text": "Dear Hiring Manager, I am writing to apply for your project. I am a hard-working professional with many years of experience and I can deliver high quality work on time. Please message me.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-data_analyst-030",
+  "type": "proposal",
+  "persona": "data_analyst",
+  "project": "cleaning",
+  "skills": [
+   "data cleaning",
+   "pandas",
+   "deduplication"
+  ],
+  "client_industry": "real estate",
+  "date": "2024-07-10",
+  "outcome": "ignored",
+  "job_title": "Need a property listings data cleaning",
+  "text": "Your real estate team needs a property listings data cleaning that works in production. I recently built one that deduplicated 120k property listings with 98% precision. I would start by reviewing your data and setup, then deliver in weekly milestones using data cleaning, pandas, deduplication.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-data_analyst-031",
+  "type": "proposal",
+  "persona": "data_analyst",
+  "project": "dbt",
+  "skills": [
+   "dbt",
+   "Snowflake",
+   "SQL",
+   "data modeling"
+  ],
+  "client_industry": "saas",
+  "date": "2024-04-10",
+  "outcome": "replied",
+  "job_title": "Need a dbt warehouse models",
+  "text": "Your saas team needs a dbt warehouse models that works in production. I recently built one that built 85 tested dbt models and cut dashboard query time by 70%. I would start by reviewing your data and setup, then deliver in weekly milestones using dbt, Snowflake, SQL.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-data_analyst-032",
+  "type": "proposal",
+  "persona": "data_analyst",
+  "project": "ga4",
+  "skills": [
+   "Google Analytics 4",
+   "Looker Studio",
+   "marketing analytics"
+  ],
+  "client_industry": "marketing",
+  "date": "2025-02-10",
+  "outcome": "replied",
+  "job_title": "Need a ga4 marketing analytics",
+  "text": "Your marketing team needs a ga4 marketing analytics that works in production. I recently built one that set up GA4 events and a Looker Studio report that attributed 30% more conversions to paid search. I would start by reviewing your data and setup, then deliver in weekly milestones using Google Analytics 4, Looker Studio, marketing analytics.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-data_analyst-033",
+  "type": "proposal",
+  "persona": "data_analyst",
+  "project": "tableau",
+  "skills": [
+   "Tableau",
+   "operations analytics",
+   "SQL"
+  ],
+  "client_industry": "healthcare",
+  "date": "2023-04-10",
+  "outcome": "won",
+  "job_title": "Need a hospital operations dashboards",
+  "text": "Your healthcare team needs a hospital operations dashboards that works in production. I recently built one that helped cut average emergency wait time by 18 minutes through bed-occupancy dashboards. I would start by reviewing your data and setup, then deliver in weekly milestones using Tableau, operations analytics, SQL.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-data_analyst-034",
+  "type": "proposal",
+  "persona": "data_analyst",
+  "project": "sales_bi",
+  "skills": [
+   "Power BI",
+   "DAX",
+   "SQL",
+   "Excel"
+  ],
+  "client_industry": "retail",
+  "date": "2024-08-10",
+  "outcome": "ignored",
+  "job_title": "Need a retail sales dashboard",
+  "text": "Your retail team needs a retail sales dashboard that works in production. I recently built one that replaced 12 weekly Excel reports with one Power BI dashboard used by 40 store managers. I would start by reviewing your data and setup, then deliver in weekly milestones using Power BI, DAX, SQL.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-data_analyst-035",
+  "type": "proposal",
+  "persona": "data_analyst",
+  "project": "finmodel",
+  "skills": [
+   "Excel",
+   "financial modeling",
+   "VBA"
+  ],
+  "client_industry": "finance",
+  "date": "2023-09-10",
+  "outcome": "replied",
+  "job_title": "Need a startup financial model",
+  "text": "Your finance team needs a startup financial model that works in production. I recently built one that built a three-statement model used in a successful seed round. I would start by reviewing your data and setup, then deliver in weekly milestones using Excel, financial modeling, VBA.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-data_analyst-036",
+  "type": "proposal",
+  "persona": "data_analyst",
+  "project": null,
+  "skills": [],
+  "client_industry": "retail",
+  "date": "2023-02-10",
+  "outcome": "ignored",
+  "job_title": "Need a retail sales dashboard",
+  "text": "Dear Hiring Manager, I am writing to apply for your project. I am a hard-working professional with many years of experience and I can deliver high quality work on time. Please message me.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-data_analyst-037",
+  "type": "proposal",
+  "persona": "data_analyst",
+  "project": "forecast",
+  "skills": [
+   "forecasting",
+   "Python",
+   "pandas",
+   "Excel"
+  ],
+  "client_industry": "retail",
+  "date": "2023-03-10",
+  "outcome": "replied",
+  "job_title": "Need a inventory forecasting workbook",
+  "text": "Your retail team needs a inventory forecasting workbook that works in production. I recently built one that cut stockouts by 22% with a weekly forecast workbook. I would start by reviewing your data and setup, then deliver in weekly milestones using forecasting, Python, pandas.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-data_analyst-038",
+  "type": "proposal",
+  "persona": "data_analyst",
+  "project": null,
+  "skills": [],
+  "client_industry": "real estate",
+  "date": "2024-04-10",
+  "outcome": "ignored",
+  "job_title": "Need a property listings data cleaning",
+  "text": "Dear Hiring Manager, I am writing to apply for your project. I am a hard-working professional with many years of experience and I can deliver high quality work on time. Please message me.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-data_analyst-039",
+  "type": "proposal",
+  "persona": "data_analyst",
+  "project": null,
+  "skills": [],
+  "client_industry": "nonprofit",
+  "date": "2023-08-10",
+  "outcome": "ignored",
+  "job_title": "Need a donor survey analysis",
+  "text": "Dear Hiring Manager, I am writing to apply for your project. I am a hard-working professional with many years of experience and I can deliver high quality work on time. Please message me.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-data_analyst-040",
+  "type": "proposal",
+  "persona": "data_analyst",
+  "project": "sales_bi",
+  "skills": [
+   "Power BI",
+   "DAX",
+   "SQL",
+   "Excel"
+  ],
+  "client_industry": "retail",
+  "date": "2023-08-10",
+  "outcome": "won",
+  "job_title": "Need a retail sales dashboard",
+  "text": "Your retail team needs a retail sales dashboard that works in production. I recently built one that replaced 12 weekly Excel reports with one Power BI dashboard used by 40 store managers. I would start by reviewing your data and setup, then deliver in weekly milestones using Power BI, DAX, SQL.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-data_analyst-041",
+  "type": "proposal",
+  "persona": "data_analyst",
+  "project": "kpi",
+  "skills": [
+   "KPI design",
+   "Looker",
+   "stakeholder reporting"
+  ],
+  "client_industry": "saas",
+  "date": "2023-05-10",
+  "outcome": "won",
+  "job_title": "Need a saas kpi framework",
+  "text": "Your saas team needs a saas kpi framework that works in production. I recently built one that defined 20 company KPIs and a weekly Looker pack for the leadership team. I would start by reviewing your data and setup, then deliver in weekly milestones using KPI design, Looker, stakeholder reporting.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-data_analyst-042",
+  "type": "proposal",
+  "persona": "data_analyst",
+  "project": "tableau",
+  "skills": [
+   "Tableau",
+   "operations analytics",
+   "SQL"
+  ],
+  "client_industry": "healthcare",
+  "date": "2024-06-10",
+  "outcome": "won",
+  "job_title": "Need a hospital operations dashboards",
+  "text": "Your healthcare team needs a hospital operations dashboards that works in production. I recently built one that helped cut average emergency wait time by 18 minutes through bed-occupancy dashboards. I would start by reviewing your data and setup, then deliver in weekly milestones using Tableau, operations analytics, SQL.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-data_analyst-043",
+  "type": "proposal",
+  "persona": "data_analyst",
+  "project": null,
+  "skills": [],
+  "client_industry": "saas",
+  "date": "2024-02-10",
+  "outcome": "ignored",
+  "job_title": "Need a dbt warehouse models",
+  "text": "Dear Hiring Manager, I am writing to apply for your project. I am a hard-working professional with many years of experience and I can deliver high quality work on time. Please message me.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-data_analyst-044",
+  "type": "proposal",
+  "persona": "data_analyst",
+  "project": null,
+  "skills": [],
+  "client_industry": "nonprofit",
+  "date": "2024-09-10",
+  "outcome": "ignored",
+  "job_title": "Need a donor survey analysis",
+  "text": "Dear Hiring Manager, I am writing to apply for your project. I am a hard-working professional with many years of experience and I can deliver high quality work on time. Please message me.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-data_analyst-045",
+  "type": "proposal",
+  "persona": "data_analyst",
+  "project": null,
+  "skills": [],
+  "client_industry": "finance",
+  "date": "2024-07-10",
+  "outcome": "ignored",
+  "job_title": "Need a startup financial model",
+  "text": "Dear Hiring Manager, I am writing to apply for your project. I am a hard-working professional with many years of experience and I can deliver high quality work on time. Please message me.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-data_analyst-046",
+  "type": "proposal",
+  "persona": "data_analyst",
+  "project": "cleaning",
+  "skills": [
+   "data cleaning",
+   "pandas",
+   "deduplication"
+  ],
+  "client_industry": "real estate",
+  "date": "2024-01-10",
+  "outcome": "ignored",
+  "job_title": "Need a property listings data cleaning",
+  "text": "Your real estate team needs a property listings data cleaning that works in production. I recently built one that deduplicated 120k property listings with 98% precision. I would start by reviewing your data and setup, then deliver in weekly milestones using data cleaning, pandas, deduplication.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-data_analyst-047",
+  "type": "proposal",
+  "persona": "data_analyst",
+  "project": "abtest",
+  "skills": [
+   "A/B testing",
+   "statistics",
+   "Python",
+   "experimentation"
+  ],
+  "client_industry": "ecommerce",
+  "date": "2024-07-10",
+  "outcome": "replied",
+  "job_title": "Need a checkout a/b test analysis",
+  "text": "Your ecommerce team needs a checkout a/b test analysis that works in production. I recently built one that designed and analysed a checkout test that raised conversion 3.1% with 95% confidence. I would start by reviewing your data and setup, then deliver in weekly milestones using A/B testing, statistics, Python.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-data_analyst-048",
+  "type": "proposal",
+  "persona": "data_analyst",
+  "project": "survey",
+  "skills": [
+   "survey analysis",
+   "R",
+   "statistics"
+  ],
+  "client_industry": "nonprofit",
+  "date": "2024-06-10",
+  "outcome": "replied",
+  "job_title": "Need a donor survey analysis",
+  "text": "Your nonprofit team needs a donor survey analysis that works in production. I recently built one that analysed 6,000 survey responses and identified three donor segments. I would start by reviewing your data and setup, then deliver in weekly milestones using survey analysis, R, statistics.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-data_analyst-049",
+  "type": "proposal",
+  "persona": "data_analyst",
+  "project": "survey",
+  "skills": [
+   "survey analysis",
+   "R",
+   "statistics"
+  ],
+  "client_industry": "nonprofit",
+  "date": "2023-09-10",
+  "outcome": "won",
+  "job_title": "Need a donor survey analysis",
+  "text": "Your nonprofit team needs a donor survey analysis that works in production. I recently built one that analysed 6,000 survey responses and identified three donor segments. I would start by reviewing your data and setup, then deliver in weekly milestones using survey analysis, R, statistics.",
+  "synthetic": true
+ }
+]

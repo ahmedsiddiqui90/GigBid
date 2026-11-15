@@ -1,0 +1,14 @@
+---
+id: "code-data_analyst-tableau"
+type: "code"
+persona: "data_analyst"
+project: "tableau"
+skills: ["Tableau", "operations analytics", "SQL"]
+date: "2023-10-01"
+client_industry: "healthcare"
+synthetic: true
+---
+# tableau core module
+WINDOW_AVG(SUM([Occupied Beds]), -6, 0)
+# ... (excerpt)
+

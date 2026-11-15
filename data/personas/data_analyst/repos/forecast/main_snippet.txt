@@ -1,0 +1,14 @@
+---
+id: "code-data_analyst-forecast"
+type: "code"
+persona: "data_analyst"
+project: "forecast"
+skills: ["forecasting", "Python", "pandas", "Excel"]
+date: "2025-10-01"
+client_industry: "retail"
+synthetic: true
+---
+# forecast core module
+df.resample('W').sum().rolling(4).mean()
+# ... (excerpt)
+

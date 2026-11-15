@@ -1,0 +1,49 @@
+{
+ "source": [
+  "asaniczka/upwork-job-postings-dataset-2024-50k-records",
+  "ahmedmyalo/upwork-freelance-jobs-60k"
+ ],
+ "synthetic": false,
+ "categories": {
+  "ai_ml": {
+   "n_jobs": 6812,
+   "hourly_mid_p25": 17.5,
+   "hourly_mid_median": 27.5,
+   "hourly_mid_p75": 41.5,
+   "fixed_budget_p25": 50.0,
+   "fixed_budget_median": 240.0,
+   "fixed_budget_p75": 800.0,
+   "connects_median": 6.0
+  },
+  "data_analysis": {
+   "n_jobs": 12187,
+   "hourly_mid_p25": 12.5,
+   "hourly_mid_median": 22.5,
+   "hourly_mid_p75": 35.0,
+   "fixed_budget_p25": 40.0,
+   "fixed_budget_median": 125.0,
+   "fixed_budget_p75": 500.0,
+   "connects_median": 6.0
+  },
+  "other": {
+   "n_jobs": 58238,
+   "hourly_mid_p25": 15.0,
+   "hourly_mid_median": 24.0,
+   "hourly_mid_p75": 37.5,
+   "fixed_budget_p25": 26.0,
+   "fixed_budget_median": 100.0,
+   "fixed_budget_p75": 300.0,
+   "connects_median": 4.0
+  },
+  "web_dev": {
+   "n_jobs": 35423,
+   "hourly_mid_p25": 16.0,
+   "hourly_mid_median": 22.5,
+   "hourly_mid_p75": 35.0,
+   "fixed_budget_p25": 50.0,
+   "fixed_budget_median": 150.0,
+   "fixed_budget_p75": 500.0,
+   "connects_median": 4.0
+  }
+ }
+}

@@ -1,0 +1,14 @@
+---
+id: "code-fullstack-perf"
+type: "code"
+persona: "fullstack"
+project: "perf"
+skills: ["web performance", "Lighthouse", "React", "CDN"]
+date: "2024-10-01"
+client_industry: "media"
+synthetic: true
+---
+# perf core module
+const Chart = dynamic(() => import('./Chart'), { ssr: false })
+# ... (excerpt)
+

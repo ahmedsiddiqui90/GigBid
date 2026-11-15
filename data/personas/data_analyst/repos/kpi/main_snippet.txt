@@ -1,0 +1,14 @@
+---
+id: "code-data_analyst-kpi"
+type: "code"
+persona: "data_analyst"
+project: "kpi"
+skills: ["KPI design", "Looker", "stakeholder reporting"]
+date: "2025-10-01"
+client_industry: "saas"
+synthetic: true
+---
+# kpi core module
+measure: net_revenue_retention { type: number }
+# ... (excerpt)
+

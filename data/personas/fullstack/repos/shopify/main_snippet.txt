@@ -1,0 +1,14 @@
+---
+id: "code-fullstack-shopify"
+type: "code"
+persona: "fullstack"
+project: "shopify"
+skills: ["Shopify", "Liquid", "JavaScript"]
+date: "2023-10-01"
+client_industry: "retail"
+synthetic: true
+---
+# shopify core module
+{% for product in collection.products %}
+# ... (excerpt)
+

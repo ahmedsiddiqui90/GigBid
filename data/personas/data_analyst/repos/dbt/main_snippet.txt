@@ -1,0 +1,14 @@
+---
+id: "code-data_analyst-dbt"
+type: "code"
+persona: "data_analyst"
+project: "dbt"
+skills: ["dbt", "Snowflake", "SQL", "data modeling"]
+date: "2025-10-01"
+client_industry: "saas"
+synthetic: true
+---
+# dbt core module
+{{ config(materialized='incremental') }}
+# ... (excerpt)
+

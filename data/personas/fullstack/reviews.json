@@ -1,0 +1,137 @@
+[
+ {
+  "id": "rv-fullstack-billing",
+  "type": "review",
+  "persona": "fullstack",
+  "project": "billing",
+  "skills": [
+   "Stripe",
+   "Node.js",
+   "webhooks",
+   "subscriptions"
+  ],
+  "client_industry": "saas",
+  "date": "2024-12-01",
+  "rating": 4,
+  "synthetic": true,
+  "text": "4/5 - Omar delivered our subscription billing system on time; the work moved 2,400 customers to Stripe Billing with zero failed renewals during migration."
+ },
+ {
+  "id": "rv-fullstack-marketplace",
+  "type": "review",
+  "persona": "fullstack",
+  "project": "marketplace",
+  "skills": [
+   "Django",
+   "Celery",
+   "Redis",
+   "PostgreSQL"
+  ],
+  "client_industry": "ecommerce",
+  "date": "2023-12-01",
+  "rating": 4,
+  "synthetic": true,
+  "text": "4/5 - Omar delivered our django services marketplace on time; the work built background order processing handling 15k orders a day."
+ },
+ {
+  "id": "rv-fullstack-chat",
+  "type": "review",
+  "persona": "fullstack",
+  "project": "chat",
+  "skills": [
+   "WebSockets",
+   "Node.js",
+   "Redis",
+   "React"
+  ],
+  "client_industry": "social",
+  "date": "2024-12-01",
+  "rating": 5,
+  "synthetic": true,
+  "text": "5/5 - Omar delivered our real-time team chat on time; the work delivered real-time messaging for 5,000 concurrent users with p95 latency under 120 ms."
+ },
+ {
+  "id": "rv-fullstack-graphql",
+  "type": "review",
+  "persona": "fullstack",
+  "project": "graphql",
+  "skills": [
+   "GraphQL",
+   "Apollo",
+   "TypeScript",
+   "PostgreSQL"
+  ],
+  "client_industry": "media",
+  "date": "2023-12-01",
+  "rating": 5,
+  "synthetic": true,
+  "text": "5/5 - Omar delivered our graphql content api on time; the work replaced 40 REST endpoints with one typed GraphQL API, halving mobile payload size."
+ },
+ {
+  "id": "rv-fullstack-shopify",
+  "type": "review",
+  "persona": "fullstack",
+  "project": "shopify",
+  "skills": [
+   "Shopify",
+   "Liquid",
+   "JavaScript"
+  ],
+  "client_industry": "retail",
+  "date": "2023-12-01",
+  "rating": 5,
+  "synthetic": true,
+  "text": "5/5 - Omar delivered our shopify theme customisation on time; the work raised conversion rate from 1.8% to 2.6% after a theme rebuild."
+ },
+ {
+  "id": "rv-fullstack-perf",
+  "type": "review",
+  "persona": "fullstack",
+  "project": "perf",
+  "skills": [
+   "web performance",
+   "Lighthouse",
+   "React",
+   "CDN"
+  ],
+  "client_industry": "media",
+  "date": "2024-12-01",
+  "rating": 5,
+  "synthetic": true,
+  "text": "5/5 - Omar delivered our web performance overhaul on time; the work improved Lighthouse performance from 48 to 94 and cut LCP from 4.1 s to 1.6 s."
+ },
+ {
+  "id": "rv-fullstack-auth",
+  "type": "review",
+  "persona": "fullstack",
+  "project": "auth",
+  "skills": [
+   "OAuth",
+   "JWT",
+   "Node.js",
+   "security"
+  ],
+  "client_industry": "saas",
+  "date": "2024-12-01",
+  "rating": 5,
+  "synthetic": true,
+  "text": "5/5 - Omar delivered our secure auth service on time; the work added SSO and MFA for 60 enterprise tenants with no security incidents."
+ },
+ {
+  "id": "rv-fullstack-cms",
+  "type": "review",
+  "persona": "fullstack",
+  "project": "cms",
+  "skills": [
+   "headless CMS",
+   "Strapi",
+   "Next.js",
+   "SEO"
+  ],
+  "client_industry": "education",
+  "date": "2023-12-01",
+  "rating": 5,
+  "synthetic": true,
+  "text": "5/5 - Omar delivered our headless cms site on time; the work grew organic traffic 3x in six months after a headless rebuild."
+ }
+]

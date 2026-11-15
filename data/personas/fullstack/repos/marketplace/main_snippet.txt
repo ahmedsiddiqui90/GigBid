@@ -1,0 +1,14 @@
+---
+id: "code-fullstack-marketplace"
+type: "code"
+persona: "fullstack"
+project: "marketplace"
+skills: ["Django", "Celery", "Redis", "PostgreSQL"]
+date: "2023-10-01"
+client_industry: "ecommerce"
+synthetic: true
+---
+# marketplace core module
+from celery import shared_task
+# ... (excerpt)
+

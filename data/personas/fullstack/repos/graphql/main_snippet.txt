@@ -1,0 +1,14 @@
+---
+id: "code-fullstack-graphql"
+type: "code"
+persona: "fullstack"
+project: "graphql"
+skills: ["GraphQL", "Apollo", "TypeScript", "PostgreSQL"]
+date: "2023-10-01"
+client_industry: "media"
+synthetic: true
+---
+# graphql core module
+const server = new ApolloServer({ typeDefs, resolvers })
+# ... (excerpt)
+

@@ -1,0 +1,14 @@
+---
+id: "code-ai_ml-demand_forecast"
+type: "code"
+persona: "ai_ml"
+project: "demand_forecast"
+skills: ["time series", "Prophet", "pandas", "Python"]
+date: "2024-10-01"
+client_industry: "retail"
+synthetic: true
+---
+# demand_forecast core module
+from prophet import Prophet
+# ... (excerpt)
+

@@ -1,0 +1,14 @@
+---
+id: "code-fullstack-auth"
+type: "code"
+persona: "fullstack"
+project: "auth"
+skills: ["OAuth", "JWT", "Node.js", "security"]
+date: "2024-10-01"
+client_industry: "saas"
+synthetic: true
+---
+# auth core module
+jwt.verify(token, publicKey, { algorithms: ['RS256'] })
+# ... (excerpt)
+

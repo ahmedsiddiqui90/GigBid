@@ -1,0 +1,14 @@
+---
+id: "code-ai_ml-sentiment"
+type: "code"
+persona: "ai_ml"
+project: "sentiment"
+skills: ["NLP", "Hugging Face", "transformers", "PyTorch"]
+date: "2023-10-01"
+client_industry: "ecommerce"
+synthetic: true
+---
+# sentiment core module
+from transformers import AutoModelForSequenceClassification
+# ... (excerpt)
+

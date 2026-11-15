@@ -1,0 +1,792 @@
+[
+ {
+  "id": "pp-ai_ml-000",
+  "type": "proposal",
+  "persona": "ai_ml",
+  "project": "churn",
+  "skills": [
+   "Python",
+   "scikit-learn",
+   "XGBoost",
+   "pandas"
+  ],
+  "client_industry": "telecom",
+  "date": "2025-07-10",
+  "outcome": "replied",
+  "job_title": "Need a telecom churn prediction",
+  "text": "Your telecom team needs a telecom churn prediction that works in production. I recently built one that raised churn recall from 0.61 to 0.78 at the same precision, saving an estimated 4% of monthly revenue. I would start by reviewing your data and setup, then deliver in weekly milestones using Python, scikit-learn, XGBoost.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-ai_ml-001",
+  "type": "proposal",
+  "persona": "ai_ml",
+  "project": null,
+  "skills": [],
+  "client_industry": "healthcare",
+  "date": "2023-06-10",
+  "outcome": "ignored",
+  "job_title": "Need a mlops platform setup",
+  "text": "Dear Hiring Manager, I am writing to apply for your project. I am a hard-working professional with many years of experience and I can deliver high quality work on time. Please message me.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-ai_ml-002",
+  "type": "proposal",
+  "persona": "ai_ml",
+  "project": "churn",
+  "skills": [
+   "Python",
+   "scikit-learn",
+   "XGBoost",
+   "pandas"
+  ],
+  "client_industry": "telecom",
+  "date": "2024-05-10",
+  "outcome": "replied",
+  "job_title": "Need a telecom churn prediction",
+  "text": "Your telecom team needs a telecom churn prediction that works in production. I recently built one that raised churn recall from 0.61 to 0.78 at the same precision, saving an estimated 4% of monthly revenue. I would start by reviewing your data and setup, then deliver in weekly milestones using Python, scikit-learn, XGBoost.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-ai_ml-003",
+  "type": "proposal",
+  "persona": "ai_ml",
+  "project": null,
+  "skills": [],
+  "client_industry": "healthcare",
+  "date": "2024-06-10",
+  "outcome": "ignored",
+  "job_title": "Need a mlops platform setup",
+  "text": "Dear Hiring Manager, I am writing to apply for your project. I am a hard-working professional with many years of experience and I can deliver high quality work on time. Please message me.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-ai_ml-004",
+  "type": "proposal",
+  "persona": "ai_ml",
+  "project": null,
+  "skills": [],
+  "client_industry": "logistics",
+  "date": "2023-08-10",
+  "outcome": "replied",
+  "job_title": "Need a invoice ocr pipeline",
+  "text": "Dear Hiring Manager, I am writing to apply for your project. I am a hard-working professional with many years of experience and I can deliver high quality work on time. Please message me.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-ai_ml-005",
+  "type": "proposal",
+  "persona": "ai_ml",
+  "project": "recsys",
+  "skills": [
+   "recommendation systems",
+   "implicit",
+   "Python",
+   "Redis"
+  ],
+  "client_industry": "media",
+  "date": "2023-05-10",
+  "outcome": "won",
+  "job_title": "Need a content recommendation engine",
+  "text": "Your media team needs a content recommendation engine that works in production. I recently built one that lifted click-through rate by 14% in a two-week online test. I would start by reviewing your data and setup, then deliver in weekly milestones using recommendation systems, implicit, Python.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-ai_ml-006",
+  "type": "proposal",
+  "persona": "ai_ml",
+  "project": null,
+  "skills": [],
+  "client_industry": "ecommerce",
+  "date": "2024-02-10",
+  "outcome": "ignored",
+  "job_title": "Need a review sentiment classifier",
+  "text": "Dear Hiring Manager, I am writing to apply for your project. I am a hard-working professional with many years of experience and I can deliver high quality work on time. Please message me.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-ai_ml-007",
+  "type": "proposal",
+  "persona": "ai_ml",
+  "project": null,
+  "skills": [],
+  "client_industry": "retail",
+  "date": "2025-05-10",
+  "outcome": "ignored",
+  "job_title": "Need a retail demand forecasting",
+  "text": "Dear Hiring Manager, I am writing to apply for your project. I am a hard-working professional with many years of experience and I can deliver high quality work on time. Please message me.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-ai_ml-008",
+  "type": "proposal",
+  "persona": "ai_ml",
+  "project": "agent",
+  "skills": [
+   "LangGraph",
+   "LLM agents",
+   "tool calling",
+   "FastAPI"
+  ],
+  "client_industry": "fintech",
+  "date": "2024-01-10",
+  "outcome": "won",
+  "job_title": "Need a langgraph finance agent",
+  "text": "Your fintech team needs a langgraph finance agent that works in production. I recently built one that automated monthly reconciliation reports with human approval, saving 30 analyst hours per month. I would start by reviewing your data and setup, then deliver in weekly milestones using LangGraph, LLM agents, tool calling.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-ai_ml-009",
+  "type": "proposal",
+  "persona": "ai_ml",
+  "project": null,
+  "skills": [],
+  "client_industry": "manufacturing",
+  "date": "2024-05-10",
+  "outcome": "replied",
+  "job_title": "Need a visual defect detection",
+  "text": "Dear Hiring Manager, I am writing to apply for your project. I am a hard-working professional with many years of experience and I can deliver high quality work on time. Please message me.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-ai_ml-010",
+  "type": "proposal",
+  "persona": "ai_ml",
+  "project": "churn",
+  "skills": [
+   "Python",
+   "scikit-learn",
+   "XGBoost",
+   "pandas"
+  ],
+  "client_industry": "telecom",
+  "date": "2025-03-10",
+  "outcome": "ignored",
+  "job_title": "Need a telecom churn prediction",
+  "text": "Your telecom team needs a telecom churn prediction that works in production. I recently built one that raised churn recall from 0.61 to 0.78 at the same precision, saving an estimated 4% of monthly revenue. I would start by reviewing your data and setup, then deliver in weekly milestones using Python, scikit-learn, XGBoost.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-ai_ml-011",
+  "type": "proposal",
+  "persona": "ai_ml",
+  "project": null,
+  "skills": [],
+  "client_industry": "fintech",
+  "date": "2024-02-10",
+  "outcome": "replied",
+  "job_title": "Need a langgraph finance agent",
+  "text": "Dear Hiring Manager, I am writing to apply for your project. I am a hard-working professional with many years of experience and I can deliver high quality work on time. Please message me.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-ai_ml-012",
+  "type": "proposal",
+  "persona": "ai_ml",
+  "project": "fraud",
+  "skills": [
+   "anomaly detection",
+   "XGBoost",
+   "SQL",
+   "imbalanced learning"
+  ],
+  "client_industry": "fintech",
+  "date": "2025-07-10",
+  "outcome": "replied",
+  "job_title": "Need a card fraud detection",
+  "text": "Your fintech team needs a card fraud detection that works in production. I recently built one that caught 23% more fraudulent transactions at a fixed 0.5% false-positive rate. I would start by reviewing your data and setup, then deliver in weekly milestones using anomaly detection, XGBoost, SQL.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-ai_ml-013",
+  "type": "proposal",
+  "persona": "ai_ml",
+  "project": null,
+  "skills": [],
+  "client_industry": "education",
+  "date": "2023-01-10",
+  "outcome": "ignored",
+  "job_title": "Need a lecture transcription service",
+  "text": "Dear Hiring Manager, I am writing to apply for your project. I am a hard-working professional with many years of experience and I can deliver high quality work on time. Please message me.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-ai_ml-014",
+  "type": "proposal",
+  "persona": "ai_ml",
+  "project": "sentiment",
+  "skills": [
+   "NLP",
+   "Hugging Face",
+   "transformers",
+   "PyTorch"
+  ],
+  "client_industry": "ecommerce",
+  "date": "2025-07-10",
+  "outcome": "replied",
+  "job_title": "Need a review sentiment classifier",
+  "text": "Your ecommerce team needs a review sentiment classifier that works in production. I recently built one that fine-tuned a DistilBERT model to 0.91 F1 on 50k product reviews. I would start by reviewing your data and setup, then deliver in weekly milestones using NLP, Hugging Face, transformers.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-ai_ml-015",
+  "type": "proposal",
+  "persona": "ai_ml",
+  "project": "defects",
+  "skills": [
+   "computer vision",
+   "YOLO",
+   "PyTorch",
+   "edge deployment"
+  ],
+  "client_industry": "manufacturing",
+  "date": "2023-09-10",
+  "outcome": "replied",
+  "job_title": "Need a visual defect detection",
+  "text": "Your manufacturing team needs a visual defect detection that works in production. I recently built one that detected surface defects at 94% precision on a Jetson device at 25 FPS. I would start by reviewing your data and setup, then deliver in weekly milestones using computer vision, YOLO, PyTorch.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-ai_ml-016",
+  "type": "proposal",
+  "persona": "ai_ml",
+  "project": "invoice_ocr",
+  "skills": [
+   "OpenCV",
+   "Tesseract",
+   "PyTorch",
+   "Python"
+  ],
+  "client_industry": "logistics",
+  "date": "2025-02-10",
+  "outcome": "replied",
+  "job_title": "Need a invoice ocr pipeline",
+  "text": "Your logistics team needs a invoice ocr pipeline that works in production. I recently built one that cut manual invoice entry time by 80% with 96% field-level accuracy. I would start by reviewing your data and setup, then deliver in weekly milestones using OpenCV, Tesseract, PyTorch.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-ai_ml-017",
+  "type": "proposal",
+  "persona": "ai_ml",
+  "project": null,
+  "skills": [],
+  "client_industry": "manufacturing",
+  "date": "2024-02-10",
+  "outcome": "ignored",
+  "job_title": "Need a visual defect detection",
+  "text": "Dear Hiring Manager, I am writing to apply for your project. I am a hard-working professional with many years of experience and I can deliver high quality work on time. Please message me.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-ai_ml-018",
+  "type": "proposal",
+  "persona": "ai_ml",
+  "project": null,
+  "skills": [],
+  "client_industry": "manufacturing",
+  "date": "2024-02-10",
+  "outcome": "ignored",
+  "job_title": "Need a visual defect detection",
+  "text": "Dear Hiring Manager, I am writing to apply for your project. I am a hard-working professional with many years of experience and I can deliver high quality work on time. Please message me.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-ai_ml-019",
+  "type": "proposal",
+  "persona": "ai_ml",
+  "project": null,
+  "skills": [],
+  "client_industry": "media",
+  "date": "2024-05-10",
+  "outcome": "ignored",
+  "job_title": "Need a content recommendation engine",
+  "text": "Dear Hiring Manager, I am writing to apply for your project. I am a hard-working professional with many years of experience and I can deliver high quality work on time. Please message me.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-ai_ml-020",
+  "type": "proposal",
+  "persona": "ai_ml",
+  "project": "defects",
+  "skills": [
+   "computer vision",
+   "YOLO",
+   "PyTorch",
+   "edge deployment"
+  ],
+  "client_industry": "manufacturing",
+  "date": "2025-03-10",
+  "outcome": "replied",
+  "job_title": "Need a visual defect detection",
+  "text": "Your manufacturing team needs a visual defect detection that works in production. I recently built one that detected surface defects at 94% precision on a Jetson device at 25 FPS. I would start by reviewing your data and setup, then deliver in weekly milestones using computer vision, YOLO, PyTorch.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-ai_ml-021",
+  "type": "proposal",
+  "persona": "ai_ml",
+  "project": null,
+  "skills": [],
+  "client_industry": "legal",
+  "date": "2024-03-10",
+  "outcome": "ignored",
+  "job_title": "Need a legal clause llm fine-tune",
+  "text": "Dear Hiring Manager, I am writing to apply for your project. I am a hard-working professional with many years of experience and I can deliver high quality work on time. Please message me.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-ai_ml-022",
+  "type": "proposal",
+  "persona": "ai_ml",
+  "project": null,
+  "skills": [],
+  "client_industry": "fintech",
+  "date": "2025-09-10",
+  "outcome": "ignored",
+  "job_title": "Need a langgraph finance agent",
+  "text": "Dear Hiring Manager, I am writing to apply for your project. I am a hard-working professional with many years of experience and I can deliver high quality work on time. Please message me.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-ai_ml-023",
+  "type": "proposal",
+  "persona": "ai_ml",
+  "project": "fraud",
+  "skills": [
+   "anomaly detection",
+   "XGBoost",
+   "SQL",
+   "imbalanced learning"
+  ],
+  "client_industry": "fintech",
+  "date": "2023-07-10",
+  "outcome": "won",
+  "job_title": "Need a card fraud detection",
+  "text": "Your fintech team needs a card fraud detection that works in production. I recently built one that caught 23% more fraudulent transactions at a fixed 0.5% false-positive rate. I would start by reviewing your data and setup, then deliver in weekly milestones using anomaly detection, XGBoost, SQL.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-ai_ml-024",
+  "type": "proposal",
+  "persona": "ai_ml",
+  "project": null,
+  "skills": [],
+  "client_industry": "education",
+  "date": "2024-01-10",
+  "outcome": "ignored",
+  "job_title": "Need a lecture transcription service",
+  "text": "Dear Hiring Manager, I am writing to apply for your project. I am a hard-working professional with many years of experience and I can deliver high quality work on time. Please message me.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-ai_ml-025",
+  "type": "proposal",
+  "persona": "ai_ml",
+  "project": "sentiment",
+  "skills": [
+   "NLP",
+   "Hugging Face",
+   "transformers",
+   "PyTorch"
+  ],
+  "client_industry": "ecommerce",
+  "date": "2025-07-10",
+  "outcome": "replied",
+  "job_title": "Need a review sentiment classifier",
+  "text": "Your ecommerce team needs a review sentiment classifier that works in production. I recently built one that fine-tuned a DistilBERT model to 0.91 F1 on 50k product reviews. I would start by reviewing your data and setup, then deliver in weekly milestones using NLP, Hugging Face, transformers.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-ai_ml-026",
+  "type": "proposal",
+  "persona": "ai_ml",
+  "project": null,
+  "skills": [],
+  "client_industry": "ecommerce",
+  "date": "2025-03-10",
+  "outcome": "ignored",
+  "job_title": "Need a review sentiment classifier",
+  "text": "Dear Hiring Manager, I am writing to apply for your project. I am a hard-working professional with many years of experience and I can deliver high quality work on time. Please message me.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-ai_ml-027",
+  "type": "proposal",
+  "persona": "ai_ml",
+  "project": "demand_forecast",
+  "skills": [
+   "time series",
+   "Prophet",
+   "pandas",
+   "Python"
+  ],
+  "client_industry": "retail",
+  "date": "2025-02-10",
+  "outcome": "won",
+  "job_title": "Need a retail demand forecasting",
+  "text": "Your retail team needs a retail demand forecasting that works in production. I recently built one that reduced weekly forecast error (MAPE) from 21% to 12% for 400 SKUs. I would start by reviewing your data and setup, then deliver in weekly milestones using time series, Prophet, pandas.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-ai_ml-028",
+  "type": "proposal",
+  "persona": "ai_ml",
+  "project": "defects",
+  "skills": [
+   "computer vision",
+   "YOLO",
+   "PyTorch",
+   "edge deployment"
+  ],
+  "client_industry": "manufacturing",
+  "date": "2024-04-10",
+  "outcome": "replied",
+  "job_title": "Need a visual defect detection",
+  "text": "Your manufacturing team needs a visual defect detection that works in production. I recently built one that detected surface defects at 94% precision on a Jetson device at 25 FPS. I would start by reviewing your data and setup, then deliver in weekly milestones using computer vision, YOLO, PyTorch.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-ai_ml-029",
+  "type": "proposal",
+  "persona": "ai_ml",
+  "project": null,
+  "skills": [],
+  "client_industry": "ecommerce",
+  "date": "2024-05-10",
+  "outcome": "ignored",
+  "job_title": "Need a review sentiment classifier",
+  "text": "Dear Hiring Manager, I am writing to apply for your project. I am a hard-working professional with many years of experience and I can deliver high quality work on time. Please message me.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-ai_ml-030",
+  "type": "proposal",
+  "persona": "ai_ml",
+  "project": "finetune",
+  "skills": [
+   "LoRA fine-tuning",
+   "Hugging Face",
+   "PEFT",
+   "LLM evaluation"
+  ],
+  "client_industry": "legal",
+  "date": "2025-03-10",
+  "outcome": "won",
+  "job_title": "Need a legal clause llm fine-tune",
+  "text": "Your legal team needs a legal clause llm fine-tune that works in production. I recently built one that improved clause extraction accuracy from 71% to 88% with a LoRA-tuned 8B model. I would start by reviewing your data and setup, then deliver in weekly milestones using LoRA fine-tuning, Hugging Face, PEFT.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-ai_ml-031",
+  "type": "proposal",
+  "persona": "ai_ml",
+  "project": "churn",
+  "skills": [
+   "Python",
+   "scikit-learn",
+   "XGBoost",
+   "pandas"
+  ],
+  "client_industry": "telecom",
+  "date": "2025-07-10",
+  "outcome": "won",
+  "job_title": "Need a telecom churn prediction",
+  "text": "Your telecom team needs a telecom churn prediction that works in production. I recently built one that raised churn recall from 0.61 to 0.78 at the same precision, saving an estimated 4% of monthly revenue. I would start by reviewing your data and setup, then deliver in weekly milestones using Python, scikit-learn, XGBoost.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-ai_ml-032",
+  "type": "proposal",
+  "persona": "ai_ml",
+  "project": null,
+  "skills": [],
+  "client_industry": "media",
+  "date": "2023-01-10",
+  "outcome": "ignored",
+  "job_title": "Need a content recommendation engine",
+  "text": "Dear Hiring Manager, I am writing to apply for your project. I am a hard-working professional with many years of experience and I can deliver high quality work on time. Please message me.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-ai_ml-033",
+  "type": "proposal",
+  "persona": "ai_ml",
+  "project": null,
+  "skills": [],
+  "client_industry": "telecom",
+  "date": "2024-01-10",
+  "outcome": "ignored",
+  "job_title": "Need a telecom churn prediction",
+  "text": "Dear Hiring Manager, I am writing to apply for your project. I am a hard-working professional with many years of experience and I can deliver high quality work on time. Please message me.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-ai_ml-034",
+  "type": "proposal",
+  "persona": "ai_ml",
+  "project": "sentiment",
+  "skills": [
+   "NLP",
+   "Hugging Face",
+   "transformers",
+   "PyTorch"
+  ],
+  "client_industry": "ecommerce",
+  "date": "2024-03-10",
+  "outcome": "won",
+  "job_title": "Need a review sentiment classifier",
+  "text": "Your ecommerce team needs a review sentiment classifier that works in production. I recently built one that fine-tuned a DistilBERT model to 0.91 F1 on 50k product reviews. I would start by reviewing your data and setup, then deliver in weekly milestones using NLP, Hugging Face, transformers.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-ai_ml-035",
+  "type": "proposal",
+  "persona": "ai_ml",
+  "project": "demand_forecast",
+  "skills": [
+   "time series",
+   "Prophet",
+   "pandas",
+   "Python"
+  ],
+  "client_industry": "retail",
+  "date": "2024-04-10",
+  "outcome": "replied",
+  "job_title": "Need a retail demand forecasting",
+  "text": "Your retail team needs a retail demand forecasting that works in production. I recently built one that reduced weekly forecast error (MAPE) from 21% to 12% for 400 SKUs. I would start by reviewing your data and setup, then deliver in weekly milestones using time series, Prophet, pandas.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-ai_ml-036",
+  "type": "proposal",
+  "persona": "ai_ml",
+  "project": "finetune",
+  "skills": [
+   "LoRA fine-tuning",
+   "Hugging Face",
+   "PEFT",
+   "LLM evaluation"
+  ],
+  "client_industry": "legal",
+  "date": "2025-07-10",
+  "outcome": "ignored",
+  "job_title": "Need a legal clause llm fine-tune",
+  "text": "Your legal team needs a legal clause llm fine-tune that works in production. I recently built one that improved clause extraction accuracy from 71% to 88% with a LoRA-tuned 8B model. I would start by reviewing your data and setup, then deliver in weekly milestones using LoRA fine-tuning, Hugging Face, PEFT.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-ai_ml-037",
+  "type": "proposal",
+  "persona": "ai_ml",
+  "project": "churn",
+  "skills": [
+   "Python",
+   "scikit-learn",
+   "XGBoost",
+   "pandas"
+  ],
+  "client_industry": "telecom",
+  "date": "2023-03-10",
+  "outcome": "ignored",
+  "job_title": "Need a telecom churn prediction",
+  "text": "Your telecom team needs a telecom churn prediction that works in production. I recently built one that raised churn recall from 0.61 to 0.78 at the same precision, saving an estimated 4% of monthly revenue. I would start by reviewing your data and setup, then deliver in weekly milestones using Python, scikit-learn, XGBoost.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-ai_ml-038",
+  "type": "proposal",
+  "persona": "ai_ml",
+  "project": "invoice_ocr",
+  "skills": [
+   "OpenCV",
+   "Tesseract",
+   "PyTorch",
+   "Python"
+  ],
+  "client_industry": "logistics",
+  "date": "2024-07-10",
+  "outcome": "won",
+  "job_title": "Need a invoice ocr pipeline",
+  "text": "Your logistics team needs a invoice ocr pipeline that works in production. I recently built one that cut manual invoice entry time by 80% with 96% field-level accuracy. I would start by reviewing your data and setup, then deliver in weekly milestones using OpenCV, Tesseract, PyTorch.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-ai_ml-039",
+  "type": "proposal",
+  "persona": "ai_ml",
+  "project": null,
+  "skills": [],
+  "client_industry": "media",
+  "date": "2023-02-10",
+  "outcome": "replied",
+  "job_title": "Need a content recommendation engine",
+  "text": "Dear Hiring Manager, I am writing to apply for your project. I am a hard-working professional with many years of experience and I can deliver high quality work on time. Please message me.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-ai_ml-040",
+  "type": "proposal",
+  "persona": "ai_ml",
+  "project": "mlops",
+  "skills": [
+   "MLflow",
+   "Docker",
+   "CI/CD",
+   "Kubernetes"
+  ],
+  "client_industry": "healthcare",
+  "date": "2024-02-10",
+  "outcome": "ignored",
+  "job_title": "Need a mlops platform setup",
+  "text": "Your healthcare team needs a mlops platform setup that works in production. I recently built one that cut model release time from two weeks to one day with reproducible pipelines. I would start by reviewing your data and setup, then deliver in weekly milestones using MLflow, Docker, CI/CD.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-ai_ml-041",
+  "type": "proposal",
+  "persona": "ai_ml",
+  "project": null,
+  "skills": [],
+  "client_industry": "fintech",
+  "date": "2024-02-10",
+  "outcome": "won",
+  "job_title": "Need a langgraph finance agent",
+  "text": "Dear Hiring Manager, I am writing to apply for your project. I am a hard-working professional with many years of experience and I can deliver high quality work on time. Please message me.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-ai_ml-042",
+  "type": "proposal",
+  "persona": "ai_ml",
+  "project": "defects",
+  "skills": [
+   "computer vision",
+   "YOLO",
+   "PyTorch",
+   "edge deployment"
+  ],
+  "client_industry": "manufacturing",
+  "date": "2023-05-10",
+  "outcome": "replied",
+  "job_title": "Need a visual defect detection",
+  "text": "Your manufacturing team needs a visual defect detection that works in production. I recently built one that detected surface defects at 94% precision on a Jetson device at 25 FPS. I would start by reviewing your data and setup, then deliver in weekly milestones using computer vision, YOLO, PyTorch.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-ai_ml-043",
+  "type": "proposal",
+  "persona": "ai_ml",
+  "project": null,
+  "skills": [],
+  "client_industry": "manufacturing",
+  "date": "2024-06-10",
+  "outcome": "ignored",
+  "job_title": "Need a visual defect detection",
+  "text": "Dear Hiring Manager, I am writing to apply for your project. I am a hard-working professional with many years of experience and I can deliver high quality work on time. Please message me.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-ai_ml-044",
+  "type": "proposal",
+  "persona": "ai_ml",
+  "project": "fraud",
+  "skills": [
+   "anomaly detection",
+   "XGBoost",
+   "SQL",
+   "imbalanced learning"
+  ],
+  "client_industry": "fintech",
+  "date": "2023-02-10",
+  "outcome": "replied",
+  "job_title": "Need a card fraud detection",
+  "text": "Your fintech team needs a card fraud detection that works in production. I recently built one that caught 23% more fraudulent transactions at a fixed 0.5% false-positive rate. I would start by reviewing your data and setup, then deliver in weekly milestones using anomaly detection, XGBoost, SQL.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-ai_ml-045",
+  "type": "proposal",
+  "persona": "ai_ml",
+  "project": "mlops",
+  "skills": [
+   "MLflow",
+   "Docker",
+   "CI/CD",
+   "Kubernetes"
+  ],
+  "client_industry": "healthcare",
+  "date": "2023-02-10",
+  "outcome": "won",
+  "job_title": "Need a mlops platform setup",
+  "text": "Your healthcare team needs a mlops platform setup that works in production. I recently built one that cut model release time from two weeks to one day with reproducible pipelines. I would start by reviewing your data and setup, then deliver in weekly milestones using MLflow, Docker, CI/CD.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-ai_ml-046",
+  "type": "proposal",
+  "persona": "ai_ml",
+  "project": "defects",
+  "skills": [
+   "computer vision",
+   "YOLO",
+   "PyTorch",
+   "edge deployment"
+  ],
+  "client_industry": "manufacturing",
+  "date": "2023-01-10",
+  "outcome": "won",
+  "job_title": "Need a visual defect detection",
+  "text": "Your manufacturing team needs a visual defect detection that works in production. I recently built one that detected surface defects at 94% precision on a Jetson device at 25 FPS. I would start by reviewing your data and setup, then deliver in weekly milestones using computer vision, YOLO, PyTorch.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-ai_ml-047",
+  "type": "proposal",
+  "persona": "ai_ml",
+  "project": "finetune",
+  "skills": [
+   "LoRA fine-tuning",
+   "Hugging Face",
+   "PEFT",
+   "LLM evaluation"
+  ],
+  "client_industry": "legal",
+  "date": "2024-05-10",
+  "outcome": "ignored",
+  "job_title": "Need a legal clause llm fine-tune",
+  "text": "Your legal team needs a legal clause llm fine-tune that works in production. I recently built one that improved clause extraction accuracy from 71% to 88% with a LoRA-tuned 8B model. I would start by reviewing your data and setup, then deliver in weekly milestones using LoRA fine-tuning, Hugging Face, PEFT.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-ai_ml-048",
+  "type": "proposal",
+  "persona": "ai_ml",
+  "project": null,
+  "skills": [],
+  "client_industry": "ecommerce",
+  "date": "2024-04-10",
+  "outcome": "ignored",
+  "job_title": "Need a review sentiment classifier",
+  "text": "Dear Hiring Manager, I am writing to apply for your project. I am a hard-working professional with many years of experience and I can deliver high quality work on time. Please message me.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-ai_ml-049",
+  "type": "proposal",
+  "persona": "ai_ml",
+  "project": "demand_forecast",
+  "skills": [
+   "time series",
+   "Prophet",
+   "pandas",
+   "Python"
+  ],
+  "client_industry": "retail",
+  "date": "2025-01-10",
+  "outcome": "ignored",
+  "job_title": "Need a retail demand forecasting",
+  "text": "Your retail team needs a retail demand forecasting that works in production. I recently built one that reduced weekly forecast error (MAPE) from 21% to 12% for 400 SKUs. I would start by reviewing your data and setup, then deliver in weekly milestones using time series, Prophet, pandas.",
+  "synthetic": true
+ }
+]

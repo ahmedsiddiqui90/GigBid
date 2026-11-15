@@ -1,0 +1,14 @@
+---
+id: "code-fullstack-booking"
+type: "code"
+persona: "fullstack"
+project: "booking"
+skills: ["Next.js", "Prisma", "calendar integration", "Stripe"]
+date: "2025-10-01"
+client_industry: "healthcare"
+synthetic: true
+---
+# booking core module
+await prisma.appointment.create({ data })
+# ... (excerpt)
+

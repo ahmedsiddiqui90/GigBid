@@ -1,0 +1,14 @@
+---
+id: "code-ai_ml-rag_support"
+type: "code"
+persona: "ai_ml"
+project: "rag_support"
+skills: ["LangChain", "RAG", "FastAPI", "pgvector"]
+date: "2025-10-01"
+client_industry: "saas"
+synthetic: true
+---
+# rag_support core module
+from langchain_postgres import PGVector
+# ... (excerpt)
+

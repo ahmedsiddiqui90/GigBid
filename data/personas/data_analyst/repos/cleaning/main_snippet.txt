@@ -1,0 +1,14 @@
+---
+id: "code-data_analyst-cleaning"
+type: "code"
+persona: "data_analyst"
+project: "cleaning"
+skills: ["data cleaning", "pandas", "deduplication"]
+date: "2024-10-01"
+client_industry: "real estate"
+synthetic: true
+---
+# cleaning core module
+df.drop_duplicates(subset=['address_norm', 'unit'])
+# ... (excerpt)
+

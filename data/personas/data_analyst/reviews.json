@@ -1,0 +1,67 @@
+[
+ {
+  "id": "rv-data_analyst-ga4",
+  "type": "review",
+  "persona": "data_analyst",
+  "project": "ga4",
+  "skills": [
+   "Google Analytics 4",
+   "Looker Studio",
+   "marketing analytics"
+  ],
+  "client_industry": "marketing",
+  "date": "2024-12-01",
+  "rating": 5,
+  "synthetic": true,
+  "text": "5/5 - Hina delivered our ga4 marketing analytics on time; the work set up GA4 events and a Looker Studio report that attributed 30% more conversions to paid search."
+ },
+ {
+  "id": "rv-data_analyst-cohort",
+  "type": "review",
+  "persona": "data_analyst",
+  "project": "cohort",
+  "skills": [
+   "cohort analysis",
+   "SQL",
+   "retention",
+   "BigQuery"
+  ],
+  "client_industry": "mobile apps",
+  "date": "2023-12-01",
+  "rating": 5,
+  "synthetic": true,
+  "text": "5/5 - Hina delivered our mobile app retention cohorts on time; the work found the onboarding step that drove a 9-point week-4 retention gap."
+ },
+ {
+  "id": "rv-data_analyst-tableau",
+  "type": "review",
+  "persona": "data_analyst",
+  "project": "tableau",
+  "skills": [
+   "Tableau",
+   "operations analytics",
+   "SQL"
+  ],
+  "client_industry": "healthcare",
+  "date": "2023-12-01",
+  "rating": 5,
+  "synthetic": true,
+  "text": "5/5 - Hina delivered our hospital operations dashboards on time; the work helped cut average emergency wait time by 18 minutes through bed-occupancy dashboards."
+ },
+ {
+  "id": "rv-data_analyst-cleaning",
+  "type": "review",
+  "persona": "data_analyst",
+  "project": "cleaning",
+  "skills": [
+   "data cleaning",
+   "pandas",
+   "deduplication"
+  ],
+  "client_industry": "real estate",
+  "date": "2024-12-01",
+  "rating": 5,
+  "synthetic": true,
+  "text": "5/5 - Hina delivered our property listings data cleaning on time; the work deduplicated 120k property listings with 98% precision."
+ }
+]

@@ -1,0 +1,121 @@
+[
+ {
+  "id": "rv-ai_ml-invoice_ocr",
+  "type": "review",
+  "persona": "ai_ml",
+  "project": "invoice_ocr",
+  "skills": [
+   "OpenCV",
+   "Tesseract",
+   "PyTorch",
+   "Python"
+  ],
+  "client_industry": "logistics",
+  "date": "2023-12-01",
+  "rating": 5,
+  "synthetic": true,
+  "text": "5/5 - Sana delivered our invoice ocr pipeline on time; the work cut manual invoice entry time by 80% with 96% field-level accuracy."
+ },
+ {
+  "id": "rv-ai_ml-recsys",
+  "type": "review",
+  "persona": "ai_ml",
+  "project": "recsys",
+  "skills": [
+   "recommendation systems",
+   "implicit",
+   "Python",
+   "Redis"
+  ],
+  "client_industry": "media",
+  "date": "2024-12-01",
+  "rating": 5,
+  "synthetic": true,
+  "text": "5/5 - Sana delivered our content recommendation engine on time; the work lifted click-through rate by 14% in a two-week online test."
+ },
+ {
+  "id": "rv-ai_ml-agent",
+  "type": "review",
+  "persona": "ai_ml",
+  "project": "agent",
+  "skills": [
+   "LangGraph",
+   "LLM agents",
+   "tool calling",
+   "FastAPI"
+  ],
+  "client_industry": "fintech",
+  "date": "2025-12-01",
+  "rating": 5,
+  "synthetic": true,
+  "text": "5/5 - Sana delivered our langgraph finance agent on time; the work automated monthly reconciliation reports with human approval, saving 30 analyst hours per month."
+ },
+ {
+  "id": "rv-ai_ml-mlops",
+  "type": "review",
+  "persona": "ai_ml",
+  "project": "mlops",
+  "skills": [
+   "MLflow",
+   "Docker",
+   "CI/CD",
+   "Kubernetes"
+  ],
+  "client_industry": "healthcare",
+  "date": "2024-12-01",
+  "rating": 5,
+  "synthetic": true,
+  "text": "5/5 - Sana delivered our mlops platform setup on time; the work cut model release time from two weeks to one day with reproducible pipelines."
+ },
+ {
+  "id": "rv-ai_ml-fraud",
+  "type": "review",
+  "persona": "ai_ml",
+  "project": "fraud",
+  "skills": [
+   "anomaly detection",
+   "XGBoost",
+   "SQL",
+   "imbalanced learning"
+  ],
+  "client_industry": "fintech",
+  "date": "2023-12-01",
+  "rating": 4,
+  "synthetic": true,
+  "text": "4/5 - Sana delivered our card fraud detection on time; the work caught 23% more fraudulent transactions at a fixed 0.5% false-positive rate."
+ },
+ {
+  "id": "rv-ai_ml-defects",
+  "type": "review",
+  "persona": "ai_ml",
+  "project": "defects",
+  "skills": [
+   "computer vision",
+   "YOLO",
+   "PyTorch",
+   "edge deployment"
+  ],
+  "client_industry": "manufacturing",
+  "date": "2024-12-01",
+  "rating": 5,
+  "synthetic": true,
+  "text": "5/5 - Sana delivered our visual defect detection on time; the work detected surface defects at 94% precision on a Jetson device at 25 FPS."
+ },
+ {
+  "id": "rv-ai_ml-speech",
+  "type": "review",
+  "persona": "ai_ml",
+  "project": "speech",
+  "skills": [
+   "Whisper",
+   "speech-to-text",
+   "Python",
+   "FastAPI"
+  ],
+  "client_industry": "education",
+  "date": "2024-12-01",
+  "rating": 5,
+  "synthetic": true,
+  "text": "5/5 - Sana delivered our lecture transcription service on time; the work transcribed 1,200 hours of lectures at 6% word error rate."
+ }
+]

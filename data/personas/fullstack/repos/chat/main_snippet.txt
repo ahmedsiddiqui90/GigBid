@@ -1,0 +1,14 @@
+---
+id: "code-fullstack-chat"
+type: "code"
+persona: "fullstack"
+project: "chat"
+skills: ["WebSockets", "Node.js", "Redis", "React"]
+date: "2024-10-01"
+client_industry: "social"
+synthetic: true
+---
+# chat core module
+io.on('connection', socket => {
+# ... (excerpt)
+

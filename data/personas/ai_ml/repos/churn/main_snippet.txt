@@ -1,0 +1,14 @@
+---
+id: "code-ai_ml-churn"
+type: "code"
+persona: "ai_ml"
+project: "churn"
+skills: ["Python", "scikit-learn", "XGBoost", "pandas"]
+date: "2024-10-01"
+client_industry: "telecom"
+synthetic: true
+---
+# churn core module
+from xgboost import XGBClassifier
+# ... (excerpt)
+

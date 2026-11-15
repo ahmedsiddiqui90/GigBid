@@ -1,0 +1,14 @@
+---
+id: "code-ai_ml-speech"
+type: "code"
+persona: "ai_ml"
+project: "speech"
+skills: ["Whisper", "speech-to-text", "Python", "FastAPI"]
+date: "2024-10-01"
+client_industry: "education"
+synthetic: true
+---
+# speech core module
+import whisper
+# ... (excerpt)
+

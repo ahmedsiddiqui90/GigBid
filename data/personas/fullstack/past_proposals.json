@@ -1,0 +1,792 @@
+[
+ {
+  "id": "pp-fullstack-000",
+  "type": "proposal",
+  "persona": "fullstack",
+  "project": "shopify",
+  "skills": [
+   "Shopify",
+   "Liquid",
+   "JavaScript"
+  ],
+  "client_industry": "retail",
+  "date": "2023-05-10",
+  "outcome": "ignored",
+  "job_title": "Need a shopify theme customisation",
+  "text": "Your retail team needs a shopify theme customisation that works in production. I recently built one that raised conversion rate from 1.8% to 2.6% after a theme rebuild. I would start by reviewing your data and setup, then deliver in weekly milestones using Shopify, Liquid, JavaScript.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-fullstack-001",
+  "type": "proposal",
+  "persona": "fullstack",
+  "project": null,
+  "skills": [],
+  "client_industry": "saas",
+  "date": "2024-04-10",
+  "outcome": "ignored",
+  "job_title": "Need a secure auth service",
+  "text": "Dear Hiring Manager, I am writing to apply for your project. I am a hard-working professional with many years of experience and I can deliver high quality work on time. Please message me.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-fullstack-002",
+  "type": "proposal",
+  "persona": "fullstack",
+  "project": null,
+  "skills": [],
+  "client_industry": "retail",
+  "date": "2024-08-10",
+  "outcome": "ignored",
+  "job_title": "Need a shopify theme customisation",
+  "text": "Dear Hiring Manager, I am writing to apply for your project. I am a hard-working professional with many years of experience and I can deliver high quality work on time. Please message me.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-fullstack-003",
+  "type": "proposal",
+  "persona": "fullstack",
+  "project": "graphql",
+  "skills": [
+   "GraphQL",
+   "Apollo",
+   "TypeScript",
+   "PostgreSQL"
+  ],
+  "client_industry": "media",
+  "date": "2024-07-10",
+  "outcome": "ignored",
+  "job_title": "Need a graphql content api",
+  "text": "Your media team needs a graphql content api that works in production. I recently built one that replaced 40 REST endpoints with one typed GraphQL API, halving mobile payload size. I would start by reviewing your data and setup, then deliver in weekly milestones using GraphQL, Apollo, TypeScript.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-fullstack-004",
+  "type": "proposal",
+  "persona": "fullstack",
+  "project": null,
+  "skills": [],
+  "client_industry": "media",
+  "date": "2024-06-10",
+  "outcome": "ignored",
+  "job_title": "Need a graphql content api",
+  "text": "Dear Hiring Manager, I am writing to apply for your project. I am a hard-working professional with many years of experience and I can deliver high quality work on time. Please message me.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-fullstack-005",
+  "type": "proposal",
+  "persona": "fullstack",
+  "project": null,
+  "skills": [],
+  "client_industry": "fitness",
+  "date": "2023-09-10",
+  "outcome": "ignored",
+  "job_title": "Need a fitness tracking mobile app",
+  "text": "Dear Hiring Manager, I am writing to apply for your project. I am a hard-working professional with many years of experience and I can deliver high quality work on time. Please message me.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-fullstack-006",
+  "type": "proposal",
+  "persona": "fullstack",
+  "project": null,
+  "skills": [],
+  "client_industry": "media",
+  "date": "2023-07-10",
+  "outcome": "ignored",
+  "job_title": "Need a web performance overhaul",
+  "text": "Dear Hiring Manager, I am writing to apply for your project. I am a hard-working professional with many years of experience and I can deliver high quality work on time. Please message me.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-fullstack-007",
+  "type": "proposal",
+  "persona": "fullstack",
+  "project": "booking",
+  "skills": [
+   "Next.js",
+   "Prisma",
+   "calendar integration",
+   "Stripe"
+  ],
+  "client_industry": "healthcare",
+  "date": "2023-08-10",
+  "outcome": "replied",
+  "job_title": "Need a clinic booking platform",
+  "text": "Your healthcare team needs a clinic booking platform that works in production. I recently built one that handled 3,000 appointments a month with automated reminders and deposits. I would start by reviewing your data and setup, then deliver in weekly milestones using Next.js, Prisma, calendar integration.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-fullstack-008",
+  "type": "proposal",
+  "persona": "fullstack",
+  "project": "shopify",
+  "skills": [
+   "Shopify",
+   "Liquid",
+   "JavaScript"
+  ],
+  "client_industry": "retail",
+  "date": "2024-03-10",
+  "outcome": "ignored",
+  "job_title": "Need a shopify theme customisation",
+  "text": "Your retail team needs a shopify theme customisation that works in production. I recently built one that raised conversion rate from 1.8% to 2.6% after a theme rebuild. I would start by reviewing your data and setup, then deliver in weekly milestones using Shopify, Liquid, JavaScript.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-fullstack-009",
+  "type": "proposal",
+  "persona": "fullstack",
+  "project": "billing",
+  "skills": [
+   "Stripe",
+   "Node.js",
+   "webhooks",
+   "subscriptions"
+  ],
+  "client_industry": "saas",
+  "date": "2025-07-10",
+  "outcome": "replied",
+  "job_title": "Need a subscription billing system",
+  "text": "Your saas team needs a subscription billing system that works in production. I recently built one that moved 2,400 customers to Stripe Billing with zero failed renewals during migration. I would start by reviewing your data and setup, then deliver in weekly milestones using Stripe, Node.js, webhooks.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-fullstack-010",
+  "type": "proposal",
+  "persona": "fullstack",
+  "project": null,
+  "skills": [],
+  "client_industry": "healthcare",
+  "date": "2023-02-10",
+  "outcome": "ignored",
+  "job_title": "Need a clinic booking platform",
+  "text": "Dear Hiring Manager, I am writing to apply for your project. I am a hard-working professional with many years of experience and I can deliver high quality work on time. Please message me.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-fullstack-011",
+  "type": "proposal",
+  "persona": "fullstack",
+  "project": "mobile",
+  "skills": [
+   "React Native",
+   "Expo",
+   "Firebase"
+  ],
+  "client_industry": "fitness",
+  "date": "2024-04-10",
+  "outcome": "ignored",
+  "job_title": "Need a fitness tracking mobile app",
+  "text": "Your fitness team needs a fitness tracking mobile app that works in production. I recently built one that launched on iOS and Android with a 4.7 store rating from 900 reviews. I would start by reviewing your data and setup, then deliver in weekly milestones using React Native, Expo, Firebase.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-fullstack-012",
+  "type": "proposal",
+  "persona": "fullstack",
+  "project": "mobile",
+  "skills": [
+   "React Native",
+   "Expo",
+   "Firebase"
+  ],
+  "client_industry": "fitness",
+  "date": "2023-02-10",
+  "outcome": "ignored",
+  "job_title": "Need a fitness tracking mobile app",
+  "text": "Your fitness team needs a fitness tracking mobile app that works in production. I recently built one that launched on iOS and Android with a 4.7 store rating from 900 reviews. I would start by reviewing your data and setup, then deliver in weekly milestones using React Native, Expo, Firebase.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-fullstack-013",
+  "type": "proposal",
+  "persona": "fullstack",
+  "project": null,
+  "skills": [],
+  "client_industry": "ecommerce",
+  "date": "2023-05-10",
+  "outcome": "ignored",
+  "job_title": "Need a django services marketplace",
+  "text": "Dear Hiring Manager, I am writing to apply for your project. I am a hard-working professional with many years of experience and I can deliver high quality work on time. Please message me.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-fullstack-014",
+  "type": "proposal",
+  "persona": "fullstack",
+  "project": "perf",
+  "skills": [
+   "web performance",
+   "Lighthouse",
+   "React",
+   "CDN"
+  ],
+  "client_industry": "media",
+  "date": "2025-08-10",
+  "outcome": "won",
+  "job_title": "Need a web performance overhaul",
+  "text": "Your media team needs a web performance overhaul that works in production. I recently built one that improved Lighthouse performance from 48 to 94 and cut LCP from 4.1 s to 1.6 s. I would start by reviewing your data and setup, then deliver in weekly milestones using web performance, Lighthouse, React.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-fullstack-015",
+  "type": "proposal",
+  "persona": "fullstack",
+  "project": null,
+  "skills": [],
+  "client_industry": "healthcare",
+  "date": "2023-05-10",
+  "outcome": "replied",
+  "job_title": "Need a clinic booking platform",
+  "text": "Dear Hiring Manager, I am writing to apply for your project. I am a hard-working professional with many years of experience and I can deliver high quality work on time. Please message me.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-fullstack-016",
+  "type": "proposal",
+  "persona": "fullstack",
+  "project": null,
+  "skills": [],
+  "client_industry": "social",
+  "date": "2024-04-10",
+  "outcome": "ignored",
+  "job_title": "Need a real-time team chat",
+  "text": "Dear Hiring Manager, I am writing to apply for your project. I am a hard-working professional with many years of experience and I can deliver high quality work on time. Please message me.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-fullstack-017",
+  "type": "proposal",
+  "persona": "fullstack",
+  "project": "shopify",
+  "skills": [
+   "Shopify",
+   "Liquid",
+   "JavaScript"
+  ],
+  "client_industry": "retail",
+  "date": "2024-04-10",
+  "outcome": "replied",
+  "job_title": "Need a shopify theme customisation",
+  "text": "Your retail team needs a shopify theme customisation that works in production. I recently built one that raised conversion rate from 1.8% to 2.6% after a theme rebuild. I would start by reviewing your data and setup, then deliver in weekly milestones using Shopify, Liquid, JavaScript.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-fullstack-018",
+  "type": "proposal",
+  "persona": "fullstack",
+  "project": null,
+  "skills": [],
+  "client_industry": "media",
+  "date": "2024-05-10",
+  "outcome": "replied",
+  "job_title": "Need a graphql content api",
+  "text": "Dear Hiring Manager, I am writing to apply for your project. I am a hard-working professional with many years of experience and I can deliver high quality work on time. Please message me.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-fullstack-019",
+  "type": "proposal",
+  "persona": "fullstack",
+  "project": "auth",
+  "skills": [
+   "OAuth",
+   "JWT",
+   "Node.js",
+   "security"
+  ],
+  "client_industry": "saas",
+  "date": "2023-06-10",
+  "outcome": "replied",
+  "job_title": "Need a secure auth service",
+  "text": "Your saas team needs a secure auth service that works in production. I recently built one that added SSO and MFA for 60 enterprise tenants with no security incidents. I would start by reviewing your data and setup, then deliver in weekly milestones using OAuth, JWT, Node.js.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-fullstack-020",
+  "type": "proposal",
+  "persona": "fullstack",
+  "project": "shopify",
+  "skills": [
+   "Shopify",
+   "Liquid",
+   "JavaScript"
+  ],
+  "client_industry": "retail",
+  "date": "2023-01-10",
+  "outcome": "ignored",
+  "job_title": "Need a shopify theme customisation",
+  "text": "Your retail team needs a shopify theme customisation that works in production. I recently built one that raised conversion rate from 1.8% to 2.6% after a theme rebuild. I would start by reviewing your data and setup, then deliver in weekly milestones using Shopify, Liquid, JavaScript.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-fullstack-021",
+  "type": "proposal",
+  "persona": "fullstack",
+  "project": "saas_dash",
+  "skills": [
+   "Next.js",
+   "TypeScript",
+   "Tailwind",
+   "PostgreSQL"
+  ],
+  "client_industry": "saas",
+  "date": "2023-03-10",
+  "outcome": "ignored",
+  "job_title": "Need a saas analytics dashboard",
+  "text": "Your saas team needs a saas analytics dashboard that works in production. I recently built one that shipped a multi-tenant dashboard used by 1,800 weekly active users with sub-second page loads. I would start by reviewing your data and setup, then deliver in weekly milestones using Next.js, TypeScript, Tailwind.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-fullstack-022",
+  "type": "proposal",
+  "persona": "fullstack",
+  "project": null,
+  "skills": [],
+  "client_industry": "saas",
+  "date": "2024-03-10",
+  "outcome": "ignored",
+  "job_title": "Need a saas analytics dashboard",
+  "text": "Dear Hiring Manager, I am writing to apply for your project. I am a hard-working professional with many years of experience and I can deliver high quality work on time. Please message me.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-fullstack-023",
+  "type": "proposal",
+  "persona": "fullstack",
+  "project": "auth",
+  "skills": [
+   "OAuth",
+   "JWT",
+   "Node.js",
+   "security"
+  ],
+  "client_industry": "saas",
+  "date": "2024-05-10",
+  "outcome": "ignored",
+  "job_title": "Need a secure auth service",
+  "text": "Your saas team needs a secure auth service that works in production. I recently built one that added SSO and MFA for 60 enterprise tenants with no security incidents. I would start by reviewing your data and setup, then deliver in weekly milestones using OAuth, JWT, Node.js.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-fullstack-024",
+  "type": "proposal",
+  "persona": "fullstack",
+  "project": "mobile",
+  "skills": [
+   "React Native",
+   "Expo",
+   "Firebase"
+  ],
+  "client_industry": "fitness",
+  "date": "2024-02-10",
+  "outcome": "replied",
+  "job_title": "Need a fitness tracking mobile app",
+  "text": "Your fitness team needs a fitness tracking mobile app that works in production. I recently built one that launched on iOS and Android with a 4.7 store rating from 900 reviews. I would start by reviewing your data and setup, then deliver in weekly milestones using React Native, Expo, Firebase.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-fullstack-025",
+  "type": "proposal",
+  "persona": "fullstack",
+  "project": "mobile",
+  "skills": [
+   "React Native",
+   "Expo",
+   "Firebase"
+  ],
+  "client_industry": "fitness",
+  "date": "2024-06-10",
+  "outcome": "won",
+  "job_title": "Need a fitness tracking mobile app",
+  "text": "Your fitness team needs a fitness tracking mobile app that works in production. I recently built one that launched on iOS and Android with a 4.7 store rating from 900 reviews. I would start by reviewing your data and setup, then deliver in weekly milestones using React Native, Expo, Firebase.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-fullstack-026",
+  "type": "proposal",
+  "persona": "fullstack",
+  "project": "billing",
+  "skills": [
+   "Stripe",
+   "Node.js",
+   "webhooks",
+   "subscriptions"
+  ],
+  "client_industry": "saas",
+  "date": "2025-06-10",
+  "outcome": "ignored",
+  "job_title": "Need a subscription billing system",
+  "text": "Your saas team needs a subscription billing system that works in production. I recently built one that moved 2,400 customers to Stripe Billing with zero failed renewals during migration. I would start by reviewing your data and setup, then deliver in weekly milestones using Stripe, Node.js, webhooks.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-fullstack-027",
+  "type": "proposal",
+  "persona": "fullstack",
+  "project": "graphql",
+  "skills": [
+   "GraphQL",
+   "Apollo",
+   "TypeScript",
+   "PostgreSQL"
+  ],
+  "client_industry": "media",
+  "date": "2023-02-10",
+  "outcome": "ignored",
+  "job_title": "Need a graphql content api",
+  "text": "Your media team needs a graphql content api that works in production. I recently built one that replaced 40 REST endpoints with one typed GraphQL API, halving mobile payload size. I would start by reviewing your data and setup, then deliver in weekly milestones using GraphQL, Apollo, TypeScript.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-fullstack-028",
+  "type": "proposal",
+  "persona": "fullstack",
+  "project": null,
+  "skills": [],
+  "client_industry": "media",
+  "date": "2025-09-10",
+  "outcome": "ignored",
+  "job_title": "Need a graphql content api",
+  "text": "Dear Hiring Manager, I am writing to apply for your project. I am a hard-working professional with many years of experience and I can deliver high quality work on time. Please message me.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-fullstack-029",
+  "type": "proposal",
+  "persona": "fullstack",
+  "project": null,
+  "skills": [],
+  "client_industry": "social",
+  "date": "2024-09-10",
+  "outcome": "replied",
+  "job_title": "Need a real-time team chat",
+  "text": "Dear Hiring Manager, I am writing to apply for your project. I am a hard-working professional with many years of experience and I can deliver high quality work on time. Please message me.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-fullstack-030",
+  "type": "proposal",
+  "persona": "fullstack",
+  "project": null,
+  "skills": [],
+  "client_industry": "fitness",
+  "date": "2025-03-10",
+  "outcome": "ignored",
+  "job_title": "Need a fitness tracking mobile app",
+  "text": "Dear Hiring Manager, I am writing to apply for your project. I am a hard-working professional with many years of experience and I can deliver high quality work on time. Please message me.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-fullstack-031",
+  "type": "proposal",
+  "persona": "fullstack",
+  "project": "graphql",
+  "skills": [
+   "GraphQL",
+   "Apollo",
+   "TypeScript",
+   "PostgreSQL"
+  ],
+  "client_industry": "media",
+  "date": "2023-02-10",
+  "outcome": "replied",
+  "job_title": "Need a graphql content api",
+  "text": "Your media team needs a graphql content api that works in production. I recently built one that replaced 40 REST endpoints with one typed GraphQL API, halving mobile payload size. I would start by reviewing your data and setup, then deliver in weekly milestones using GraphQL, Apollo, TypeScript.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-fullstack-032",
+  "type": "proposal",
+  "persona": "fullstack",
+  "project": "marketplace",
+  "skills": [
+   "Django",
+   "Celery",
+   "Redis",
+   "PostgreSQL"
+  ],
+  "client_industry": "ecommerce",
+  "date": "2025-07-10",
+  "outcome": "replied",
+  "job_title": "Need a django services marketplace",
+  "text": "Your ecommerce team needs a django services marketplace that works in production. I recently built one that built background order processing handling 15k orders a day. I would start by reviewing your data and setup, then deliver in weekly milestones using Django, Celery, Redis.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-fullstack-033",
+  "type": "proposal",
+  "persona": "fullstack",
+  "project": "graphql",
+  "skills": [
+   "GraphQL",
+   "Apollo",
+   "TypeScript",
+   "PostgreSQL"
+  ],
+  "client_industry": "media",
+  "date": "2024-05-10",
+  "outcome": "won",
+  "job_title": "Need a graphql content api",
+  "text": "Your media team needs a graphql content api that works in production. I recently built one that replaced 40 REST endpoints with one typed GraphQL API, halving mobile payload size. I would start by reviewing your data and setup, then deliver in weekly milestones using GraphQL, Apollo, TypeScript.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-fullstack-034",
+  "type": "proposal",
+  "persona": "fullstack",
+  "project": "shopify",
+  "skills": [
+   "Shopify",
+   "Liquid",
+   "JavaScript"
+  ],
+  "client_industry": "retail",
+  "date": "2023-04-10",
+  "outcome": "ignored",
+  "job_title": "Need a shopify theme customisation",
+  "text": "Your retail team needs a shopify theme customisation that works in production. I recently built one that raised conversion rate from 1.8% to 2.6% after a theme rebuild. I would start by reviewing your data and setup, then deliver in weekly milestones using Shopify, Liquid, JavaScript.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-fullstack-035",
+  "type": "proposal",
+  "persona": "fullstack",
+  "project": "billing",
+  "skills": [
+   "Stripe",
+   "Node.js",
+   "webhooks",
+   "subscriptions"
+  ],
+  "client_industry": "saas",
+  "date": "2025-05-10",
+  "outcome": "replied",
+  "job_title": "Need a subscription billing system",
+  "text": "Your saas team needs a subscription billing system that works in production. I recently built one that moved 2,400 customers to Stripe Billing with zero failed renewals during migration. I would start by reviewing your data and setup, then deliver in weekly milestones using Stripe, Node.js, webhooks.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-fullstack-036",
+  "type": "proposal",
+  "persona": "fullstack",
+  "project": null,
+  "skills": [],
+  "client_industry": "fintech",
+  "date": "2024-03-10",
+  "outcome": "ignored",
+  "job_title": "Need a aws infrastructure as code",
+  "text": "Dear Hiring Manager, I am writing to apply for your project. I am a hard-working professional with many years of experience and I can deliver high quality work on time. Please message me.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-fullstack-037",
+  "type": "proposal",
+  "persona": "fullstack",
+  "project": "marketplace",
+  "skills": [
+   "Django",
+   "Celery",
+   "Redis",
+   "PostgreSQL"
+  ],
+  "client_industry": "ecommerce",
+  "date": "2025-03-10",
+  "outcome": "won",
+  "job_title": "Need a django services marketplace",
+  "text": "Your ecommerce team needs a django services marketplace that works in production. I recently built one that built background order processing handling 15k orders a day. I would start by reviewing your data and setup, then deliver in weekly milestones using Django, Celery, Redis.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-fullstack-038",
+  "type": "proposal",
+  "persona": "fullstack",
+  "project": "billing",
+  "skills": [
+   "Stripe",
+   "Node.js",
+   "webhooks",
+   "subscriptions"
+  ],
+  "client_industry": "saas",
+  "date": "2023-09-10",
+  "outcome": "replied",
+  "job_title": "Need a subscription billing system",
+  "text": "Your saas team needs a subscription billing system that works in production. I recently built one that moved 2,400 customers to Stripe Billing with zero failed renewals during migration. I would start by reviewing your data and setup, then deliver in weekly milestones using Stripe, Node.js, webhooks.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-fullstack-039",
+  "type": "proposal",
+  "persona": "fullstack",
+  "project": "booking",
+  "skills": [
+   "Next.js",
+   "Prisma",
+   "calendar integration",
+   "Stripe"
+  ],
+  "client_industry": "healthcare",
+  "date": "2025-07-10",
+  "outcome": "replied",
+  "job_title": "Need a clinic booking platform",
+  "text": "Your healthcare team needs a clinic booking platform that works in production. I recently built one that handled 3,000 appointments a month with automated reminders and deposits. I would start by reviewing your data and setup, then deliver in weekly milestones using Next.js, Prisma, calendar integration.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-fullstack-040",
+  "type": "proposal",
+  "persona": "fullstack",
+  "project": "billing",
+  "skills": [
+   "Stripe",
+   "Node.js",
+   "webhooks",
+   "subscriptions"
+  ],
+  "client_industry": "saas",
+  "date": "2024-02-10",
+  "outcome": "replied",
+  "job_title": "Need a subscription billing system",
+  "text": "Your saas team needs a subscription billing system that works in production. I recently built one that moved 2,400 customers to Stripe Billing with zero failed renewals during migration. I would start by reviewing your data and setup, then deliver in weekly milestones using Stripe, Node.js, webhooks.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-fullstack-041",
+  "type": "proposal",
+  "persona": "fullstack",
+  "project": null,
+  "skills": [],
+  "client_industry": "saas",
+  "date": "2025-07-10",
+  "outcome": "ignored",
+  "job_title": "Need a saas analytics dashboard",
+  "text": "Dear Hiring Manager, I am writing to apply for your project. I am a hard-working professional with many years of experience and I can deliver high quality work on time. Please message me.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-fullstack-042",
+  "type": "proposal",
+  "persona": "fullstack",
+  "project": null,
+  "skills": [],
+  "client_industry": "ecommerce",
+  "date": "2025-05-10",
+  "outcome": "ignored",
+  "job_title": "Need a django services marketplace",
+  "text": "Dear Hiring Manager, I am writing to apply for your project. I am a hard-working professional with many years of experience and I can deliver high quality work on time. Please message me.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-fullstack-043",
+  "type": "proposal",
+  "persona": "fullstack",
+  "project": null,
+  "skills": [],
+  "client_industry": "media",
+  "date": "2023-09-10",
+  "outcome": "ignored",
+  "job_title": "Need a web performance overhaul",
+  "text": "Dear Hiring Manager, I am writing to apply for your project. I am a hard-working professional with many years of experience and I can deliver high quality work on time. Please message me.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-fullstack-044",
+  "type": "proposal",
+  "persona": "fullstack",
+  "project": "chat",
+  "skills": [
+   "WebSockets",
+   "Node.js",
+   "Redis",
+   "React"
+  ],
+  "client_industry": "social",
+  "date": "2024-05-10",
+  "outcome": "ignored",
+  "job_title": "Need a real-time team chat",
+  "text": "Your social team needs a real-time team chat that works in production. I recently built one that delivered real-time messaging for 5,000 concurrent users with p95 latency under 120 ms. I would start by reviewing your data and setup, then deliver in weekly milestones using WebSockets, Node.js, Redis.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-fullstack-045",
+  "type": "proposal",
+  "persona": "fullstack",
+  "project": null,
+  "skills": [],
+  "client_industry": "healthcare",
+  "date": "2025-07-10",
+  "outcome": "ignored",
+  "job_title": "Need a clinic booking platform",
+  "text": "Dear Hiring Manager, I am writing to apply for your project. I am a hard-working professional with many years of experience and I can deliver high quality work on time. Please message me.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-fullstack-046",
+  "type": "proposal",
+  "persona": "fullstack",
+  "project": "shopify",
+  "skills": [
+   "Shopify",
+   "Liquid",
+   "JavaScript"
+  ],
+  "client_industry": "retail",
+  "date": "2025-03-10",
+  "outcome": "won",
+  "job_title": "Need a shopify theme customisation",
+  "text": "Your retail team needs a shopify theme customisation that works in production. I recently built one that raised conversion rate from 1.8% to 2.6% after a theme rebuild. I would start by reviewing your data and setup, then deliver in weekly milestones using Shopify, Liquid, JavaScript.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-fullstack-047",
+  "type": "proposal",
+  "persona": "fullstack",
+  "project": "booking",
+  "skills": [
+   "Next.js",
+   "Prisma",
+   "calendar integration",
+   "Stripe"
+  ],
+  "client_industry": "healthcare",
+  "date": "2023-03-10",
+  "outcome": "replied",
+  "job_title": "Need a clinic booking platform",
+  "text": "Your healthcare team needs a clinic booking platform that works in production. I recently built one that handled 3,000 appointments a month with automated reminders and deposits. I would start by reviewing your data and setup, then deliver in weekly milestones using Next.js, Prisma, calendar integration.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-fullstack-048",
+  "type": "proposal",
+  "persona": "fullstack",
+  "project": null,
+  "skills": [],
+  "client_industry": "saas",
+  "date": "2025-07-10",
+  "outcome": "ignored",
+  "job_title": "Need a saas analytics dashboard",
+  "text": "Dear Hiring Manager, I am writing to apply for your project. I am a hard-working professional with many years of experience and I can deliver high quality work on time. Please message me.",
+  "synthetic": true
+ },
+ {
+  "id": "pp-fullstack-049",
+  "type": "proposal",
+  "persona": "fullstack",
+  "project": "perf",
+  "skills": [
+   "web performance",
+   "Lighthouse",
+   "React",
+   "CDN"
+  ],
+  "client_industry": "media",
+  "date": "2025-01-10",
+  "outcome": "won",
+  "job_title": "Need a web performance overhaul",
+  "text": "Your media team needs a web performance overhaul that works in production. I recently built one that improved Lighthouse performance from 48 to 94 and cut LCP from 4.1 s to 1.6 s. I would start by reviewing your data and setup, then deliver in weekly milestones using web performance, Lighthouse, React.",
+  "synthetic": true
+ }
+]
