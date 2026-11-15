@@ -1,0 +1,142 @@
+{
+ "create_email_draft": {
+  "annotations": {
+   "destructiveHint": false,
+   "idempotentHint": false,
+   "openWorldHint": false,
+   "readOnlyHint": false
+  },
+  "input": {
+   "$defs": {
+    "DraftInput": {
+     "properties": {
+      "body": {
+       "maxLength": 5000,
+       "minLength": 1,
+       "title": "Body",
+       "type": "string"
+      },
+      "subject": {
+       "maxLength": 200,
+       "minLength": 1,
+       "title": "Subject",
+       "type": "string"
+      },
+      "to": {
+       "description": "Recipient (client name or thread id)",
+       "maxLength": 200,
+       "minLength": 1,
+       "title": "To",
+       "type": "string"
+      }
+     },
+     "required": [
+      "to",
+      "subject",
+      "body"
+     ],
+     "title": "DraftInput",
+     "type": "object"
+    }
+   },
+   "properties": {
+    "input": {
+     "$ref": "#/$defs/DraftInput"
+    }
+   },
+   "required": [
+    "input"
+   ],
+   "title": "create_email_draftArguments",
+   "type": "object"
+  },
+  "output": null
+ },
+ "create_tentative_hold": {
+  "annotations": {
+   "destructiveHint": false,
+   "idempotentHint": true,
+   "openWorldHint": false,
+   "readOnlyHint": false
+  },
+  "input": {
+   "$defs": {
+    "HoldInput": {
+     "properties": {
+      "duration_minutes": {
+       "default": 30,
+       "maximum": 120,
+       "minimum": 15,
+       "title": "Duration Minutes",
+       "type": "integer"
+      },
+      "idempotency_key": {
+       "maxLength": 200,
+       "minLength": 8,
+       "title": "Idempotency Key",
+       "type": "string"
+      },
+      "start": {
+       "description": "ISO-8601 start time of one of the offered slots",
+       "title": "Start",
+       "type": "string"
+      },
+      "title": {
+       "maxLength": 200,
+       "minLength": 3,
+       "title": "Title",
+       "type": "string"
+      }
+     },
+     "required": [
+      "start",
+      "title",
+      "idempotency_key"
+     ],
+     "title": "HoldInput",
+     "type": "object"
+    }
+   },
+   "properties": {
+    "input": {
+     "$ref": "#/$defs/HoldInput"
+    }
+   },
+   "required": [
+    "input"
+   ],
+   "title": "create_tentative_holdArguments",
+   "type": "object"
+  },
+  "output": null
+ },
+ "free_slots": {
+  "annotations": {
+   "idempotentHint": true,
+   "openWorldHint": false,
+   "readOnlyHint": true
+  },
+  "input": {
+   "properties": {
+    "days_ahead": {
+     "default": 5,
+     "title": "Days Ahead",
+     "type": "integer"
+    },
+    "duration_minutes": {
+     "default": 30,
+     "title": "Duration Minutes",
+     "type": "integer"
+    },
+    "max_slots": {
+     "default": 4,
+     "title": "Max Slots",
+     "type": "integer"
+    }
+   },
+   "title": "free_slotsArguments",
+   "type": "object"
+  },
+  "output": null
+ }
+}

@@ -52,7 +52,7 @@ async def fit_matcher(state: dict) -> dict:
         for r in reqs:
             res, t = await tool(state, "fit_matcher", "search_evidence",
                                 {"requirement": f"{r} ({job.get('title', '')})", "k": 4,
-                                 "filters": {"persona": state["persona"]}})
+                                 "filters": {"persona": state["persona"], "variant": state.get("retrieval_variant")}})
             trace.append(t)
             per_req[r] = res.get("items", [])
             for e in per_req[r]:

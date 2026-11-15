@@ -31,6 +31,7 @@ class Filters(BaseModel):
     type: Literal["cv", "case_study", "readme", "code", "review", "proposal"] | None = None
     project: str | None = None
     outcome: Literal["won", "replied", "ignored"] | None = None
+    variant: str | None = Field(default=None, description="Retrieval variant override (experiments only)")
 
 
 class Evidence(BaseModel):
@@ -62,7 +63,7 @@ async def search_evidence(requirement: str, k: int = 5, filters: Filters | None 
 
     persona = _persona(filters)
     job = {"text": requirement, "requirements": [requirement], "title": ""}
-    hits = search(persona, job, k=max(1, min(k, 20)) * 2)
+    hits = search(persona, job, k=max(1, min(k, 20)) * 2, variant=filters.variant if filters else None)
     if filters:
         hits = [h for h in hits if (not filters.type or h["type"] == filters.type)
                 and (not filters.project or h["project"] == filters.project)

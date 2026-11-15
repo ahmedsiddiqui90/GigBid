@@ -1,0 +1,63 @@
+# docker compose -f infra/docker-compose.yml --env-file .env up --build
+# Starts web, API, worker, MCP servers, GigSim, Postgres, Redis (vectors are a numpy index inside the
+# portfolio MCP/API images) and, with `--profile local-models`, an Ollama service for the open profile.
+name: gigbid
+
+x-py: &py
+  env_file: ../.env
+  environment:
+    DATABASE_URL: postgresql://postgres:postgres@postgres:5432/gigbid
+    REDIS_URL: redis://redis:6379/0
+    GIGSIM_BASE_URL: http://gigsim:8081
+    GIGBID_MCP_HOST: mcp
+  depends_on:
+    postgres: { condition: service_healthy }
+    redis: { condition: service_started }
+  restart: unless-stopped
+
+services:
+  postgres:
+    image: postgres:16
+    environment: { POSTGRES_PASSWORD: postgres, POSTGRES_DB: gigbid }
+    volumes: [pgdata:/var/lib/postgresql/data]
+    healthcheck: { test: ["CMD", "pg_isready", "-U", "postgres"], interval: 5s, retries: 10 }
+
+  redis:
+    image: redis:7
+
+  gigsim:
+    build: { context: .., dockerfile: infra/docker/gigsim.Dockerfile }
+    environment: { GIGSIM_STATE: /state/gigsim_state.json }
+    env_file: ../.env
+    volumes: [gigsim:/state]
+    ports: ["8081:8081"]
+
+  mcp:
+    <<: *py
+    build: { context: .., dockerfile: infra/docker/mcp.Dockerfile }
+    ports: ["8101:8101", "8102:8102", "8103:8103"]
+
+  api:
+    <<: *py
+    build: { context: .., dockerfile: infra/docker/api.Dockerfile }
+    ports: ["8000:8000"]
+
+  worker:
+    <<: *py
+    build: { context: .., dockerfile: infra/docker/worker.Dockerfile }
+
+  web:
+    build: { context: .., dockerfile: infra/docker/web.Dockerfile }
+    ports: ["8080:80"]
+    depends_on: [api]
+
+  ollama:
+    image: ollama/ollama:0.5.4
+    profiles: [local-models]
+    ports: ["11434:11434"]
+    volumes: [ollama:/root/.ollama]
+
+volumes:
+  pgdata: {}
+  gigsim: {}
+  ollama: {}

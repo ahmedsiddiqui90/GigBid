@@ -45,6 +45,7 @@ retrieval:
   variant: v3_rerank      # chosen by evals/results/rag_eval.json (see docs/DATA_CARD.md)
   k: 5
   candidates: 30
+  rerank_top: 12          # E5 optimisation: cross-encoder only re-scores the top 12 fused hits (was 30)
 
 marketplace:
   adapter: gigsim         # gigsim | upwork_live  (env MARKETPLACE_ADAPTER overrides)

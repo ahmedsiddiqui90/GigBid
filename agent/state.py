@@ -23,6 +23,7 @@ class BidState(TypedDict, total=False):
     run_id: str
     trace_id: str
     strategy: str
+    retrieval_variant: str | None
     # inputs / analyses (written by parallel branches: disjoint keys)
     job: dict[str, Any]
     client: dict[str, Any]

@@ -72,6 +72,9 @@ def config() -> Config:
         cfg.profile = e.model_profile
     if e.marketplace_adapter:
         cfg.marketplace["adapter"] = e.marketplace_adapter
+    mcp_host = os.environ.get("GIGBID_MCP_HOST")
+    if mcp_host:  # docker compose: MCP servers run in the "mcp" container
+        cfg.mcp["servers"] = {k: v.replace("localhost", mcp_host) for k, v in cfg.mcp["servers"].items()}
     if cfg.profile not in cfg.profiles:
         raise ValueError(f"unknown model profile {cfg.profile!r}")
     prof = cfg.profiles[cfg.profile]

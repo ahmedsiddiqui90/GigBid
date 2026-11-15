@@ -19,3 +19,4 @@ apps/web/playwright-report/
 tests/unit/_gigsim_state_test.json
 .cache/
 logs/
+apps/web/playwright-report/

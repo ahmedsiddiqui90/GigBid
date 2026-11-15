@@ -78,7 +78,7 @@ async def proposal_writer(state: dict) -> dict:
     try:  # targeted retrieval per extracted requirement (JobSpec from the analyst)
         for r in (state.get("job_spec", {}).get("requirements") or [])[:4]:
             res, t = await tool(state, "proposal_writer", "search_evidence",
-                                {"requirement": r, "k": 3, "filters": {"persona": state["persona"]}})
+                                {"requirement": r, "k": 3, "filters": {"persona": state["persona"], "variant": state.get("retrieval_variant")}})
             trace.append(t)
             for e in res.get("items", []):
                 evidence.setdefault(e["id"], {**e, "project": e.get("source_project")})

@@ -1,0 +1,30 @@
+name: Smoke eval
+on: [pull_request, workflow_dispatch]
+
+# 30-job smoke eval (offline deterministic profile) with failure thresholds from agent/config.yaml (eval_gates):
+# fails if unsupported claims per proposal rise above the gate or bid/skip F1 drops below it.
+jobs:
+  smoke-eval:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16
+        env: { POSTGRES_PASSWORD: postgres, POSTGRES_DB: gigbid }
+        ports: ["5432:5432"]
+        options: --health-cmd pg_isready --health-interval 5s --health-retries 10
+    env:
+      DATABASE_URL: postgresql://postgres:postgres@localhost:5432/gigbid
+      MODEL_PROFILE: offline
+      GIGSIM_ERROR_RATE: "0"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12", cache: pip }
+      - run: pip install -e ".[dev]"
+      - run: python -m rag.ingest.build
+      - run: |
+          nohup uvicorn gigsim.app:app --port 8081 > gigsim.log 2>&1 &
+          nohup python -m scripts.run_mcp_servers > mcp.log 2>&1 &
+          sleep 15
+      - run: python -m evals.runners.agent_eval --name smoke --per-persona 10
+      - run: python -m evals.runners.gate evals/results/smoke.json

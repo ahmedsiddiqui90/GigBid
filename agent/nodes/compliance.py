@@ -35,7 +35,9 @@ def check_text(text: str, risk: dict, verification: dict | None) -> tuple[str, C
                     blocked, reason = True, f"{rule['id']}: {rule['description']}"
         elif rule["action"] == "block_if_unsupported" and verification and verification.get("unsupported_after", 0) > 0:
             blocked, reason = True, f"{rule['id']}: {verification['unsupported_after']} unsupported claim(s) remain"
-    for tok in injected_tokens(risk.get("injection_text", [])):
+    from agent.safety.untrusted import defences_on
+
+    for tok in (injected_tokens(risk.get("injection_text", [])) if defences_on() else []):
         if tok.lower() in out.lower():
             out = re.sub(re.escape(tok), "", out, flags=re.I)
             edits.append(f"injection_defence: removed '{tok}' requested by text inside the job post")

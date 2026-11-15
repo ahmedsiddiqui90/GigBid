@@ -58,6 +58,9 @@ def retrieve(idx: PersonaIndex, job: dict, k: int, sw: Switches, candidates: int
         if sw.exclude_proposals:
             hits = [h for h in hits if idx.by_id[h[0]]["type"] != "proposal"]
         if sw.rerank and hits:
+            from agent.settings import config
+
+            hits = hits[: int(config().retrieval.get("rerank_top", 30))]
             docs = [item_text(idx.by_id[i]) for i, _ in hits]
             scores = list(reranker().rerank(q, docs))
             hits = sorted(zip([i for i, _ in hits], scores, strict=False), key=lambda x: -x[1])
