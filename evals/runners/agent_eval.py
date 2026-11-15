@@ -145,6 +145,9 @@ async def main(a) -> None:
     from agent.graphs.bid_graph import build_bid_graph
     from agent.settings import config
 
+    if a.model:
+        config().profiles["open"]["nodes"] = {"default": a.model}
+        config().profiles["open"]["fallback"] = a.model
     if a.all_small:  # model comparison: every node on the small open model
         config().profiles["open"]["nodes"] = {"default": config().profiles["open"]["nodes"]["default"]}
     graph = build_bid_graph(InMemorySaver(), InMemoryStore())
@@ -191,6 +194,7 @@ if __name__ == "__main__":
     ap.add_argument("--variant")
     ap.add_argument("--kinds")
     ap.add_argument("--per-persona", type=int, default=0)
+    ap.add_argument("--model", help="run every node on this open model")
     ap.add_argument("--split", default="dev", choices=["dev", "test"])
     ap.add_argument("--all-small", action="store_true", help="all nodes on the small open model")
     ap.add_argument("--stride", type=int, default=0, help="take every Nth dev job (keeps the mix of job kinds)")

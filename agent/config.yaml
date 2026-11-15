@@ -12,8 +12,8 @@ profiles:
       proposal_writer: openai/gpt-oss-120b
       critic: openai/gpt-oss-120b
       client_liaison: openai/gpt-oss-120b
-      judge: openai/gpt-oss-120b
-    fallback: openai/gpt-oss-20b   # llama-3.1-8b-instant is not available on this Groq account
+      judge: qwen/qwen3.8-27b          # judge is a different model family from the writer
+    fallback: qwen/qwen3.8-27b     # separate daily quota from gpt-oss; llama-3.1-8b-instant is not on this account
   offline:               # deterministic heuristics; tests, CI and no-key runs
     provider: heuristic
   paid:                  # optional; not used by default
@@ -29,6 +29,7 @@ model_prices:
   openai/gpt-oss-20b: [0.075, 0.30]
   openai/gpt-oss-120b: [0.15, 0.60]
   llama-3.1-8b-instant: [0.05, 0.08]
+  qwen/qwen3.8-27b: [0.29, 0.59]
   heuristic: [0.0, 0.0]
 
 llm:

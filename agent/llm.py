@@ -72,8 +72,12 @@ def is_offline() -> bool:
     return model_for("default") == "heuristic"
 
 
+def _strip_think(text: str) -> str:
+    return re.sub(r"<think>.*?</think>", "", str(text), flags=re.S).strip()
+
+
 def _extract_json(text: str) -> dict:
-    text = text.strip()
+    text = _strip_think(text)
     m = re.search(r"\{.*\}", text, re.S)
     return json.loads(m.group(0) if m else text)
 
@@ -137,7 +141,7 @@ async def llm_text(
         try:
             text, usage = await _invoke(node, m, system, user, json_mode=False)
             usage.fallback = is_fb
-            return str(text).strip(), usage
+            return _strip_think(text), usage
         except Exception:  # noqa: BLE001
             continue
     return heuristic(), Usage(node, "heuristic", fallback=True)

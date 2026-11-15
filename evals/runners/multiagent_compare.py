@@ -63,7 +63,9 @@ async def run_react(llm, tools, job, persona):
     agent = create_react_agent(llm, tools)
     t0 = time.perf_counter()
     out = await agent.ainvoke({"messages": [("user", job_prompt(job, persona))]}, {"recursion_limit": 16})
-    return _parse_final(out["messages"][-1].content), _usage(out["messages"]), time.perf_counter() - t0
+    from agent.llm import _strip_think
+
+    return _parse_final(_strip_think(out["messages"][-1].content)), _usage(out["messages"]), time.perf_counter() - t0
 
 
 async def run_supervisor(llm, tools, job, persona):
@@ -81,7 +83,9 @@ async def run_supervisor(llm, tools, job, persona):
                                    "End with the JSON object requested by the user.").compile()
     t0 = time.perf_counter()
     out = await sup.ainvoke({"messages": [("user", job_prompt(job, persona))]}, {"recursion_limit": 30})
-    return _parse_final(out["messages"][-1].content), _usage(out["messages"]), time.perf_counter() - t0
+    from agent.llm import _strip_think
+
+    return _parse_final(_strip_think(out["messages"][-1].content)), _usage(out["messages"]), time.perf_counter() - t0
 
 
 def score_text(job, lab, text: str, price: float) -> dict:
@@ -116,6 +120,9 @@ async def main(a) -> None:
 
     prof = config().profiles["open"]
     llm = ChatOpenAI(model=a.model, base_url=prof["base_url"], api_key=os.environ.get(prof["api_key_env"]), temperature=0.2, max_retries=6)
+    # Fairness: our graph runs every node on the same model as the baselines.
+    config().profiles["open"]["nodes"] = {"default": a.model}
+    config().profiles["open"]["fallback"] = a.model
     labels = dev_labels()[:: a.stride]
     jobs = gigsim_jobs()
     graph = build_bid_graph(InMemorySaver(), InMemoryStore())
