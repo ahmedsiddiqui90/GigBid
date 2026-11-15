@@ -1,0 +1,107 @@
+# GigBid runtime configuration. Rules, models, budgets and thresholds live here, never in code.
+
+profile: open            # open | offline | paid  (env MODEL_PROFILE overrides)
+
+profiles:
+  open:                  # open-weight models only, via an OpenAI-compatible host
+    provider: openai_compatible
+    base_url: https://api.groq.com/openai/v1
+    api_key_env: GROQ_API_KEY
+    nodes:               # route by node: cheap model for frequent nodes, strong for writing
+      default: openai/gpt-oss-20b
+      proposal_writer: openai/gpt-oss-120b
+      critic: openai/gpt-oss-120b
+      client_liaison: openai/gpt-oss-120b
+      judge: openai/gpt-oss-120b
+    fallback: llama-3.1-8b-instant
+  offline:               # deterministic heuristics; tests, CI and no-key runs
+    provider: heuristic
+  paid:                  # optional; not used by default
+    provider: openai_compatible
+    base_url: https://api.openai.com/v1
+    api_key_env: OPENAI_API_KEY
+    nodes:
+      default: gpt-5-mini
+    fallback: gpt-5-mini
+
+# USD per million tokens (input, output) for cost reporting
+model_prices:
+  openai/gpt-oss-20b: [0.075, 0.30]
+  openai/gpt-oss-120b: [0.15, 0.60]
+  llama-3.1-8b-instant: [0.05, 0.08]
+  heuristic: [0.0, 0.0]
+
+llm:
+  temperature: 0.2
+  timeout_s: 60
+  max_retries: 2
+
+embeddings:
+  model: BAAI/bge-small-en-v1.5
+reranker:
+  model: Xenova/ms-marco-MiniLM-L-6-v2
+
+retrieval:
+  variant: v3_rerank      # chosen by evals/results/rag_eval.json (see docs/DATA_CARD.md)
+  k: 5
+  candidates: 30
+
+marketplace:
+  adapter: gigsim         # gigsim | upwork_live  (env MARKETPLACE_ADAPTER overrides)
+  rate_limit_per_minute: 50
+  request_timeout_s: 10
+  max_retries: 3
+
+mcp:
+  servers:
+    portfolio: http://localhost:8101/mcp
+    marketplace: http://localhost:8102/mcp
+    workspace: http://localhost:8103/mcp
+  # Each agent sees only the tools it needs, filtered by name.
+  allowlists:
+    scout: [search_jobs, get_job]
+    job_analyst: []
+    risk_assessor: [get_client_history]
+    fit_matcher: [search_evidence, list_skills]
+    pricing_strategist: [get_market_stats, get_client_history, get_connects_balance]
+    proposal_writer: [search_evidence, get_case_study]
+    critic: [search_evidence]
+    compliance_guard: []
+    submitter: [create_proposal_draft, submit_proposal]
+    client_liaison: [list_messages, send_message, free_slots, create_tentative_hold, create_email_draft]
+
+thresholds:
+  bid_fit_min: 0.55       # fit >= this and risk below risk_skip -> bid
+  watch_fit_min: 0.40     # between watch and bid -> watch
+  risk_skip: 0.60         # risk >= this -> skip
+  critic_pass: 0.70
+  min_hourly_rate: 20
+
+budgets:
+  max_graph_steps: 40
+  max_tokens_per_thread: 40000
+  max_revisions: 2
+  declared_p95_latency_s_per_job: 20
+  declared_p95_latency_s_per_proposal: 60
+  declared_cost_usd_per_job: 0.002
+  declared_cost_usd_per_proposal: 0.01
+
+autonomy:
+  auto_skip_low_fit: true   # may auto-skip; never auto-send (enforced in code)
+
+memory:
+  style_promotion_min_occurrences: 2   # an edit pattern must repeat this often to become a style rule
+  outcome_min_samples: 3               # outcome stats are promoted once a category has this many outcomes
+
+schedules:
+  gigsim_scout_minutes: 30
+  live_scout_minutes: 240   # live mode: conservative, see docs/RUNBOOK.md
+
+experiments:
+  ab_test:
+    enabled: true
+    arms: [evidence_first, question_first]
+
+eval_gates:                 # CI fails if these regress
+  max_unsupported_claims_per_proposal: 0.5
+  min_bid_skip_f1: 0.70

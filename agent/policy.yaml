@@ -1,0 +1,60 @@
+# Marketplace policy as configuration. Compliance Guard, Risk Assessor, Pricing and GigSim read this.
+# A platform policy update should be absorbed by editing this file (see docs/rd/change_request.md).
+version: "2026-10-27"
+
+connects:
+  # cost = base + sum(tier.extra for tiers whose budget_over < job budget max)
+  base: 4
+  tiers:
+    - {budget_over: 500, extra: 4}
+    - {budget_over: 2000, extra: 6}
+  weekly_budget_default: 80
+
+rules:
+  - id: no_off_platform
+    description: No off-platform contact or payment requests.
+    action: strip           # remove matching text from drafts
+    patterns:
+      - '[\w.+-]+@[\w-]+\.[\w.]+'                         # emails
+      - '\+?\d[\d\s().-]{7,}\d'                           # phone numbers
+      - '(?i)\b(whats ?app|telegram|skype|signal|wechat|discord)\b'
+      - '(?i)\b(paypal|wire transfer|western union|crypto|bitcoin|usdt)\b'
+  - id: no_guarantees
+    description: Do not guarantee results that cannot be guaranteed.
+    action: strip
+    patterns:
+      - '(?i)\b(i|we) guarantee\b[^.]*\.'
+      - '(?i)\b100% (guaranteed|success|satisfaction)\b'
+      - '(?i)\bguaranteed (results|ranking|success)\b'
+  - id: no_fabrication
+    description: Never claim experience the portfolio does not support.
+    action: block_if_unsupported   # enforced via claim verification results
+  - id: no_free_work
+    description: Do not propose unpaid production work disguised as a trial.
+    action: block
+    patterns:
+      - '(?i)\b(free (sample|trial|test)|unpaid (trial|test|work))\b'
+  - id: fair_automation
+    description: Never submit, message or spend Connects without human approval.
+    action: enforce_in_code
+
+# Signals the Risk Assessor uses on job posts and client messages (untrusted text).
+risk_signals:
+  scam:
+    - '(?i)\b(unpaid|for free|free (sample|test|trial))\b'
+    - '(?i)\b(whats ?app|telegram|skype|signal)\b'
+    - '(?i)\b(pay (a|the) (fee|deposit)|registration fee|send (me|us) (money|payment))\b'
+    - '(?i)\b(paypal|western union|crypto|bitcoin|usdt|gift card)\b'
+    - '(?i)\b(outside (of )?(upwork|the platform)|off[- ]platform)\b'
+  injection:
+    - '(?i)ignore (all |any )?(previous|prior|above) (instructions|prompts)'
+    - '(?i)\b(system prompt|you are now|act as|developer mode)\b'
+    - '(?i)\b(reveal|print|output) (your|the) (instructions|prompt|api key)'
+    - '(?i)(include|add|write) (the word|the phrase|this code)'
+    - '(?i)\bAI (agent|assistant|bot)s?\b.*\b(must|should)\b'
+
+proposal:
+  max_words: 260
+  min_words: 80
+  generic_openings:
+    - "(?i)^\\s*(dear (sir|madam|hiring manager)|hello,? i am|hi,? i am|i am writing|i have read your job)"
