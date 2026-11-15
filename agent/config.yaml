@@ -59,7 +59,7 @@ mcp:
     workspace: http://localhost:8103/mcp
   # Each agent sees only the tools it needs, filtered by name.
   allowlists:
-    scout: [search_jobs, get_job]
+    scout: [search_jobs, get_job, list_events]
     job_analyst: []
     risk_assessor: [get_client_history]
     fit_matcher: [search_evidence, list_skills]

@@ -6,8 +6,8 @@ import re
 
 from agent.handoffs import ProposalDraft
 from agent.llm import llm_json
-from agent.memory.store import style_rules
 from agent.mcp_client import MarketplaceDown
+from agent.memory.store import style_rules
 from agent.nodes._base import node, tool, usage
 from agent.nodes.analyst import job_text
 from agent.nodes.pricing import _store
@@ -60,10 +60,13 @@ def heuristic_draft(state: dict, evidence: list[dict], style: list[str], critiqu
     if any("exclamation" in r for r in style):
         text = text.replace("!", ".")
     answers = []
-    for q in job.get("screening_questions", []):
-        e = strong[0] if strong else (evidence[0] if evidence else None)
-        answers.append(f"Yes: on my {e['title'].lower()} project the work {outcome_of(e) or 'was delivered'} [{e['id']}]."
-                       if e else "I have not done this exact work before, but I can explain my approach on a call.")
+    for i, _q in enumerate(job.get("screening_questions", [])):
+        e = strong[i % len(strong)] if strong else (evidence[0] if evidence else None)
+        if e:
+            proj = (e.get("project") or "similar").replace("_", " ")
+            answers.append(f"Yes. In my {proj} project the work {outcome_of(e) or 'was delivered to the client'} [{e['id']}].")
+        else:
+            answers.append("I have not done this exact work before; I can walk you through my approach on a call.")
     return ProposalDraft(cover_letter=text, screening_answers=answers, cited_ids=[e["id"] for e in strong])
 
 

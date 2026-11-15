@@ -1,10 +1,9 @@
 """Build (or incrementally rebuild) persona indexes. Run: python -m rag.ingest.build"""
 from __future__ import annotations
 
+from agent.settings import ROOT
 from rag.index.store import INDEX_DIR, build_index, load_index, set_cached
 from rag.ingest.loaders import load_persona_dir
-
-from agent.settings import ROOT
 
 PERSONA_ROOT = ROOT / "data" / "personas"
 

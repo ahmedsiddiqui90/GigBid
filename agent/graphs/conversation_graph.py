@@ -9,7 +9,13 @@ from __future__ import annotations
 from langgraph.graph import END, START, StateGraph
 from langgraph.types import RetryPolicy
 
-from agent.nodes.client_liaison import client_liaison, conversation_compliance, load_thread, message_approval, send_reply
+from agent.nodes.client_liaison import (
+    client_liaison,
+    conversation_compliance,
+    load_thread,
+    message_approval,
+    send_reply,
+)
 from agent.state import ConversationState
 
 STOP = ("blocked", "rejected", "waiting_marketplace", "needs_attention")

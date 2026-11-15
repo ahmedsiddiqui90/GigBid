@@ -10,7 +10,8 @@ from typing import TypedDict
 from langgraph.graph import END, StateGraph
 
 from rag.index.store import PersonaIndex
-from rag.variants.pipeline import PRESETS, retrieve as _retrieve
+from rag.variants.pipeline import PRESETS
+from rag.variants.pipeline import retrieve as _retrieve
 
 SWITCHES = PRESETS["v3_rerank"]
 GRADE_MIN = -4.0  # cross-encoder logit; a requirement whose best hit is below this has no evidence

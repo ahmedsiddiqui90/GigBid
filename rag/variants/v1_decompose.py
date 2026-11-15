@@ -1,6 +1,7 @@
 """Retrieval variant v1_decompose - a preset of rag/variants/pipeline.py switches (see PRESETS)."""
 from rag.index.store import PersonaIndex
-from rag.variants.pipeline import PRESETS, retrieve as _retrieve
+from rag.variants.pipeline import PRESETS
+from rag.variants.pipeline import retrieve as _retrieve
 
 SWITCHES = PRESETS["v1_decompose"]
 

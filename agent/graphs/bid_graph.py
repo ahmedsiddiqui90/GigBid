@@ -46,7 +46,7 @@ def fan_out(state: dict):
 
 
 def after_decide(state: dict) -> str:
-    return "pricing_strategist" if state.get("decision", {}).get("action") == "bid" and not state.get("status") in (
+    return "pricing_strategist" if state.get("decision", {}).get("action") == "bid" and state.get("status") not in (
         "skipped", "watch", "waiting_marketplace", "needs_attention") else END
 
 

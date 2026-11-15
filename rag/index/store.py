@@ -9,7 +9,6 @@ from __future__ import annotations
 import json
 import re
 from functools import lru_cache
-from pathlib import Path
 
 import bm25s
 import numpy as np
@@ -93,7 +92,7 @@ class PersonaIndex:
         if not toks:
             return []
         res, scores = self.bm25.retrieve([toks], k=min(n, len(self.items)), show_progress=False)
-        return [(self.items[int(i)]["id"], float(s)) for i, s in zip(res[0], scores[0]) if s > 0]
+        return [(self.items[int(i)]["id"], float(s)) for i, s in zip(res[0], scores[0], strict=False) if s > 0]
 
     # ---------------------------------------------------------------- persistence
     def save(self) -> None:
