@@ -6,7 +6,7 @@ GigBid finds freelance jobs, flags scams and planted prompt injections, decides 
 Connects, and drafts proposals in which **every claim links to real portfolio evidence**. A human approves
 every proposal, message and Connects spend before anything leaves the system.
 
-- **Live app:** _LIVE_URL_ (reviewer login shared privately)
+- **Live app:** https://julian-mason-joe-pontiac.trycloudflare.com (reviewer login shared privately; served from the author's machine through a Cloudflare tunnel, see docs/RUNBOOK.md)
 - **Demo video (3 min):** _VIDEO_URL_
 - **Traces:** skipped scam _TRACE_SCAM_ · approved proposal _TRACE_APPROVED_ · critic loop _TRACE_CRITIC_
 - **Portfolio MCP server:** [`mcp_servers/portfolio`](mcp_servers/portfolio/README.md) (`uvx --from git+<repo> gigbid-portfolio-mcp`)

@@ -19,12 +19,15 @@ Or everything with Docker: `docker compose -f infra/docker-compose.yml --env-fil
 
 Reviewer login is seeded on API start from `REVIEWER_EMAIL` / `REVIEWER_PASSWORD` with the AI/ML persona.
 
-## Deployment (Hugging Face Docker Space, free)
+## Deployment (live link)
 
-`infra/hf_space/` holds a single-container image (Postgres + Redis + GigSim + MCP + API + worker; the API serves the
-built UI on port 7860). `scripts/deploy_hf.sh` assembles the Space repo (Dockerfile and README front matter at the
-root) and pushes it. Secrets are set in the Space settings: `GROQ_API_KEY`, `APP_SECRET_KEY`, `REVIEWER_PASSWORD`.
-Data lives inside the container; a Space restart re-seeds the reviewer account and GigSim state.
+Hugging Face Docker Spaces and Render/Vercel free tiers cannot run this stack for free, so the graded link is served
+from the author's machine through a **Cloudflare quick tunnel** (no account): `scripts/start_live.ps1` starts
+Postgres, Redis, GigSim, the MCP servers, the API (which also serves the built UI) and the worker as background
+processes, then runs `cloudflared tunnel --url http://localhost:8000` and writes the public URL to
+`logs/public_url.txt`. If the machine restarts, run the script again (the URL changes; update the submission).
+`infra/hf_space/` (single container) and `infra/docker-compose.yml` remain for any Docker host, e.g. an Oracle Cloud
+Always Free VM.
 
 ## Schedules
 
