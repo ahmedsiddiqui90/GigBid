@@ -1,0 +1,21 @@
+{
+ "generated_at": "2026-11-15 21:27:54",
+ "arms": {
+  "evidence_first": {
+   "n": 32,
+   "replied": 32,
+   "reply_rate": 1.0
+  },
+  "question_first": {
+   "n": 23,
+   "replied": 22,
+   "reply_rate": 0.957
+  }
+ },
+ "difference": 0.043,
+ "z": 1.19,
+ "p_value_z": 0.2339,
+ "p_value_fisher": 0.4182,
+ "min_detectable_difference_80pct_power": 0.102,
+ "significant_at_0.05": false
+}

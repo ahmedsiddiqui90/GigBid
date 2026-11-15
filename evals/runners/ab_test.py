@@ -34,7 +34,7 @@ def main() -> None:
     mde = (1.96 + 0.84) * math.sqrt(pp * (1 - pp) * (1 / n1 + 1 / n2))
     out = {"arms": {a: {"n": n1, "replied": s1, "reply_rate": round(p1, 3)}, b: {"n": n2, "replied": s2, "reply_rate": round(p2, 3)}},
            "difference": round(p1 - p2, 3), "z": round(z, 3), "p_value_z": round(p_z, 4), "p_value_fisher": round(p_f, 4),
-           "min_detectable_difference_80pct_power": round(mde, 3), "significant_at_0.05": p_f < 0.05}
+           "min_detectable_difference_80pct_power": round(mde, 3), "significant_at_0.05": bool(p_f < 0.05)}
     save("ab_test", out)
     print(json.dumps(out, indent=1))
 

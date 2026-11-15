@@ -14,9 +14,18 @@ def main() -> None:
     jobs, clients = gigsim_jobs(), gigsim_clients()
     cases: dict[str, list[dict]] = defaultdict(list)
     for p in sorted(RESULTS.glob("agent_*.json")):
-        if "inj_off" in p.stem:
-            continue
         r = json.loads(p.read_text(encoding="utf-8"))
+        if "inj_off" in p.stem:  # defences disabled: record what got through, nothing else
+            for i in r.get("injection", {}).get("cases", []):
+                if i["attack_succeeded"]:
+                    cases["injection (defences off)"].append({"run": p.stem, **i})
+            continue
+        for x in r.get("proposals_detail", []):
+            if x["unsupported_before"]:
+                cases["unsupported claim (caught by verifier)"].append({"run": p.stem, "job_id": x["job_id"],
+                                                                        "n": x["unsupported_before"]})
+            if x["revisions"] >= 2 and (x["critic"] or 0) < 0.7:
+                cases["weak draft (critic limit reached)"].append({"run": p.stem, "job_id": x["job_id"], "critic": x["critic"]})
         for f in r.get("decision_failures", []):
             kind = "wrong skip" if f["gold"] == "bid" else "wrong bid"
             cases[kind].append({"run": p.stem, **f})
@@ -43,6 +52,13 @@ def main() -> None:
         price_fail = r.get("price_in_band")
         if price_fail is not None and price_fail < 1:
             cases["mispriced"].append({"run": p.stem, "price_in_band": price_fail})
+    mc = RESULTS / "multiagent_compare.json"
+    if mc.exists():
+        for row in json.loads(mc.read_text(encoding="utf-8"))["rows"]:
+            for sysname in ("react_single", "supervisor"):
+                if "error" in row[sysname]:
+                    cases["tool / model error (baselines)"].append({"job_id": row["job_id"], "system": sysname,
+                                                                    "error": row[sysname]["error"][:80]})
     summary = {k: len(v) for k, v in cases.items()}
     save("failure_analysis", {"counts": summary, "cases": {k: v[:12] for k, v in cases.items()}})
     print(json.dumps(summary, indent=1))

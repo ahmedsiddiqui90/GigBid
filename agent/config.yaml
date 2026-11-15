@@ -13,7 +13,7 @@ profiles:
       critic: openai/gpt-oss-120b
       client_liaison: openai/gpt-oss-120b
       judge: openai/gpt-oss-120b
-    fallback: llama-3.1-8b-instant
+    fallback: openai/gpt-oss-20b   # llama-3.1-8b-instant is not available on this Groq account
   offline:               # deterministic heuristics; tests, CI and no-key runs
     provider: heuristic
   paid:                  # optional; not used by default

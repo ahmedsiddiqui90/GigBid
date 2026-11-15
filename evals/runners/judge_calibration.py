@@ -61,6 +61,7 @@ async def prepare() -> None:
         for i, x in enumerate(picked):
             j, u = await llm_json("judge", "judge", Judgement, lambda: Judgement(score=3, reason="heuristic"),
                                   job=job_text(jobs[x["job_id"]]), draft=x["text"])
+            await asyncio.sleep(9)  # free-tier tokens-per-minute window
             scores[i] = {"judge": j.score, "reason": j.reason, "model": u.model, "source": x["source"]}
             wr.writerow([i, x["job_id"], jobs[x["job_id"]]["title"], x["text"], ""])
     JUDGE.write_text(json.dumps(scores, indent=1), encoding="utf-8")

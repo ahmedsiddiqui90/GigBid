@@ -132,6 +132,7 @@ async def main(a) -> None:
                 rec[name] = {"decision": dec, "tokens": tok, "latency_s": round(lat, 1), **s}
             except Exception as e:  # noqa: BLE001
                 rec[name] = {"error": f"{type(e).__name__}: {str(e)[:200]}"}
+            await asyncio.sleep(a.cooldown)  # free-tier tokens-per-minute window
         r = await run_one(graph, lab, job, None)
         st = r["state"]
         dec = "bid" if (st.get("decision") or {}).get("action") == "bid" and st.get("status") != "skipped" else "skip"
