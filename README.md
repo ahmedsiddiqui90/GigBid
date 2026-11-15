@@ -45,7 +45,7 @@ All numbers come from files in [`evals/results/`](evals/results) and are regener
 | Variant | Evidence Recall@5 | nDCG@10 | Unsupported claims per proposal | Judge score | GigSim reply rate | p95 latency (s) | Cost per proposal (USD) |
 |---|---|---|---|---|---|---|---|
 | V0 naive | 0.817 | 0.868 | 0.0 | 2.6 | 1.0 | 18.129 | 0.0 |
-| Shipped: V2 hybrid (+ verification, critic, compliance) | 0.959 | 0.984 | 0.0 | n/a | 1.0 | 91.15 | 0.004484 |
+| Shipped: V2 hybrid (+ verification, critic, compliance) | 0.959 | 0.984 | 0.0 | 2.7 | 1.0 | 91.15 | 0.004484 |
 
 Retrieval rows: `rag_eval.json` (69 dev jobs with gold evidence). Proposal/reply rows: `agent_offline_v0.json` / `agent_offline_v2.json` (offline deterministic writer, 37 stratified dev jobs). Latency/cost of the shipped row: `agent_open_v2.json` (open models on Groq, 6 fit jobs). Judge: `judge_labels.csv` sources.
 

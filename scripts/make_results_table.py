@@ -47,7 +47,7 @@ def build() -> str:
                  f"| {v(jm.get('agent_offline_v0'))} | {v(a0 and a0['outcome']['reply_rate'])} "
                  f"| {v(a0 and a0['cost_latency']['per_proposal']['p95_s'])} | {v(a0 and a0['cost_latency']['per_proposal']['usd_mean'])} |")
         L.append(f"| Shipped: V2 hybrid (+ verification, critic, compliance) | {v(r2['recall@5'])} | {v(r2['ndcg@10'])} "
-                 f"| {v(a2 and a2['proposals']['unsupported_after_per_proposal'])} | {v(jm.get('agent_open_v2'))} "
+                 f"| {v(a2 and a2['proposals']['unsupported_after_per_proposal'])} | {v(jm.get('agent_offline_v2'))} "
                  f"| {v(a2 and a2['outcome']['reply_rate'])} | {v(ao and ao['cost_latency']['per_proposal']['p95_s'])} "
                  f"| {v(ao and ao['cost_latency']['per_proposal']['usd_mean'])} |")
         L += ["", "Retrieval rows: `rag_eval.json` (69 dev jobs with gold evidence). Proposal/reply rows: `agent_offline_v0.json` / "
