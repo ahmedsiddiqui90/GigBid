@@ -14,7 +14,10 @@ def to_me(u: dict) -> Me:
 
 
 def _cookie(resp: Response, token: str) -> None:
-    resp.set_cookie(COOKIE, token, httponly=True, samesite="lax", max_age=7 * 86400)
+    from agent.settings import env
+
+    prod = env().app_env == "production"  # HF Spaces embeds the app in an iframe: needs SameSite=None; Secure
+    resp.set_cookie(COOKIE, token, httponly=True, samesite="none" if prod else "lax", secure=prod, max_age=7 * 86400)
 
 
 @router.post("/signup", response_model=Me)
