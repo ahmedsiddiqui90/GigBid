@@ -57,6 +57,31 @@ def hidden() -> str:
             + (REP / "budgets.md").read_text(encoding="utf-8"))
 
 
+def judge() -> str:
+    c = j("judge_calibration")
+    if not c:
+        return "Human labels were not complete at submission time, so no kappa is reported and no judge score is used as evidence."
+    return (f"Quadratic-weighted Cohen's kappa between the judge and my labels: {c['quadratic_weighted_kappa']} on {c['n']} "
+            f"proposals (exact agreement {c['exact_agreement']}) [`judge_calibration.json`].")
+
+
+def models() -> str:
+    a, q = j("agent_open_v2"), j("agent_open_qwen")
+    if not (a and q):
+        return "_Not run._"
+    def row(n, x):
+        c = x["cost_latency"]["per_proposal"]
+        return (f"| {n} | {x['n_proposals']} | {x['proposals']['critic_mean']} | {x['proposals']['unsupported_before_per_proposal']} "
+                f"| {x['outcome']['reply_rate']} | {c['p95_s']} | {c['tokens_mean']} | {c['usd_mean']} |")
+    nl = chr(10)
+    head = ("| Config | Proposals | Critic score | Unsupported before verification | Reply rate | p95 s | Tokens | USD |"
+            + nl + "|---|---|---|---|---|---|---|---|")
+    return ("Two open configurations on dev fit jobs [`agent_open_v2.json`, `agent_open_qwen.json`]:" + nl + nl + head + nl
+            + row("routed gpt-oss-20b / gpt-oss-120b (writer, critic)", a) + nl + row("all nodes qwen/qwen3.8-27b", q)
+            + nl + nl + "The routed gpt-oss configuration ships: it is cheaper per token and both run on hardware we do not "
+            "own; on this free tier the deciding factor is the separate daily quota, so Qwen is kept as the fallback model.")
+
+
 def main() -> None:
     body = (REP / "REPORT.md").read_text(encoding="utf-8").replace("<!-- RESULTS-SECTIONS -->",
                                                                     (REP / "rd_ab.md").read_text(encoding="utf-8") + "\n\n"
@@ -64,7 +89,8 @@ def main() -> None:
     change = (ROOT / "docs" / "rd" / "change_request.md").read_text(encoding="utf-8").split("\n", 2)[2]
     body = (body.replace("<!-- MULTIAGENT -->", multiagent()).replace("<!-- CHANGE -->", change)
             .replace("<!-- AB -->", ab()).replace("<!-- FAILURES -->", (REP / "failures.md").read_text(encoding="utf-8").split("\n", 2)[2])
-            .replace("<!-- SAFETY -->", (REP / "safety.md").read_text(encoding="utf-8")).replace("<!-- HIDDEN -->", hidden()))
+            .replace("<!-- SAFETY -->", (REP / "safety.md").read_text(encoding="utf-8")).replace("<!-- HIDDEN -->", hidden())
+            .replace("<!-- JUDGE -->", judge()).replace("<!-- MODELS -->", models()))
     out_md = REP / "GigBid_RD_Report.md"
     out_md.write_text(body, encoding="utf-8")
     subprocess.run(["pandoc", str(out_md), "-o", str(REP / "GigBid_RD_Report.pdf"), "--pdf-engine=xelatex",

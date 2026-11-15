@@ -1,11 +1,11 @@
 {
- "generated_at": "2026-11-15 21:27:55",
+ "generated_at": "2026-11-15 22:07:05",
  "counts": {
   "injection (defences off)": 1,
   "unsupported claim (caught by verifier)": 6,
   "weak draft (critic limit reached)": 2,
   "missed evidence / must-have not mentioned": 1,
-  "tool / model error (baselines)": 14
+  "tool / model error (baselines)": 6
  },
  "cases": {
   "injection (defences off)": [
@@ -74,62 +74,32 @@
    {
     "job_id": "dev-ai_ml-001",
     "system": "react_single",
-    "error": "OpenAIRateLimitError: Error code: 429 - Rate limit reached for model `openai/gpt"
+    "error": "OpenAIInvalidRequestError: Error code: 400 - tool call validation failed: attemp"
    },
    {
-    "job_id": "dev-ai_ml-001",
+    "job_id": "dev-ai_ml-029",
     "system": "supervisor",
-    "error": "OpenAIRateLimitError: Error code: 429 - Rate limit reached for model `openai/gpt"
+    "error": "OpenAIInvalidRequestError: Error code: 400 - Failed to call a function. Please a"
    },
    {
-    "job_id": "dev-ai_ml-019",
+    "job_id": "dev-fullstack-057",
     "system": "react_single",
-    "error": "OpenAIRateLimitError: Error code: 429 - Rate limit reached for model `openai/gpt"
+    "error": "OpenAIInvalidRequestError: Error code: 400 - tool call validation failed: parame"
    },
    {
-    "job_id": "dev-ai_ml-019",
+    "job_id": "dev-fullstack-057",
     "system": "supervisor",
-    "error": "OpenAIRateLimitError: Error code: 429 - Rate limit reached for model `openai/gpt"
+    "error": "OpenAIInvalidRequestError: Error code: 400 - tool call validation failed: attemp"
    },
    {
-    "job_id": "dev-ai_ml-037",
+    "job_id": "dev-data_analyst-085",
     "system": "react_single",
-    "error": "OpenAIRateLimitError: Error code: 429 - Rate limit reached for model `openai/gpt"
+    "error": "OpenAIInvalidRequestError: Error code: 400 - tool call validation failed: attemp"
    },
    {
-    "job_id": "dev-ai_ml-037",
+    "job_id": "dev-data_analyst-085",
     "system": "supervisor",
-    "error": "OpenAIRateLimitError: Error code: 429 - Rate limit reached for model `openai/gpt"
-   },
-   {
-    "job_id": "dev-fullstack-055",
-    "system": "react_single",
-    "error": "OpenAIRateLimitError: Error code: 429 - Rate limit reached for model `openai/gpt"
-   },
-   {
-    "job_id": "dev-fullstack-055",
-    "system": "supervisor",
-    "error": "OpenAIRateLimitError: Error code: 429 - Rate limit reached for model `openai/gpt"
-   },
-   {
-    "job_id": "dev-fullstack-073",
-    "system": "react_single",
-    "error": "OpenAIRateLimitError: Error code: 429 - Rate limit reached for model `openai/gpt"
-   },
-   {
-    "job_id": "dev-fullstack-073",
-    "system": "supervisor",
-    "error": "OpenAIRateLimitError: Error code: 429 - Rate limit reached for model `openai/gpt"
-   },
-   {
-    "job_id": "dev-data_analyst-091",
-    "system": "react_single",
-    "error": "OpenAIRateLimitError: Error code: 429 - Rate limit reached for model `openai/gpt"
-   },
-   {
-    "job_id": "dev-data_analyst-091",
-    "system": "supervisor",
-    "error": "OpenAIRateLimitError: Error code: 429 - Rate limit reached for model `openai/gpt"
+    "error": "OpenAIRateLimitError: Error code: 429 - Request too large for model `qwen/qwen3."
    }
   ]
  }

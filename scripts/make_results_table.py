@@ -25,7 +25,11 @@ def judge_means() -> dict:
     out: dict[str, list[int]] = {}
     for s in json.loads(p.read_text(encoding="utf-8")).values():
         out.setdefault(s["source"], []).append(s["judge"])
-    return {k: round(sum(x) / len(x), 2) for k, x in out.items()}
+    means = {k: round(sum(x) / len(x), 2) for k, x in out.items()}
+    models = sorted({s["model"] for s in json.loads(p.read_text(encoding="utf-8")).values()})
+    (R / "judge_summary.json").write_text(json.dumps({"mean_judge_score_by_run": means, "judge_models": models}, indent=1),
+                                          encoding="utf-8")
+    return means
 
 
 def build() -> str:

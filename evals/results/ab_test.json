@@ -1,21 +1,21 @@
 {
- "generated_at": "2026-11-15 21:27:54",
+ "generated_at": "2026-11-15 22:07:04",
  "arms": {
   "evidence_first": {
-   "n": 32,
-   "replied": 32,
+   "n": 30,
+   "replied": 30,
    "reply_rate": 1.0
   },
   "question_first": {
-   "n": 23,
-   "replied": 22,
-   "reply_rate": 0.957
+   "n": 19,
+   "replied": 18,
+   "reply_rate": 0.947
   }
  },
- "difference": 0.043,
- "z": 1.19,
- "p_value_z": 0.2339,
- "p_value_fisher": 0.4182,
- "min_detectable_difference_80pct_power": 0.102,
+ "difference": 0.053,
+ "z": 1.27,
+ "p_value_z": 0.2042,
+ "p_value_fisher": 0.3878,
+ "min_detectable_difference_80pct_power": 0.116,
  "significant_at_0.05": false
 }

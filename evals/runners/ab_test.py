@@ -14,6 +14,8 @@ def main() -> None:
     arms: dict[str, list[int]] = {}
     seen = set()
     for p in sorted(RESULTS.glob("agent_*.json")):
+        if p.stem.startswith("agent_test"):
+            continue  # held-out split is reported separately
         if "inj_off" in p.stem:
             continue  # defences disabled: not a production proposal
         for x in json.loads(p.read_text(encoding="utf-8")).get("proposals_detail", []):

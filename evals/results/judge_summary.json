@@ -1,0 +1,9 @@
+{
+ "mean_judge_score_by_run": {
+  "agent_offline_v0": 3.0,
+  "agent_offline_v2": 3.0
+ },
+ "judge_models": [
+  "heuristic (after error: OpenAIModelNotFoundError)"
+ ]
+}

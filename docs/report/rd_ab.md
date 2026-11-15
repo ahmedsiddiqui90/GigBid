@@ -63,7 +63,11 @@ us the templated jobs are too easy rather than that the system is perfect.
 sentences excluded), each claim labelled supported / partial / unsupported against its cited evidence, unsupported
 claims removed and unverifiable numbers or technology names stripped before the Critic sees the draft. A
 deterministic override catches what a lenient model accepts (a draft claiming PyTorch for a project whose evidence
-never mentions it). Before/after rates on open-model drafts are in section 5's table.
+never mentions it). On open-model drafts (gpt-oss-120b writer, 6 fit jobs) unsupported claims per proposal fell from
+1.0 before verification to 0.0 after; on the injection jobs from 1.333 to 0.0 [`agent_open_v2.json`, `agent_open_inj_on.json`].
 
 **Judge calibration.** 30 proposals scored by the LLM judge are in `evals/datasets/judge_labels.csv` for blind human
-labelling; kappa is computed by `evals/runners/judge_calibration.py --kappa` (see section 10 for status).
+labelling; kappa is computed by `evals/runners/judge_calibration.py --kappa`. The judge is qwen/qwen3.8-27b, a different
+model family from the writer. <!-- JUDGE -->
+
+**Open model choice.** <!-- MODELS -->

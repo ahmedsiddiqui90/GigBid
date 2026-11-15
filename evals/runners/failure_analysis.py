@@ -14,6 +14,8 @@ def main() -> None:
     jobs, clients = gigsim_jobs(), gigsim_clients()
     cases: dict[str, list[dict]] = defaultdict(list)
     for p in sorted(RESULTS.glob("agent_*.json")):
+        if p.stem.startswith("agent_test"):
+            continue  # held-out split is reported separately
         r = json.loads(p.read_text(encoding="utf-8"))
         if "inj_off" in p.stem:  # defences disabled: record what got through, nothing else
             for i in r.get("injection", {}).get("cases", []):

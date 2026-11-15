@@ -40,6 +40,68 @@ All numbers come from files in [`evals/results/`](evals/results) and are regener
 (`python -m scripts.make_results_table` rewrites this section; CI checks every number traces to a results file).
 
 <!-- results:start -->
+### Headline (dev set)
+
+| Variant | Evidence Recall@5 | nDCG@10 | Unsupported claims per proposal | Judge score | GigSim reply rate | p95 latency (s) | Cost per proposal (USD) |
+|---|---|---|---|---|---|---|---|
+| V0 naive | 0.817 | 0.868 | 0.0 | 3.0 | 1.0 | 18.129 | 0.0 |
+| Shipped: V2 hybrid (+ verification, critic, compliance) | 0.959 | 0.984 | 0.0 | n/a | 1.0 | 91.15 | 0.004484 |
+
+Retrieval rows: `rag_eval.json` (69 dev jobs with gold evidence). Proposal/reply rows: `agent_offline_v0.json` / `agent_offline_v2.json` (offline deterministic writer, 37 stratified dev jobs). Latency/cost of the shipped row: `agent_open_v2.json` (open models on Groq, 6 fit jobs). Judge: `judge_labels.csv` sources.
+
+### All retrieval variants (`rag_eval.json`)
+
+| Variant | Recall@5 | MRR | nDCG@10 | Recall@5 on 4+ requirements | Recall@5 on vague posts | ms/query |
+|---|---|---|---|---|---|---|
+| v0_naive | 0.817 | 1.0 | 0.868 | 0.798 | 0.639 | 36.2 |
+| v1_decompose | 0.955 | 1.0 | 0.983 | 0.953 | 0.958 | 29.9 |
+| v2_hybrid | 0.959 | 1.0 | 0.984 | 0.957 | 0.951 | 29.8 |
+| v3_rerank | 0.76 | 0.836 | 0.815 | 0.739 | 0.736 | 3544.7 |
+| v4_outcome | 0.752 | 0.857 | 0.808 | 0.731 | 0.736 | 3613.0 |
+| v8_corrective | 0.773 | 0.767 | 0.763 | 0.762 | 0.847 | 3958.0 |
+| v3_rerank_top30 | 0.739 | 0.836 | 0.799 | 0.724 | 0.736 | 4886.7 |
+
+Hypothesis: Requirement decomposition + hybrid BM25/dense retrieval (V2) raises evidence Recall@5 by at least 10 points over V0 on jobs with 4+ requirements. Delta = 0.159 (supported: True).
+
+Ablation of V4 (one component removed at a time):
+
+| Removed | Recall@5 | MRR | nDCG@10 |
+|---|---|---|---|
+| decompose | 0.921 | 1.0 | 0.966 |
+| hybrid | 0.766 | 0.85 | 0.797 |
+| rerank | 0.376 | 0.408 | 0.431 |
+| outcome | 0.76 | 0.836 | 0.815 |
+
+### Decisions, safety, cost (`agent_offline_v2.json`, `agent_open_*.json`)
+
+| Metric | Value |
+|---|---|
+| Bid/skip F1 | 1.0 |
+| Bid/skip accuracy | 1.0 |
+| Scam precision / recall | 1.0 / 1.0 |
+| Price inside fair band | 1.0 |
+| Unsupported claims per proposal before / after verification (open models) | 1.0 / 0.0 |
+| Injection attack success rate, defences off / on (open models) | 0.333 / 0.0 |
+| Per job analysed: p50 / p95 latency (s), USD | 8.089 / 8.952, 0.000229 |
+| Per proposal: p50 / p95 latency (s), USD | 57.174 / 91.15, 0.004484 |
+
+### Multi-agent comparison (`multiagent_compare.json`, 4 dev jobs)
+
+| System | Bid/skip accuracy | Unsupported per proposal | Policy violations in text | Reply rate | Tokens/job | s/job |
+|---|---|---|---|---|---|---|
+| react_single | 1.0 | 0.0 | 0 | 0.0 | 3051 | 3.2 |
+| supervisor | 1.0 | 2.0 | 0 | 1.0 | 13822 | 177.3 |
+| our_graph | 1.0 | 0.0 | 0 | 1.0 | 8666 | 96.9 |
+
+### Tool granularity (`tool_granularity.json`, 40 tasks, openai/gpt-oss-20b)
+
+| Tool set | Tools | Selection accuracy | Argument accuracy | Tokens/task |
+|---|---|---|---|---|
+| fine | 17 | 0.95 | 0.925 | 570.5 |
+| coarse | 2 | 0.925 | 0.9 | 388.1 |
+| ours | 8 | 0.975 | 0.975 | 473.5 |
+
+Judge calibration: pending human labels (`evals/datasets/judge_labels.csv`).
 <!-- results:end -->
 
 **What ships:** V2 (requirement decomposition + BM25/dense fusion, no reranker). The cross-encoder looked like the
