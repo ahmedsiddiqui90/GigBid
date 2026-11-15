@@ -20,7 +20,7 @@ export default function Settings() {
   const forget = async (ns: string, key: string) => { await api.DELETE("/api/memory/{ns}/{key}", { params: { path: { ns, key } } }); m.reload(); };
   return (
     <div>
-      <h1>Settings</h1>
+<div className="page-head"><div><h1>Settings</h1><p className="page-sub">Autonomy, budgets, saved searches and connected accounts, plus everything GigBid has learned from you.</p></div></div>
       <div className="grid2">
         <section className="card"><h2>Autonomy and budgets</h2>
           <label><span>Autonomy</span>
@@ -48,7 +48,7 @@ export default function Settings() {
             <button onClick={async () => { await api.POST("/api/saved-searches", { body: { query: q, every_minutes: 30 } }); setQ(""); s.reload(); }}>Add</button></div>
         </section>
       </div>
-      <section className="card" data-testid="memory-viewer"><h2>What GigBid has learned</h2>
+      <section className="card" data-testid="memory-viewer" data-tour="memory"><h2>What GigBid has learned</h2>
         <p className="muted">Style rules are promoted only after the same edit pattern appears in at least two of your edits. Outcome memory comes only from confirmed marketplace events.</p>
         <h3>Style rules</h3>
         {(m.data?.style ?? []).length === 0 && <p className="muted">None yet.</p>}

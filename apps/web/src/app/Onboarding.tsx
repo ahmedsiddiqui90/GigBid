@@ -44,6 +44,7 @@ export default function Onboarding() {
   return (
     <div style={{ maxWidth: 560, margin: "40px auto" }} className="pad">
       <h1>Set up GigBid</h1>
+      <p className="page-sub" style={{ marginBottom: 20 }}>Pick the profile GigBid writes for, your rates and what to search for. You can change all of this later in Settings.</p>
       <form className="card" onSubmit={submit} aria-label="Onboarding">
         <label><span>Profile</span>
           <select value={persona} onChange={(e) => {

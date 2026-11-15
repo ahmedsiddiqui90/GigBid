@@ -29,7 +29,7 @@ function ThreadCard({ t, reload }: { t: Thread; reload: () => void }) {
     <section className="card">
       <h2>{t.job_id}</h2>
       {t.messages.map((m, i) => (
-        <p key={i}><b>{m.from === "client" ? "Client" : "You"}:</b> {m.text}</p>
+        <div key={i} className={`msg ${m.from === "client" ? "client" : "me"}`}><b className="small">{m.from === "client" ? "Client" : "You"}</b><div>{m.text}</div></div>
       ))}
       {pa ? (
         <div>
@@ -55,10 +55,14 @@ export default function Messages() {
   if (!th.data) return <p role="status">Loading…</p>;
   return (
     <div>
-      <h1>Messages</h1>
+<div className="page-head"><div><h1>Messages</h1><p className="page-sub">Client replies with a suggested answer. GigBid drafts, you approve before anything is sent.</p></div></div>
       {th.data.marketplace_unavailable && <div className="banner" role="alert">Marketplace unavailable - messages will load when it is back.</div>}
-      {th.data.threads.length === 0 && <p className="empty">No client conversations yet. They appear when a client replies to a proposal.</p>}
-      {th.data.threads.map((t) => <ThreadCard key={t.thread_id + (t.pending_approval?.id ?? "")} t={t} reload={th.reload} />)}
+      {th.data.threads.length === 0 && <div className="card empty" data-tour="messages"><b>No client conversations yet</b><span>They appear here when a client replies to one of your proposals.</span></div>}
+      {th.data.threads.length > 0 && (
+        <div data-tour="messages">
+          {th.data.threads.map((t) => <ThreadCard key={t.thread_id + (t.pending_approval?.id ?? "")} t={t} reload={th.reload} />)}
+        </div>
+      )}
     </div>
   );
 }

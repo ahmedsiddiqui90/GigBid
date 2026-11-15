@@ -20,7 +20,7 @@ export default function JobDetail() {
   const spec = a.job_spec ?? {};
   return (
     <div>
-      <h1>{row.title}</h1>
+      <div className="page-head"><div><h1>{row.title}</h1><p className="page-sub">Why GigBid recommends what it does: the job broken into requirements, the risk check, the evidence it found and the price.</p></div></div>
       <div className="row" style={{ marginBottom: 12 }}>
         <span className="chip">{row.status.replace(/_/g, " ")}</span>
         <RiskBadges risk={row.risk} flags={row.risk_flags} />
@@ -41,7 +41,7 @@ export default function JobDetail() {
           <p>Score <b>{a.risk?.score ?? "-"}</b></p>
           <p className="muted">{a.risk?.explanation}</p>
           {a.risk?.injection_text?.length > 0 && (
-            <div className="banner">Planted instruction detected and ignored: <em>{a.risk.injection_text.join(" ")}</em></div>
+            <div className="banner"><div><b>Planted instruction detected and ignored.</b> <em>{a.risk.injection_text.join(" ")}</em></div></div>
           )}
         </section>
       </div>

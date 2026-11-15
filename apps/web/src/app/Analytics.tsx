@@ -16,7 +16,7 @@ export default function Analytics() {
   const d = a.data;
   return (
     <div>
-      <h1>Analytics</h1>
+<div className="page-head"><div><h1>Analytics</h1><p className="page-sub">Reply and hire rates by category, what you spent in Connects, and what each proposal costs to produce.</p></div></div>
       <div className="grid2">
         <section className="card"><h2>Spend and speed</h2>
           <p>Connects spent: <b>{d.connects_spent}</b></p>

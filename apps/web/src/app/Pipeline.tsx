@@ -10,9 +10,8 @@ export default function Pipeline() {
   if (!b.data) return <p role="status">Loading…</p>;
   return (
     <div>
-      <h1>Pipeline</h1>
-      <p className="muted">Cards move automatically from marketplace events (viewed, replied, interview, hired, lost).</p>
-      <div className="kanban">
+<div className="page-head"><div><h1>Pipeline</h1><p className="page-sub">Submitted proposals move across the board automatically as the marketplace reports views, replies, interviews and hires.</p></div></div>
+      <div className="kanban" data-tour="pipeline">
         {b.data.stages.map((s) => (
           <div key={s} className="col" aria-label={`${s} column`}>
             <h3>{s} ({b.data!.columns[s]?.length ?? 0})</h3>

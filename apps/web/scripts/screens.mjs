@@ -21,7 +21,7 @@ await page.getByText("Requirement to evidence matrix").waitFor();
 await page.waitForTimeout(500);
 await page.screenshot({ path: `${out}/02-job-detail.png`, fullPage: false });
 await page.goto(`${base}/studio/${jobId}`);
-await page.getByText("Proposal studio").waitFor();
+await page.getByText("What will be sent").waitFor();
 await page.locator(".cite").first().hover();
 await page.waitForTimeout(400);
 await page.screenshot({ path: `${out}/03-studio-evidence.png` });
@@ -29,7 +29,7 @@ await page.locator("[data-testid=dry-run]").scrollIntoViewIfNeeded();
 await page.screenshot({ path: `${out}/04-studio-dry-run.png` });
 const skipped = page.getByRole("button", { name: "skip" });
 await page.goto(`${base}/`);
-await page.getByRole("button", { name: "skip", exact: true }).click();
+await page.getByRole("button", { name: /^Skipped/ }).click();
 await page.waitForTimeout(500);
 await page.screenshot({ path: `${out}/05-skipped-scams.png` });
 for (const p of ["pipeline", "analytics", "settings"]) {

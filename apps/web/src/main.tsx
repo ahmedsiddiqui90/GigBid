@@ -1,6 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import "@fontsource-variable/inter";
+import "@fontsource-variable/fraunces";
 import "./styles.css";
 import { Layout } from "./components/Layout";
 import { AuthProvider, useAuth } from "./lib/auth";

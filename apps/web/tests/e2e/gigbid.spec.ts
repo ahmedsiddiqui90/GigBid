@@ -75,6 +75,7 @@ test("rejecting requires a reason and sends it", async ({ page }) => {
 test("editing a draft sends the edited text for compliance re-check", async ({ page }) => {
   const resolved = await mockApi(page);
   await page.goto(`/studio/${job.job_id}`);
+  await page.getByRole("button", { name: "Edit", exact: true }).click();
   const editor = page.getByTestId("draft-editor");
   await editor.fill("Your team needs reproducible releases, and I have done this before [cs-ai_ml-mlops].");
   await expect(page.getByText("You edited the draft")).toBeVisible();
