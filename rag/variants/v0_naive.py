@@ -1,0 +1,9 @@
+"""Retrieval variant v0_naive - a preset of rag/variants/pipeline.py switches (see PRESETS)."""
+from rag.index.store import PersonaIndex
+from rag.variants.pipeline import PRESETS, retrieve as _retrieve
+
+SWITCHES = PRESETS["v0_naive"]
+
+
+def retrieve(idx: PersonaIndex, job: dict, k: int = 5, candidates: int = 30) -> list[dict]:
+    return _retrieve(idx, job, k, SWITCHES, candidates)
