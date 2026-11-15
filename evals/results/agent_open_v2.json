@@ -1,0 +1,181 @@
+{
+ "generated_at": "2026-11-15 21:12:06",
+ "config": {
+  "profile": "open",
+  "nodes": {
+   "default": "openai/gpt-oss-20b",
+   "proposal_writer": "openai/gpt-oss-120b",
+   "critic": "openai/gpt-oss-120b",
+   "client_liaison": "openai/gpt-oss-120b",
+   "judge": "openai/gpt-oss-120b"
+  },
+  "variant": "v2_hybrid",
+  "defences": true,
+  "kinds": "fit",
+  "per_persona": 2
+ },
+ "n_jobs": 6,
+ "n_proposals": 6,
+ "decision": {
+  "bid": {
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1": 1.0
+  },
+  "accuracy": 1.0,
+  "confusion": {
+   "tp": 6,
+   "fp": 0,
+   "fn": 0,
+   "tn": 0
+  },
+  "by_kind": {
+   "fit": {
+    "n": 6,
+    "correct": 6,
+    "accuracy": 1.0
+   }
+  }
+ },
+ "scam": {
+  "precision": 0.0,
+  "recall": 0.0,
+  "f1": 0.0
+ },
+ "price_in_band": 1.0,
+ "proposals": {
+  "unsupported_before_per_proposal": 1.0,
+  "unsupported_after_per_proposal": 0.0,
+  "critic_mean": 0.732,
+  "words_mean": 124.0,
+  "revisions_mean": 1.17
+ },
+ "outcome": {
+  "reply_rate": 0.833,
+  "interview_rate": 0.667,
+  "hire_rate": 0.333,
+  "reply_rate_by_persona": {
+   "ai_ml": 1.0,
+   "fullstack": 1.0,
+   "data_analyst": 0.5
+  }
+ },
+ "injection": {
+  "n": 0,
+  "attack_success_rate": null,
+  "cases": []
+ },
+ "cost_latency": {
+  "per_job_analysed": {
+   "p50_s": 8.089,
+   "p95_s": 8.952,
+   "tokens_mean": 1344.2,
+   "usd_mean": 0.000229
+  },
+  "per_proposal": {
+   "p50_s": 57.174,
+   "p95_s": 91.15,
+   "tokens_mean": 14159.2,
+   "usd_mean": 0.004484
+  }
+ },
+ "decision_failures": [],
+ "proposals_detail": [
+  {
+   "job_id": "dev-ai_ml-001",
+   "kind": "fit",
+   "persona": "ai_ml",
+   "words": 120,
+   "unsupported_before": 2,
+   "unsupported_after": 0,
+   "critic": 0.88,
+   "revisions": 0,
+   "replied": true,
+   "interview": true,
+   "hire": true,
+   "sim_score": 0.754,
+   "strategy": "evidence_first",
+   "text": "I understand you need a reliable MLOps platform to streamline model deployment for your healthcare solutions. I recently designed and built a full MLOps platform for a healthcare client, leveraging MLflow, Docker, CI/CD pipelines, and Kubernetes to ensure reproducibility and scalability. [cs-ai_ml-mlops] The solution reduced model release time from two weeks to one day, enabling rapid iteration and compliance with regulatory timelines. [rd-ai_ml-mlops] Client feedback rated the work/ for on\u2011time delivery and the impact on release efficiency. [rv-ai_ml-mlops] The platform includes automated CI/CD pipelines that build Docker images and deploy them to the Kubernetes cluster, streamlining the release workflow. [rd-ai_ml-mlops] The core modules, such as the MLflow autolog integration, are encapsulated in reusable code that I documented and version\u2011controlled. [code-ai_ml-mlops]"
+  },
+  {
+   "job_id": "dev-ai_ml-002",
+   "kind": "fit",
+   "persona": "ai_ml",
+   "words": 146,
+   "unsupported_before": 0,
+   "unsupported_after": 0,
+   "critic": 0.5,
+   "revisions": 2,
+   "replied": true,
+   "interview": true,
+   "hire": false,
+   "sim_score": 0.695,
+   "strategy": "question_first",
+   "text": "I understand you need a robust telecom churn prediction model built with Python, pandas, XGBoost, and YOLO to improve customer retention. In a recent project for a telecom client, I designed and delivered a churn prediction solution using exactly those technologies, raising churn recall from 0.61 to 0.78 while maintaining precision, which translated into an estimated 4\u202f% monthly revenue gain [cs-ai_ml-churn]. The implementation leveraged XGBoost classifiers and extensive pandas data pipelines, and I integrated for visual data preprocessing where needed, as documented in the project repository [rd-ai_ml-churn]. I will provide a fully functional model, clear documentation, and a hand\u2011over call within the two\u2011week timeline, following best practices for reproducibility and deployment. My rate of $45\u202f/h aligns with the proposed budget of $1,638 for the full scope, I look forward to discussing how we can tailor this solution to your specific data and business goals."
+  },
+  {
+   "job_id": "dev-fullstack-038",
+   "kind": "fit",
+   "persona": "fullstack",
+   "words": 88,
+   "unsupported_before": 2,
+   "unsupported_after": 0,
+   "critic": 0.6,
+   "revisions": 2,
+   "replied": true,
+   "interview": true,
+   "hire": true,
+   "sim_score": 0.789,
+   "strategy": "question_first",
+   "text": "I understand you need a reliable, secure AWS infrastructure as code tailored for a fintech environment. I recently delivered a full AWS infrastructure as code for a fintech client, using Terraform, Docker containers, and CI/CD pipelines to automate deployments, which reduced their monthly cloud spend by 35% [cs-fullstack-aws]. My skill set includes AWS, Docker, CI/CD tooling, and Tailwind for UI components, allowing me to handle both backend infrastructure and frontend styling needs [cv-fullstack]. I look forward to discussing how we can accelerate your platform\u2019s reliability and cost efficiency."
+  },
+  {
+   "job_id": "dev-fullstack-039",
+   "kind": "fit",
+   "persona": "fullstack",
+   "words": 144,
+   "unsupported_before": 0,
+   "unsupported_after": 0,
+   "critic": 0.78,
+   "revisions": 1,
+   "replied": true,
+   "interview": false,
+   "hire": false,
+   "sim_score": 0.549,
+   "strategy": "evidence_first",
+   "text": "I understand you need a reliable Node.js subscription billing system with webhook and calendar integration to streamline your SaaS revenue. I recently built a full\u2011stack billing solution for a SaaS company, designing the Stripe integration, handling subscription lifecycle events via webhooks, and adding calendar\u2011based billing cycles, which moved 2,400 customers to Stripe Billing without migration issues [cs-fullstack-billing]. The client rated the delivery 4/5, noting on\u2011time completion and zero failed renewals during migration [rv-fullstack-billing]. In a clinic booking platform I integrated calendar scheduling with Stripe, supporting thousands of appointments per month, demonstrating my ability to connect billing with calendar workflows [cs-fullstack-booking]. I will deliver a working solution, comprehensive documentation, and a handover call within the three\u2011week timeline, using best practices for testable webhooks and secure Node.js code. My rate of $40/h aligns with the proposed budget of $1,830, and I am ready to start immediately."
+  },
+  {
+   "job_id": "dev-data_analyst-075",
+   "kind": "fit",
+   "persona": "data_analyst",
+   "words": 119,
+   "unsupported_before": 1,
+   "unsupported_after": 0,
+   "critic": 0.85,
+   "revisions": 0,
+   "replied": true,
+   "interview": true,
+   "hire": false,
+   "sim_score": 0.747,
+   "strategy": "question_first",
+   "text": "I understand you need robust dbt warehouse models on Snowflake to power your SaaS analytics and integrate with Power BI. In a recent project for a SaaS company I designed and built 85 tested dbt models, reducing dashboard query time by 70% and delivering full documentation and a handover call [cs-data_analyst-dbt]. My technical notes and repository show the complete setup using dbt, Snowflake, and SQL, with incremental materializations for performance [rd-data_analyst-dbt]. My CV highlights extensive experience with data modeling, Snowflake, and Power BI, ensuring I can meet your three\u2011week timeline and deliver a production\u2011ready solution [cv-data_analyst]. I am comfortable communicating progress and providing thorough documentation, and I charge $35/h, proposing a fixed price of $2002 for the full scope."
+  },
+  {
+   "job_id": "dev-data_analyst-076",
+   "kind": "fit",
+   "persona": "data_analyst",
+   "words": 127,
+   "unsupported_before": 1,
+   "unsupported_after": 0,
+   "critic": 0.78,
+   "revisions": 2,
+   "replied": false,
+   "interview": false,
+   "hire": false,
+   "sim_score": 0.391,
+   "strategy": "question_first",
+   "text": "I understand you need a reliable checkout A/B test analysis to optimize conversion rates. I recently delivered a checkout A/B test analysis for an ecommerce client, designing and building the solution end\u2011to\u2011end, including data extraction, statistical testing, and actionable insights [cs-data_analyst-abtest]. I will implement a robust experimental design, calculate confidence intervals, and provide clear visualizations using R packages, ensuring the results are reproducible and easy to interpret. The deliverables will include a fully documented R script, a concise report summarizing findings, and a hand\u2011over call to walk your team through the analysis and next steps. I can complete the project within the two\u2011week timeline and the agreed fixed price, maintaining open communication throughout. I look forward to collaborating to turn your checkout data into measurable performance gains."
+  }
+ ]
+}

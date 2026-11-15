@@ -12,6 +12,19 @@ RESULTS = ROOT / "evals" / "results"
 RESULTS.mkdir(parents=True, exist_ok=True)
 
 
+def test_labels() -> list[dict]:
+    """Held-out split: used once, for the final test run only (never for tuning)."""
+    return [json.loads(x) for x in (ROOT / "data" / "hidden" / "test.jsonl").read_text().splitlines() if x.strip()]
+
+
+def test_jobs() -> dict[str, dict]:
+    return {j["job_id"]: j for j in json.loads((ROOT / "data" / "hidden" / "jobs.json").read_text(encoding="utf-8"))}
+
+
+def test_clients() -> dict[str, dict]:
+    return {c["client_id"]: c for c in json.loads((ROOT / "data" / "hidden" / "clients.json").read_text(encoding="utf-8"))}
+
+
 def dev_labels() -> list[dict]:
     return [json.loads(x) for x in (ROOT / "evals" / "datasets" / "dev.jsonl").read_text().splitlines() if x.strip()]
 

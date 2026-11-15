@@ -25,7 +25,7 @@ import sys
 import time
 from collections import defaultdict
 
-from evals.runners.common import dev_labels, f1, gigsim_clients, gigsim_jobs, pct, profile, public_job, save
+from evals.runners.common import dev_labels, f1, gigsim_jobs, pct, profile, public_job, save
 
 
 async def run_one(graph, lab: dict, job: dict, variant: str | None) -> dict:
@@ -46,9 +46,10 @@ async def run_one(graph, lab: dict, job: dict, variant: str | None) -> dict:
 
 
 def score(results: list[tuple[dict, dict, dict]]) -> dict:
+    from evals.runners import common
     from gigsim.app import client_decision
 
-    clients = gigsim_clients()
+    clients = common.gigsim_clients()
     tp = fp = fn = tn = 0
     stp = sfp = sfn = 0
     in_band = n_band = 0
@@ -148,6 +149,14 @@ async def main(a) -> None:
         config().profiles["open"]["nodes"] = {"default": config().profiles["open"]["nodes"]["default"]}
     graph = build_bid_graph(InMemorySaver(), InMemoryStore())
     labels = dev_labels()
+    jobs = gigsim_jobs()
+    if a.split == "test":
+        from evals.runners import common
+        from evals.runners.common import test_clients, test_jobs, test_labels
+
+        labels, jobs = test_labels(), test_jobs()
+        held = test_clients()
+        common.gigsim_clients = lambda: held  # score with the held-out clients' hidden preferences
     if a.kinds:
         labels = [x for x in labels if x["kind"] in a.kinds.split(",")]
     if a.stride:
@@ -160,7 +169,6 @@ async def main(a) -> None:
                 seen[x["persona"]] += 1
                 keep.append(x)
         labels = keep
-    jobs = gigsim_jobs()
     out = []
     for i, lab in enumerate(labels):
         job = public_job(jobs[lab["job_id"]])
@@ -171,7 +179,7 @@ async def main(a) -> None:
               f"status={st.get('status')} {r['latency_s']:.1f}s", flush=True)
     res = score(out)
     meta = {"profile": config().profile, "nodes": config().profiles.get(config().profile, {}).get("nodes"), "variant": a.variant or config().retrieval["variant"],
-            "defences": os.environ.get("GIGBID_DISABLE_DEFENCES") != "1", "kinds": a.kinds, "per_persona": a.per_persona}
+            "split": a.split, "defences": os.environ.get("GIGBID_DISABLE_DEFENCES") != "1", "kinds": a.kinds, "per_persona": a.per_persona}
     p = save(a.name, {"config": meta, **res})
     print(p, {k: res[k] for k in ("decision", "scam", "price_in_band", "proposals", "outcome")}, res["injection"]["attack_success_rate"])
 
@@ -183,6 +191,7 @@ if __name__ == "__main__":
     ap.add_argument("--variant")
     ap.add_argument("--kinds")
     ap.add_argument("--per-persona", type=int, default=0)
+    ap.add_argument("--split", default="dev", choices=["dev", "test"])
     ap.add_argument("--all-small", action="store_true", help="all nodes on the small open model")
     ap.add_argument("--stride", type=int, default=0, help="take every Nth dev job (keeps the mix of job kinds)")
     args = ap.parse_args()
