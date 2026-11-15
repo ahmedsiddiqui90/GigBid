@@ -22,3 +22,7 @@ I reviewed, ran and debugged the generated code; I am accountable for every line
    `scripts/serve_api.py`.
 6. **Playwright route mock** `**/api/**` also intercepted Vite's `/src/lib/api/*.ts` modules, so every test timed out;
    fixed by matching only paths that start with `/api/`.
+7. **A model-comparison run silently measured heuristics.** The first "all nodes gpt-oss-20b" run hit the free tier's
+   daily cap and every call fell back to the deterministic heuristic (174 tokens per proposal gave it away). The
+   configured fallback model did not exist on the account either. The result file was deleted, the fallback fixed
+   (Qwen, separate quota) and the comparison re-run on qwen/qwen3.8-27b.

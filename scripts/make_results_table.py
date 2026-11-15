@@ -30,7 +30,7 @@ def judge_means() -> dict:
 
 def build() -> str:
     rag, a0, a2, ao = load("rag_eval"), load("agent_offline_v0"), load("agent_offline_v2"), load("agent_open_v2")
-    small, inj_on, inj_off = load("agent_open_small_v2"), load("agent_open_inj_on"), load("agent_open_inj_off")
+    small, inj_on, inj_off = load("agent_open_qwen"), load("agent_open_inj_on"), load("agent_open_inj_off")
     mac, tg, jc = load("multiagent_compare"), load("tool_granularity"), load("judge_calibration")
     jm = judge_means()
     L = []
@@ -72,9 +72,9 @@ def build() -> str:
             L += [f"| Per job analysed: p50 / p95 latency (s), USD | {c['per_job_analysed']['p50_s']} / {c['per_job_analysed']['p95_s']}, {c['per_job_analysed']['usd_mean']} |",
                   f"| Per proposal: p50 / p95 latency (s), USD | {c['per_proposal']['p50_s']} / {c['per_proposal']['p95_s']}, {c['per_proposal']['usd_mean']} |"]
     if ao and small:
-        L += ["", "### Open model configurations (6 fit jobs, Groq)", "",
+        L += ["", "### Open model configurations (fit jobs, Groq; routed run 6 jobs, Qwen run 3 jobs)", "",
               "| Config | Critic score | Unsupported after | Reply rate | p95 s/proposal | Tokens/proposal | USD/proposal |", "|---|---|---|---|---|---|---|"]
-        for name, x in (("routed: gpt-oss-20b + gpt-oss-120b for writer/critic", ao), ("all nodes gpt-oss-20b", small)):
+        for name, x in (("routed: gpt-oss-20b + gpt-oss-120b for writer/critic", ao), ("all nodes qwen/qwen3.8-27b", small)):
             c = x["cost_latency"]["per_proposal"]
             L.append(f"| {name} | {x['proposals']['critic_mean']} | {x['proposals']['unsupported_after_per_proposal']} | {x['outcome']['reply_rate']} "
                      f"| {c['p95_s']} | {c['tokens_mean']} | {c['usd_mean']} |")
