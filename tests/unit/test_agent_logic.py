@@ -55,3 +55,12 @@ def test_claim_verification_and_repair():
 def test_style_promotion_patterns():
     pats = edit_patterns("Hi there! I am passionate about data. Your project needs X.", "Your project needs X.")
     assert "cut_first_sentence" in pats and "ban:passionate" in pats and "no_exclamations" in pats
+
+
+def test_change_request_policy_2026_11_02():
+    """Platform policy update: higher Connects cost and no external links (config-only change)."""
+    from gigsim.app import connects_cost
+
+    assert connects_cost({"budget": {"max": 6000}}) == 6 + 4 + 6 + 4
+    text, v = check_text("See my work at https://github.com/me/project and www.example.com for details.", {}, None)
+    assert "github.com" not in text and "www.example.com" not in text and v.passed

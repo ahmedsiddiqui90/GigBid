@@ -1,13 +1,14 @@
 # Marketplace policy as configuration. Compliance Guard, Risk Assessor, Pricing and GigSim read this.
 # A platform policy update should be absorbed by editing this file (see docs/rd/change_request.md).
-version: "2026-10-27"
+version: "2026-11-02"   # platform policy update (change request)
 
 connects:
   # cost = base + sum(tier.extra for tiers whose budget_over < job budget max)
-  base: 4
+  base: 6                              # 2026-11-02: was 4
   tiers:
     - {budget_over: 500, extra: 4}
     - {budget_over: 2000, extra: 6}
+    - {budget_over: 5000, extra: 4}    # 2026-11-02: new tier for large budgets
   weekly_budget_default: 80
 
 rules:
@@ -29,6 +30,11 @@ rules:
   - id: no_fabrication
     description: Never claim experience the portfolio does not support.
     action: block_if_unsupported   # enforced via claim verification results
+  - id: no_external_links            # 2026-11-02: links outside the platform are not allowed in proposals
+    description: Do not include external links; use the platform portfolio instead.
+    action: strip
+    patterns:
+      - '(?i)\b(https?://|www\.)\S+'
   - id: no_free_work
     description: Do not propose unpaid production work disguised as a trial.
     action: block
