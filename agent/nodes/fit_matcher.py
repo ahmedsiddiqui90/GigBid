@@ -9,12 +9,17 @@ from agent.nodes._base import node, tool
 from agent.nodes.analyst import heuristic_spec
 
 
+GENERIC = {"developer", "engineer", "expert", "specialist", "project", "need", "needed", "help", "build", "looking",
+           "freelancer", "job", "work", "experienced", "senior", "junior", "website", "app", "application", "the", "and",
+           "for", "with", "consultant", "required", "remote", "opportunity", "long", "term", "company", "business"}
+
+
 def covers(requirement: str, ev: dict) -> bool:
     r = requirement.lower().strip()
     skills = [s.lower() for s in ev.get("skills", [])]
     if any(r == s or (len(r) > 3 and (r in s or s in r)) for s in skills):
         return True
-    words = [w for w in re.findall(r"[a-z0-9+#.]{3,}", r)]
+    words = [w for w in re.findall(r"[a-z0-9+#.]{3,}", r) if w not in GENERIC]
     text = (ev.get("snippet", "") + " " + " ".join(skills)).lower()
     return bool(words) and sum(w in text for w in words) / len(words) >= 0.75
 
@@ -28,6 +33,9 @@ def score_fit(reqs: list[str], per_req: dict[str, list[dict]]) -> FitReport:
     covered = sum(m.covered for m in matrix)
     score = covered / len(matrix) if matrix else 0.0
     reasons = [f"{covered}/{len(matrix)} requirements have direct portfolio evidence"]
+    if len(matrix) < 3:  # too few explicit requirements to be confident about fit
+        score *= len(matrix) / 3
+        reasons.append("fewer than 3 explicit requirements: fit discounted")
     missing = [m.requirement for m in matrix if not m.covered]
     if missing:
         reasons.append("no evidence for: " + ", ".join(missing[:4]))

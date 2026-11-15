@@ -31,23 +31,25 @@ def _tech_vocab() -> set[str]:
 
     vocab: set[str] = set()
     for p in (Path(__file__).resolve().parent.parent / "data" / "personas").glob("*/profile.json"):
-        vocab |= {s.lower() for s in json.loads(p.read_text(encoding="utf-8"))["skills"] if len(s) > 2}
+        # named technologies only (capitalised names like XGBoost, Next.js), not plain words like "forecasting"
+        vocab |= {s.lower() for s in json.loads(p.read_text(encoding="utf-8"))["skills"]
+                  if len(s) > 2 and (any(ch.isupper() for ch in s) or s in ("dbt", "pandas"))}
     return vocab
 
 
 TECH = _tech_vocab()
 
 
-def specific_violation(claim: str, ev_text: str) -> str | None:
+def specific_violation(claim: str, ev_text: str) -> tuple[str, list[str]] | None:
     """Deterministic check that overrides a lenient model: numbers and named technologies must be in evidence."""
     ev = ev_text.lower().replace("‑", "-")
     body = CITE.sub("", claim).lower().replace("‑", "-")
     missing_n = [n for n in _numbers(body) if n not in ev]
     if missing_n:
-        return f"numbers not in evidence: {missing_n}"
+        return f"numbers not in evidence: {missing_n}", missing_n
     missing_t = [t for t in TECH if re.search(rf"(?<![a-z]){re.escape(t)}(?![a-z])", body) and t not in ev]
     if missing_t:
-        return f"technologies not in cited evidence: {missing_t}"
+        return f"technologies not in cited evidence: {missing_t}", missing_t
     return None
 CITE = re.compile(r"\[([a-z]{2,4}-[\w-]+)\]")
 STOP = set("the a an and or of to in for on with by at from is are was were be been this that it as i my we our "
@@ -59,6 +61,7 @@ class ClaimCheck(BaseModel):
     cited: list[str] = []
     label: str  # supported | partial | unsupported
     reason: str = ""
+    fix_terms: list[str] = []  # unverifiable numbers / technologies to strip from a partial claim
 
 
 class ClaimChecks(BaseModel):
@@ -93,15 +96,14 @@ def heuristic_check(claim: str, evidence: dict[str, dict]) -> ClaimCheck:
     if not words:
         return ClaimCheck(claim=claim, cited=cited, label="supported", reason="no factual content")
     overlap = len([w for w in words if w in ev_text]) / len(words)
-    nums_ok = all(n in ev_text for n in nums)
     if not cited and overlap < 0.6:
         return ClaimCheck(claim=claim, cited=cited, label="unsupported", reason=f"no citation, overlap {overlap:.2f}")
-    if nums_ok and overlap >= 0.45:
+    v = specific_violation(claim, ev_text)
+    if v:
+        return ClaimCheck(claim=claim, cited=cited, label="partial", reason=v[0], fix_terms=v[1])
+    if overlap >= 0.25 or not cited:
         return ClaimCheck(claim=claim, cited=cited, label="supported", reason=f"overlap {overlap:.2f}")
-    if overlap >= 0.3:
-        return ClaimCheck(claim=claim, cited=cited, label="partial",
-                          reason=("numbers not in evidence; " if not nums_ok else "") + f"overlap {overlap:.2f}")
-    return ClaimCheck(claim=claim, cited=cited, label="unsupported", reason=f"overlap {overlap:.2f}")
+    return ClaimCheck(claim=claim, cited=cited, label="unsupported", reason=f"cited evidence does not match (overlap {overlap:.2f})")
 
 
 async def verify_claims(text: str, evidence: list[dict]) -> tuple[list[ClaimCheck], Usage]:
@@ -127,23 +129,22 @@ async def verify_claims(text: str, evidence: list[dict]) -> tuple[list[ClaimChec
         ev_text = " ".join(e.get("snippet", e.get("text", "")) + " " + " ".join(e.get("skills", [])) for e in pool)
         v = specific_violation(c.claim, ev_text)
         if v and c.label != "unsupported":
-            c.label, c.reason = "unsupported", v
+            c.label, c.reason, c.fix_terms = "partial", v[0], v[1]
     return checks, usage
 
 
 def repair(text: str, checks: list[ClaimCheck], evidence: list[dict]) -> str:
-    """Remove unsupported claims; drop numbers from partial claims that the evidence does not contain."""
-    ev_text = " ".join(e.get("snippet", "") for e in evidence)
+    """Delete unsupported claims; in partial claims strip only the unverifiable numbers / technologies."""
     out = text
     for c in checks:
         if c.label == "unsupported":
             out = out.replace(c.claim, "")
-        elif c.label == "partial":
+        elif c.label == "partial" and c.fix_terms:
             fixed = c.claim
-            for n in _numbers(c.claim):
-                if n not in ev_text:
-                    fixed = re.sub(rf"\b{re.escape(n)}%?", "", fixed)
-            out = out.replace(c.claim, re.sub(r"\s{2,}", " ", fixed))
+            for t in c.fix_terms:
+                fixed = re.sub(rf"(?i),?\s*(and\s+)?{re.escape(t)}%?(?![a-z])", "", fixed)
+            fixed = re.sub(r"\s+,", ",", re.sub(r"\s{2,}", " ", fixed))
+            out = out.replace(c.claim, fixed)
     return re.sub(r"[ \t]{2,}", " ", re.sub(r"\n{3,}", "\n\n", out)).strip()
 
 

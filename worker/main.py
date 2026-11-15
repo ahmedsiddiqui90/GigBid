@@ -173,7 +173,7 @@ class WorkerSettings:
     on_startup = startup
     on_shutdown = shutdown
     redis_settings = RedisSettings.from_dsn(env().redis_url)
-    max_jobs = 4
+    max_jobs = 2
     job_timeout = 600
     keep_result = 3600
 

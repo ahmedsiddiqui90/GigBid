@@ -1,0 +1,2419 @@
+{
+ "openapi": "3.1.0",
+ "info": {
+  "title": "GigBid API",
+  "version": "1.0"
+ },
+ "paths": {
+  "/api/auth/signup": {
+   "post": {
+    "tags": [
+     "auth"
+    ],
+    "summary": "Signup",
+    "operationId": "signup_api_auth_signup_post",
+    "requestBody": {
+     "content": {
+      "application/json": {
+       "schema": {
+        "$ref": "#/components/schemas/SignupIn"
+       }
+      }
+     },
+     "required": true
+    },
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/Me"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/auth/login": {
+   "post": {
+    "tags": [
+     "auth"
+    ],
+    "summary": "Login",
+    "operationId": "login_api_auth_login_post",
+    "requestBody": {
+     "content": {
+      "application/json": {
+       "schema": {
+        "$ref": "#/components/schemas/LoginIn"
+       }
+      }
+     },
+     "required": true
+    },
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/Me"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/auth/logout": {
+   "post": {
+    "tags": [
+     "auth"
+    ],
+    "summary": "Logout",
+    "operationId": "logout_api_auth_logout_post",
+    "parameters": [
+     {
+      "name": "gb_session",
+      "in": "cookie",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Gb Session"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "type": "object",
+         "additionalProperties": true,
+         "title": "Response Logout Api Auth Logout Post"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/auth/me": {
+   "get": {
+    "tags": [
+     "auth"
+    ],
+    "summary": "Me",
+    "operationId": "me_api_auth_me_get",
+    "parameters": [
+     {
+      "name": "gb_session",
+      "in": "cookie",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Gb Session"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/Me"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/onboarding": {
+   "post": {
+    "tags": [
+     "onboarding"
+    ],
+    "summary": "Onboard",
+    "operationId": "onboard_api_onboarding_post",
+    "parameters": [
+     {
+      "name": "gb_session",
+      "in": "cookie",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Gb Session"
+      }
+     }
+    ],
+    "requestBody": {
+     "required": true,
+     "content": {
+      "application/json": {
+       "schema": {
+        "$ref": "#/components/schemas/OnboardingIn"
+       }
+      }
+     }
+    },
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "type": "object",
+         "additionalProperties": true,
+         "title": "Response Onboard Api Onboarding Post"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/onboarding/upload": {
+   "post": {
+    "tags": [
+     "onboarding"
+    ],
+    "summary": "Upload",
+    "operationId": "upload_api_onboarding_upload_post",
+    "parameters": [
+     {
+      "name": "gb_session",
+      "in": "cookie",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Gb Session"
+      }
+     }
+    ],
+    "requestBody": {
+     "required": true,
+     "content": {
+      "multipart/form-data": {
+       "schema": {
+        "$ref": "#/components/schemas/Body_upload_api_onboarding_upload_post"
+       }
+      }
+     }
+    },
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "type": "object",
+         "additionalProperties": true,
+         "title": "Response Upload Api Onboarding Upload Post"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/onboarding/upwork/start": {
+   "get": {
+    "tags": [
+     "onboarding"
+    ],
+    "summary": "Upwork Start",
+    "operationId": "upwork_start_api_onboarding_upwork_start_get",
+    "parameters": [
+     {
+      "name": "gb_session",
+      "in": "cookie",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Gb Session"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {}
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/onboarding/upwork/callback": {
+   "get": {
+    "tags": [
+     "onboarding"
+    ],
+    "summary": "Upwork Callback",
+    "operationId": "upwork_callback_api_onboarding_upwork_callback_get",
+    "parameters": [
+     {
+      "name": "code",
+      "in": "query",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "title": "Code"
+      }
+     },
+     {
+      "name": "state",
+      "in": "query",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "title": "State"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {}
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/jobs": {
+   "get": {
+    "tags": [
+     "jobs"
+    ],
+    "summary": "Inbox",
+    "operationId": "inbox_api_jobs_get",
+    "parameters": [
+     {
+      "name": "status",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Status"
+      }
+     },
+     {
+      "name": "decision",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Decision"
+      }
+     },
+     {
+      "name": "gb_session",
+      "in": "cookie",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Gb Session"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "type": "array",
+         "items": {
+          "$ref": "#/components/schemas/JobRow"
+         },
+         "title": "Response Inbox Api Jobs Get"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/jobs/{job_id}": {
+   "get": {
+    "tags": [
+     "jobs"
+    ],
+    "summary": "Job Detail",
+    "operationId": "job_detail_api_jobs__job_id__get",
+    "parameters": [
+     {
+      "name": "job_id",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "title": "Job Id"
+      }
+     },
+     {
+      "name": "gb_session",
+      "in": "cookie",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Gb Session"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "type": "object",
+         "additionalProperties": true,
+         "title": "Response Job Detail Api Jobs  Job Id  Get"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/jobs/{job_id}/analyse": {
+   "post": {
+    "tags": [
+     "jobs"
+    ],
+    "summary": "Analyse",
+    "operationId": "analyse_api_jobs__job_id__analyse_post",
+    "parameters": [
+     {
+      "name": "job_id",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "title": "Job Id"
+      }
+     },
+     {
+      "name": "gb_session",
+      "in": "cookie",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Gb Session"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "type": "object",
+         "additionalProperties": true,
+         "title": "Response Analyse Api Jobs  Job Id  Analyse Post"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/jobs/{job_id}/skip": {
+   "post": {
+    "tags": [
+     "jobs"
+    ],
+    "summary": "Skip",
+    "operationId": "skip_api_jobs__job_id__skip_post",
+    "parameters": [
+     {
+      "name": "job_id",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "title": "Job Id"
+      }
+     },
+     {
+      "name": "gb_session",
+      "in": "cookie",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Gb Session"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "type": "object",
+         "additionalProperties": true,
+         "title": "Response Skip Api Jobs  Job Id  Skip Post"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/pipeline": {
+   "get": {
+    "tags": [
+     "jobs"
+    ],
+    "summary": "Pipeline",
+    "operationId": "pipeline_api_pipeline_get",
+    "parameters": [
+     {
+      "name": "gb_session",
+      "in": "cookie",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Gb Session"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "type": "object",
+         "additionalProperties": true,
+         "title": "Response Pipeline Api Pipeline Get"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/jobs/{job_id}/regenerate": {
+   "post": {
+    "tags": [
+     "jobs"
+    ],
+    "summary": "Regenerate",
+    "description": "Rewrite one paragraph (the user then approves via 'edit', so Compliance re-checks it).",
+    "operationId": "regenerate_api_jobs__job_id__regenerate_post",
+    "parameters": [
+     {
+      "name": "job_id",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "title": "Job Id"
+      }
+     },
+     {
+      "name": "gb_session",
+      "in": "cookie",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Gb Session"
+      }
+     }
+    ],
+    "requestBody": {
+     "required": true,
+     "content": {
+      "application/json": {
+       "schema": {
+        "$ref": "#/components/schemas/RegenerateIn"
+       }
+      }
+     }
+    },
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "type": "object",
+         "additionalProperties": true,
+         "title": "Response Regenerate Api Jobs  Job Id  Regenerate Post"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/approvals": {
+   "get": {
+    "tags": [
+     "approvals"
+    ],
+    "summary": "Pending",
+    "operationId": "pending_api_approvals_get",
+    "parameters": [
+     {
+      "name": "gb_session",
+      "in": "cookie",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Gb Session"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "type": "array",
+         "items": {
+          "type": "object",
+          "additionalProperties": true
+         },
+         "title": "Response Pending Api Approvals Get"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/approvals/{approval_id}": {
+   "get": {
+    "tags": [
+     "approvals"
+    ],
+    "summary": "Get Approval",
+    "operationId": "get_approval_api_approvals__approval_id__get",
+    "parameters": [
+     {
+      "name": "approval_id",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "integer",
+       "title": "Approval Id"
+      }
+     },
+     {
+      "name": "gb_session",
+      "in": "cookie",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Gb Session"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "type": "object",
+         "additionalProperties": true,
+         "title": "Response Get Approval Api Approvals  Approval Id  Get"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/approvals/{approval_id}/resolve": {
+   "post": {
+    "tags": [
+     "approvals"
+    ],
+    "summary": "Resolve",
+    "operationId": "resolve_api_approvals__approval_id__resolve_post",
+    "parameters": [
+     {
+      "name": "approval_id",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "integer",
+       "title": "Approval Id"
+      }
+     },
+     {
+      "name": "gb_session",
+      "in": "cookie",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Gb Session"
+      }
+     }
+    ],
+    "requestBody": {
+     "required": true,
+     "content": {
+      "application/json": {
+       "schema": {
+        "$ref": "#/components/schemas/ResolveIn"
+       }
+      }
+     }
+    },
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "type": "object",
+         "additionalProperties": true,
+         "title": "Response Resolve Api Approvals  Approval Id  Resolve Post"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/messages": {
+   "get": {
+    "tags": [
+     "messages"
+    ],
+    "summary": "Threads",
+    "operationId": "threads_api_messages_get",
+    "parameters": [
+     {
+      "name": "gb_session",
+      "in": "cookie",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Gb Session"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "type": "object",
+         "additionalProperties": true,
+         "title": "Response Threads Api Messages Get"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/messages/{thread_id}/draft": {
+   "post": {
+    "tags": [
+     "messages"
+    ],
+    "summary": "Draft Reply",
+    "operationId": "draft_reply_api_messages__thread_id__draft_post",
+    "parameters": [
+     {
+      "name": "thread_id",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "title": "Thread Id"
+      }
+     },
+     {
+      "name": "gb_session",
+      "in": "cookie",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Gb Session"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "type": "object",
+         "additionalProperties": true,
+         "title": "Response Draft Reply Api Messages  Thread Id  Draft Post"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/runs": {
+   "get": {
+    "tags": [
+     "runs"
+    ],
+    "summary": "List Runs",
+    "operationId": "list_runs_api_runs_get",
+    "parameters": [
+     {
+      "name": "ref",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Ref"
+      }
+     },
+     {
+      "name": "gb_session",
+      "in": "cookie",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Gb Session"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "type": "array",
+         "items": {
+          "type": "object",
+          "additionalProperties": true
+         },
+         "title": "Response List Runs Api Runs Get"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/runs/{run_id}": {
+   "get": {
+    "tags": [
+     "runs"
+    ],
+    "summary": "Get Run",
+    "operationId": "get_run_api_runs__run_id__get",
+    "parameters": [
+     {
+      "name": "run_id",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "title": "Run Id"
+      }
+     },
+     {
+      "name": "gb_session",
+      "in": "cookie",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Gb Session"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "type": "object",
+         "additionalProperties": true,
+         "title": "Response Get Run Api Runs  Run Id  Get"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/runs/{run_id}/stream": {
+   "get": {
+    "tags": [
+     "runs"
+    ],
+    "summary": "Stream",
+    "operationId": "stream_api_runs__run_id__stream_get",
+    "parameters": [
+     {
+      "name": "run_id",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "title": "Run Id"
+      }
+     },
+     {
+      "name": "gb_session",
+      "in": "cookie",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Gb Session"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {}
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/runs/threads/{job_id}/history": {
+   "get": {
+    "tags": [
+     "runs"
+    ],
+    "summary": "History",
+    "description": "Checkpoint history of a job's bid thread (for replaying from any node).",
+    "operationId": "history_api_runs_threads__job_id__history_get",
+    "parameters": [
+     {
+      "name": "job_id",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "title": "Job Id"
+      }
+     },
+     {
+      "name": "gb_session",
+      "in": "cookie",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Gb Session"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "type": "array",
+         "items": {
+          "type": "object",
+          "additionalProperties": true
+         },
+         "title": "Response History Api Runs Threads  Job Id  History Get"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/runs/threads/{job_id}/replay/{checkpoint_id}": {
+   "post": {
+    "tags": [
+     "runs"
+    ],
+    "summary": "Replay",
+    "operationId": "replay_api_runs_threads__job_id__replay__checkpoint_id__post",
+    "parameters": [
+     {
+      "name": "job_id",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "title": "Job Id"
+      }
+     },
+     {
+      "name": "checkpoint_id",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "title": "Checkpoint Id"
+      }
+     },
+     {
+      "name": "gb_session",
+      "in": "cookie",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Gb Session"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "type": "object",
+         "additionalProperties": true,
+         "title": "Response Replay Api Runs Threads  Job Id  Replay  Checkpoint Id  Post"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/settings": {
+   "get": {
+    "tags": [
+     "settings"
+    ],
+    "summary": "Get Settings",
+    "operationId": "get_settings_api_settings_get",
+    "parameters": [
+     {
+      "name": "gb_session",
+      "in": "cookie",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Gb Session"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "type": "object",
+         "additionalProperties": true,
+         "title": "Response Get Settings Api Settings Get"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   },
+   "put": {
+    "tags": [
+     "settings"
+    ],
+    "summary": "Put Settings",
+    "operationId": "put_settings_api_settings_put",
+    "parameters": [
+     {
+      "name": "gb_session",
+      "in": "cookie",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Gb Session"
+      }
+     }
+    ],
+    "requestBody": {
+     "required": true,
+     "content": {
+      "application/json": {
+       "schema": {
+        "$ref": "#/components/schemas/SettingsIn"
+       }
+      }
+     }
+    },
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "type": "object",
+         "additionalProperties": true,
+         "title": "Response Put Settings Api Settings Put"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/saved-searches": {
+   "post": {
+    "tags": [
+     "settings"
+    ],
+    "summary": "Add Search",
+    "operationId": "add_search_api_saved_searches_post",
+    "parameters": [
+     {
+      "name": "gb_session",
+      "in": "cookie",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Gb Session"
+      }
+     }
+    ],
+    "requestBody": {
+     "required": true,
+     "content": {
+      "application/json": {
+       "schema": {
+        "$ref": "#/components/schemas/SavedSearchIn"
+       }
+      }
+     }
+    },
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "type": "object",
+         "additionalProperties": true,
+         "title": "Response Add Search Api Saved Searches Post"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/saved-searches/{sid}": {
+   "delete": {
+    "tags": [
+     "settings"
+    ],
+    "summary": "Del Search",
+    "operationId": "del_search_api_saved_searches__sid__delete",
+    "parameters": [
+     {
+      "name": "sid",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "integer",
+       "title": "Sid"
+      }
+     },
+     {
+      "name": "gb_session",
+      "in": "cookie",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Gb Session"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "type": "object",
+         "additionalProperties": true,
+         "title": "Response Del Search Api Saved Searches  Sid  Delete"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/memory": {
+   "get": {
+    "tags": [
+     "settings"
+    ],
+    "summary": "Memory",
+    "operationId": "memory_api_memory_get",
+    "parameters": [
+     {
+      "name": "gb_session",
+      "in": "cookie",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Gb Session"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "type": "object",
+         "additionalProperties": true,
+         "title": "Response Memory Api Memory Get"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/memory/{ns}/{key}": {
+   "delete": {
+    "tags": [
+     "settings"
+    ],
+    "summary": "Forget",
+    "operationId": "forget_api_memory__ns___key__delete",
+    "parameters": [
+     {
+      "name": "ns",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "title": "Ns"
+      }
+     },
+     {
+      "name": "key",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "title": "Key"
+      }
+     },
+     {
+      "name": "gb_session",
+      "in": "cookie",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Gb Session"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "type": "object",
+         "additionalProperties": true,
+         "title": "Response Forget Api Memory  Ns   Key  Delete"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/analytics": {
+   "get": {
+    "tags": [
+     "settings"
+    ],
+    "summary": "Analytics",
+    "operationId": "analytics_api_analytics_get",
+    "parameters": [
+     {
+      "name": "gb_session",
+      "in": "cookie",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Gb Session"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "type": "object",
+         "additionalProperties": true,
+         "title": "Response Analytics Api Analytics Get"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/health": {
+   "get": {
+    "tags": [
+     "health"
+    ],
+    "summary": "Health",
+    "operationId": "health_api_health_get",
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/Health"
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ },
+ "components": {
+  "schemas": {
+   "Body_upload_api_onboarding_upload_post": {
+    "properties": {
+     "file": {
+      "type": "string",
+      "format": "binary",
+      "title": "File"
+     }
+    },
+    "type": "object",
+    "required": [
+     "file"
+    ],
+    "title": "Body_upload_api_onboarding_upload_post"
+   },
+   "HTTPValidationError": {
+    "properties": {
+     "detail": {
+      "items": {
+       "$ref": "#/components/schemas/ValidationError"
+      },
+      "type": "array",
+      "title": "Detail"
+     }
+    },
+    "type": "object",
+    "title": "HTTPValidationError"
+   },
+   "Health": {
+    "properties": {
+     "api": {
+      "type": "boolean",
+      "title": "Api"
+     },
+     "marketplace": {
+      "type": "boolean",
+      "title": "Marketplace"
+     },
+     "database": {
+      "type": "boolean",
+      "title": "Database"
+     },
+     "worker_queue": {
+      "type": "boolean",
+      "title": "Worker Queue"
+     },
+     "model_profile": {
+      "type": "string",
+      "title": "Model Profile"
+     },
+     "marketplace_adapter": {
+      "type": "string",
+      "title": "Marketplace Adapter"
+     }
+    },
+    "type": "object",
+    "required": [
+     "api",
+     "marketplace",
+     "database",
+     "worker_queue",
+     "model_profile",
+     "marketplace_adapter"
+    ],
+    "title": "Health"
+   },
+   "JobRow": {
+    "properties": {
+     "job_id": {
+      "type": "string",
+      "title": "Job Id"
+     },
+     "title": {
+      "type": "string",
+      "title": "Title"
+     },
+     "category": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Category"
+     },
+     "status": {
+      "type": "string",
+      "title": "Status"
+     },
+     "decision": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Decision"
+     },
+     "fit": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Fit"
+     },
+     "risk": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Risk"
+     },
+     "risk_flags": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Risk Flags",
+      "default": []
+     },
+     "price": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Price"
+     },
+     "connects": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Connects"
+     },
+     "budget": {
+      "additionalProperties": true,
+      "type": "object",
+      "title": "Budget",
+      "default": {}
+     },
+     "stage": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Stage"
+     },
+     "updated_at": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Updated At"
+     }
+    },
+    "type": "object",
+    "required": [
+     "job_id",
+     "title",
+     "status"
+    ],
+    "title": "JobRow"
+   },
+   "LoginIn": {
+    "properties": {
+     "email": {
+      "type": "string",
+      "title": "Email"
+     },
+     "password": {
+      "type": "string",
+      "title": "Password"
+     }
+    },
+    "type": "object",
+    "required": [
+     "email",
+     "password"
+    ],
+    "title": "LoginIn"
+   },
+   "Me": {
+    "properties": {
+     "id": {
+      "type": "integer",
+      "title": "Id"
+     },
+     "email": {
+      "type": "string",
+      "title": "Email"
+     },
+     "name": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Name"
+     },
+     "persona_id": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Persona Id"
+     },
+     "freelancer_id": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Freelancer Id"
+     },
+     "marketplace": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Marketplace"
+     },
+     "settings": {
+      "additionalProperties": true,
+      "type": "object",
+      "title": "Settings",
+      "default": {}
+     },
+     "onboarded": {
+      "type": "boolean",
+      "title": "Onboarded"
+     }
+    },
+    "type": "object",
+    "required": [
+     "id",
+     "email",
+     "onboarded"
+    ],
+    "title": "Me"
+   },
+   "OnboardingIn": {
+    "properties": {
+     "persona_id": {
+      "type": "string",
+      "enum": [
+       "ai_ml",
+       "fullstack",
+       "data_analyst"
+      ],
+      "title": "Persona Id"
+     },
+     "marketplace": {
+      "type": "string",
+      "enum": [
+       "gigsim",
+       "upwork_live"
+      ],
+      "title": "Marketplace",
+      "default": "gigsim"
+     },
+     "hourly_rate": {
+      "type": "number",
+      "maximum": 1000.0,
+      "exclusiveMinimum": 0.0,
+      "title": "Hourly Rate"
+     },
+     "floor_rate": {
+      "type": "number",
+      "maximum": 1000.0,
+      "exclusiveMinimum": 0.0,
+      "title": "Floor Rate"
+     },
+     "weekly_connects": {
+      "type": "integer",
+      "maximum": 1000.0,
+      "minimum": 0.0,
+      "title": "Weekly Connects",
+      "default": 80
+     },
+     "search_query": {
+      "type": "string",
+      "maxLength": 200,
+      "title": "Search Query",
+      "default": ""
+     },
+     "search_category": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Search Category"
+     },
+     "every_minutes": {
+      "type": "integer",
+      "maximum": 1440.0,
+      "minimum": 5.0,
+      "title": "Every Minutes",
+      "default": 30
+     }
+    },
+    "type": "object",
+    "required": [
+     "persona_id",
+     "hourly_rate",
+     "floor_rate"
+    ],
+    "title": "OnboardingIn"
+   },
+   "RegenerateIn": {
+    "properties": {
+     "paragraph": {
+      "type": "string",
+      "maxLength": 3000,
+      "minLength": 1,
+      "title": "Paragraph"
+     },
+     "instruction": {
+      "type": "string",
+      "maxLength": 300,
+      "title": "Instruction",
+      "default": "Make it more specific to the client."
+     }
+    },
+    "type": "object",
+    "required": [
+     "paragraph"
+    ],
+    "title": "RegenerateIn"
+   },
+   "ResolveIn": {
+    "properties": {
+     "action": {
+      "type": "string",
+      "enum": [
+       "approve",
+       "edit",
+       "reject"
+      ],
+      "title": "Action"
+     },
+     "text": {
+      "anyOf": [
+       {
+        "type": "string",
+        "maxLength": 5000
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Text"
+     },
+     "answers": {
+      "anyOf": [
+       {
+        "items": {
+         "type": "string"
+        },
+        "type": "array"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Answers"
+     },
+     "reason": {
+      "anyOf": [
+       {
+        "type": "string",
+        "maxLength": 1000
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Reason"
+     }
+    },
+    "type": "object",
+    "required": [
+     "action"
+    ],
+    "title": "ResolveIn"
+   },
+   "SavedSearchIn": {
+    "properties": {
+     "query": {
+      "type": "string",
+      "maxLength": 200,
+      "title": "Query"
+     },
+     "category": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Category"
+     },
+     "every_minutes": {
+      "type": "integer",
+      "maximum": 1440.0,
+      "minimum": 5.0,
+      "title": "Every Minutes",
+      "default": 30
+     }
+    },
+    "type": "object",
+    "required": [
+     "query"
+    ],
+    "title": "SavedSearchIn"
+   },
+   "SettingsIn": {
+    "properties": {
+     "autonomy": {
+      "type": "string",
+      "enum": [
+       "manual",
+       "auto_skip_low_fit"
+      ],
+      "title": "Autonomy",
+      "default": "auto_skip_low_fit"
+     },
+     "hourly_rate": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Hourly Rate"
+     },
+     "floor_rate": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Floor Rate"
+     },
+     "weekly_connects": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Weekly Connects"
+     },
+     "max_tokens_per_thread": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Max Tokens Per Thread"
+     }
+    },
+    "type": "object",
+    "title": "SettingsIn"
+   },
+   "SignupIn": {
+    "properties": {
+     "email": {
+      "type": "string",
+      "maxLength": 200,
+      "minLength": 3,
+      "title": "Email"
+     },
+     "password": {
+      "type": "string",
+      "maxLength": 200,
+      "minLength": 8,
+      "title": "Password"
+     },
+     "name": {
+      "type": "string",
+      "maxLength": 100,
+      "title": "Name",
+      "default": ""
+     }
+    },
+    "type": "object",
+    "required": [
+     "email",
+     "password"
+    ],
+    "title": "SignupIn"
+   },
+   "ValidationError": {
+    "properties": {
+     "loc": {
+      "items": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "integer"
+        }
+       ]
+      },
+      "type": "array",
+      "title": "Location"
+     },
+     "msg": {
+      "type": "string",
+      "title": "Message"
+     },
+     "type": {
+      "type": "string",
+      "title": "Error Type"
+     }
+    },
+    "type": "object",
+    "required": [
+     "loc",
+     "msg",
+     "type"
+    ],
+    "title": "ValidationError"
+   }
+  }
+ }
+}

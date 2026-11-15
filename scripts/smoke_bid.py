@@ -1,6 +1,5 @@
 """Smoke test: run the bid graph on a few dev jobs for a test user. Usage: python -m scripts.smoke_bid [job ids]"""
 import asyncio
-import json
 import sys
 
 from agent import db
