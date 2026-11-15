@@ -75,8 +75,9 @@ async def proposal_writer(state: dict) -> dict:
     job = state["job"]
     evidence = {e["id"]: e for e in state.get("evidence", [])}
     trace = []
-    try:  # targeted retrieval per extracted requirement (JobSpec from the analyst)
-        for r in (state.get("job_spec", {}).get("requirements") or [])[:4]:
+    try:  # one whole-job query (best on the dev set) + targeted retrieval per extracted requirement
+        whole = f"{job.get('title', '')}. {strip_injection(job.get('description', ''))[:400]}"
+        for r in [whole] + (state.get("job_spec", {}).get("requirements") or [])[:3]:
             res, t = await tool(state, "proposal_writer", "search_evidence",
                                 {"requirement": r, "k": 3, "filters": {"persona": state["persona"], "variant": state.get("retrieval_variant")}})
             trace.append(t)
@@ -84,10 +85,10 @@ async def proposal_writer(state: dict) -> dict:
                 evidence.setdefault(e["id"], {**e, "project": e.get("source_project")})
     except MarketplaceDown:
         pass  # writing can proceed with the fit evidence we already have
-    ev = sorted(evidence.values(), key=lambda e: e["type"] == "proposal")[:8]
+    ev = sorted(evidence.values(), key=lambda e: e["type"] == "proposal")[:6]
     rules = await style_rules(_store(), str(state.get("user_id")))
     critique = state.get("critique")  # present only after the Critic sent the draft back
-    ev_block = "\n".join(f"[{e['id']}] ({e['type']}) {e['title']}: {e['snippet'][:450]}" for e in ev)
+    ev_block = "\n".join(f"[{e['id']}] ({e['type']}) {e['title']}: {e['snippet'][:350]}" for e in ev)
     clean_job = {**job, "description": strip_injection(job.get("description", ""))}
     draft, u = await llm_json(
         "proposal_writer", "proposal_writer", ProposalDraft, lambda: heuristic_draft(state, ev, rules, critique),

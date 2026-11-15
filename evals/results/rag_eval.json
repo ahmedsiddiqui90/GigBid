@@ -1,0 +1,477 @@
+{
+ "generated_at": "2026-11-15 20:43:00",
+ "hypothesis": "Requirement decomposition + hybrid BM25/dense retrieval (V2) raises evidence Recall@5 by at least 10 points over V0 on jobs with 4+ requirements.",
+ "hypothesis_delta_recall5_reqs>=4": 0.159,
+ "hypothesis_supported": true,
+ "n_jobs": 69,
+ "variants": {
+  "v0_naive": {
+   "all": {
+    "recall@5": 0.817,
+    "mrr": 1.0,
+    "ndcg@10": 0.868,
+    "n": 69
+   },
+   "persona:ai_ml": {
+    "recall@5": 0.833,
+    "mrr": 1.0,
+    "ndcg@10": 0.856,
+    "n": 23
+   },
+   "kind:fit": {
+    "recall@5": 0.855,
+    "mrr": 1.0,
+    "ndcg@10": 0.899,
+    "n": 36
+   },
+   "reqs>=4": {
+    "recall@5": 0.798,
+    "mrr": 1.0,
+    "ndcg@10": 0.859,
+    "n": 60
+   },
+   "kind:vague": {
+    "recall@5": 0.639,
+    "mrr": 1.0,
+    "ndcg@10": 0.726,
+    "n": 12
+   },
+   "kind:injection": {
+    "recall@5": 0.785,
+    "mrr": 1.0,
+    "ndcg@10": 0.87,
+    "n": 12
+   },
+   "kind:low_budget": {
+    "recall@5": 0.944,
+    "mrr": 1.0,
+    "ndcg@10": 0.929,
+    "n": 9
+   },
+   "reqs<4": {
+    "recall@5": 0.944,
+    "mrr": 1.0,
+    "ndcg@10": 0.929,
+    "n": 9
+   },
+   "persona:fullstack": {
+    "recall@5": 0.791,
+    "mrr": 1.0,
+    "ndcg@10": 0.861,
+    "n": 23
+   },
+   "persona:data_analyst": {
+    "recall@5": 0.826,
+    "mrr": 1.0,
+    "ndcg@10": 0.887,
+    "n": 23
+   },
+   "latency_ms_mean": 36.2
+  },
+  "v1_decompose": {
+   "all": {
+    "recall@5": 0.955,
+    "mrr": 1.0,
+    "ndcg@10": 0.983,
+    "n": 69
+   },
+   "persona:ai_ml": {
+    "recall@5": 0.967,
+    "mrr": 1.0,
+    "ndcg@10": 0.991,
+    "n": 23
+   },
+   "kind:fit": {
+    "recall@5": 0.949,
+    "mrr": 1.0,
+    "ndcg@10": 0.979,
+    "n": 36
+   },
+   "reqs>=4": {
+    "recall@5": 0.953,
+    "mrr": 1.0,
+    "ndcg@10": 0.982,
+    "n": 60
+   },
+   "kind:vague": {
+    "recall@5": 0.958,
+    "mrr": 1.0,
+    "ndcg@10": 0.988,
+    "n": 12
+   },
+   "kind:injection": {
+    "recall@5": 0.958,
+    "mrr": 1.0,
+    "ndcg@10": 0.985,
+    "n": 12
+   },
+   "kind:low_budget": {
+    "recall@5": 0.972,
+    "mrr": 1.0,
+    "ndcg@10": 0.991,
+    "n": 9
+   },
+   "reqs<4": {
+    "recall@5": 0.972,
+    "mrr": 1.0,
+    "ndcg@10": 0.991,
+    "n": 9
+   },
+   "persona:fullstack": {
+    "recall@5": 0.952,
+    "mrr": 1.0,
+    "ndcg@10": 0.987,
+    "n": 23
+   },
+   "persona:data_analyst": {
+    "recall@5": 0.946,
+    "mrr": 1.0,
+    "ndcg@10": 0.972,
+    "n": 23
+   },
+   "latency_ms_mean": 29.9
+  },
+  "v2_hybrid": {
+   "all": {
+    "recall@5": 0.959,
+    "mrr": 1.0,
+    "ndcg@10": 0.984,
+    "n": 69
+   },
+   "persona:ai_ml": {
+    "recall@5": 0.938,
+    "mrr": 1.0,
+    "ndcg@10": 0.983,
+    "n": 23
+   },
+   "kind:fit": {
+    "recall@5": 0.959,
+    "mrr": 1.0,
+    "ndcg@10": 0.985,
+    "n": 36
+   },
+   "reqs>=4": {
+    "recall@5": 0.957,
+    "mrr": 1.0,
+    "ndcg@10": 0.986,
+    "n": 60
+   },
+   "kind:vague": {
+    "recall@5": 0.951,
+    "mrr": 1.0,
+    "ndcg@10": 0.991,
+    "n": 12
+   },
+   "kind:injection": {
+    "recall@5": 0.958,
+    "mrr": 1.0,
+    "ndcg@10": 0.982,
+    "n": 12
+   },
+   "kind:low_budget": {
+    "recall@5": 0.972,
+    "mrr": 1.0,
+    "ndcg@10": 0.975,
+    "n": 9
+   },
+   "reqs<4": {
+    "recall@5": 0.972,
+    "mrr": 1.0,
+    "ndcg@10": 0.975,
+    "n": 9
+   },
+   "persona:fullstack": {
+    "recall@5": 0.961,
+    "mrr": 1.0,
+    "ndcg@10": 0.988,
+    "n": 23
+   },
+   "persona:data_analyst": {
+    "recall@5": 0.978,
+    "mrr": 1.0,
+    "ndcg@10": 0.982,
+    "n": 23
+   },
+   "latency_ms_mean": 29.8
+  },
+  "v3_rerank": {
+   "all": {
+    "recall@5": 0.76,
+    "mrr": 0.836,
+    "ndcg@10": 0.815,
+    "n": 69
+   },
+   "persona:ai_ml": {
+    "recall@5": 0.663,
+    "mrr": 0.841,
+    "ndcg@10": 0.804,
+    "n": 23
+   },
+   "kind:fit": {
+    "recall@5": 0.741,
+    "mrr": 0.829,
+    "ndcg@10": 0.805,
+    "n": 36
+   },
+   "reqs>=4": {
+    "recall@5": 0.739,
+    "mrr": 0.828,
+    "ndcg@10": 0.806,
+    "n": 60
+   },
+   "kind:vague": {
+    "recall@5": 0.736,
+    "mrr": 0.875,
+    "ndcg@10": 0.852,
+    "n": 12
+   },
+   "kind:injection": {
+    "recall@5": 0.736,
+    "mrr": 0.778,
+    "ndcg@10": 0.766,
+    "n": 12
+   },
+   "kind:low_budget": {
+    "recall@5": 0.898,
+    "mrr": 0.889,
+    "ndcg@10": 0.87,
+    "n": 9
+   },
+   "reqs<4": {
+    "recall@5": 0.898,
+    "mrr": 0.889,
+    "ndcg@10": 0.87,
+    "n": 9
+   },
+   "persona:fullstack": {
+    "recall@5": 0.801,
+    "mrr": 0.819,
+    "ndcg@10": 0.796,
+    "n": 23
+   },
+   "persona:data_analyst": {
+    "recall@5": 0.815,
+    "mrr": 0.848,
+    "ndcg@10": 0.844,
+    "n": 23
+   },
+   "latency_ms_mean": 3544.7
+  },
+  "v4_outcome": {
+   "all": {
+    "recall@5": 0.752,
+    "mrr": 0.857,
+    "ndcg@10": 0.808,
+    "n": 69
+   },
+   "persona:ai_ml": {
+    "recall@5": 0.652,
+    "mrr": 0.862,
+    "ndcg@10": 0.795,
+    "n": 23
+   },
+   "kind:fit": {
+    "recall@5": 0.727,
+    "mrr": 0.843,
+    "ndcg@10": 0.802,
+    "n": 36
+   },
+   "reqs>=4": {
+    "recall@5": 0.731,
+    "mrr": 0.853,
+    "ndcg@10": 0.802,
+    "n": 60
+   },
+   "kind:vague": {
+    "recall@5": 0.736,
+    "mrr": 0.917,
+    "ndcg@10": 0.847,
+    "n": 12
+   },
+   "kind:injection": {
+    "recall@5": 0.736,
+    "mrr": 0.819,
+    "ndcg@10": 0.756,
+    "n": 12
+   },
+   "kind:low_budget": {
+    "recall@5": 0.898,
+    "mrr": 0.889,
+    "ndcg@10": 0.851,
+    "n": 9
+   },
+   "reqs<4": {
+    "recall@5": 0.898,
+    "mrr": 0.889,
+    "ndcg@10": 0.851,
+    "n": 9
+   },
+   "persona:fullstack": {
+    "recall@5": 0.812,
+    "mrr": 0.819,
+    "ndcg@10": 0.798,
+    "n": 23
+   },
+   "persona:data_analyst": {
+    "recall@5": 0.793,
+    "mrr": 0.891,
+    "ndcg@10": 0.832,
+    "n": 23
+   },
+   "latency_ms_mean": 3613.0
+  },
+  "v8_corrective": {
+   "all": {
+    "recall@5": 0.773,
+    "mrr": 0.767,
+    "ndcg@10": 0.763,
+    "n": 69
+   },
+   "persona:ai_ml": {
+    "recall@5": 0.703,
+    "mrr": 0.701,
+    "ndcg@10": 0.703,
+    "n": 23
+   },
+   "kind:fit": {
+    "recall@5": 0.741,
+    "mrr": 0.812,
+    "ndcg@10": 0.777,
+    "n": 36
+   },
+   "reqs>=4": {
+    "recall@5": 0.762,
+    "mrr": 0.754,
+    "ndcg@10": 0.753,
+    "n": 60
+   },
+   "kind:vague": {
+    "recall@5": 0.847,
+    "mrr": 0.694,
+    "ndcg@10": 0.764,
+    "n": 12
+   },
+   "kind:injection": {
+    "recall@5": 0.743,
+    "mrr": 0.639,
+    "ndcg@10": 0.672,
+    "n": 12
+   },
+   "kind:low_budget": {
+    "recall@5": 0.843,
+    "mrr": 0.852,
+    "ndcg@10": 0.825,
+    "n": 9
+   },
+   "reqs<4": {
+    "recall@5": 0.843,
+    "mrr": 0.852,
+    "ndcg@10": 0.825,
+    "n": 9
+   },
+   "persona:fullstack": {
+    "recall@5": 0.743,
+    "mrr": 0.737,
+    "ndcg@10": 0.742,
+    "n": 23
+   },
+   "persona:data_analyst": {
+    "recall@5": 0.873,
+    "mrr": 0.862,
+    "ndcg@10": 0.844,
+    "n": 23
+   },
+   "latency_ms_mean": 3958.0
+  },
+  "v3_rerank_top30": {
+   "all": {
+    "recall@5": 0.739,
+    "mrr": 0.836,
+    "ndcg@10": 0.799,
+    "n": 69
+   },
+   "persona:ai_ml": {
+    "recall@5": 0.652,
+    "mrr": 0.841,
+    "ndcg@10": 0.788,
+    "n": 23
+   },
+   "kind:fit": {
+    "recall@5": 0.715,
+    "mrr": 0.829,
+    "ndcg@10": 0.789,
+    "n": 36
+   },
+   "reqs>=4": {
+    "recall@5": 0.724,
+    "mrr": 0.828,
+    "ndcg@10": 0.791,
+    "n": 60
+   },
+   "kind:vague": {
+    "recall@5": 0.736,
+    "mrr": 0.875,
+    "ndcg@10": 0.838,
+    "n": 12
+   },
+   "kind:injection": {
+    "recall@5": 0.736,
+    "mrr": 0.778,
+    "ndcg@10": 0.75,
+    "n": 12
+   },
+   "kind:low_budget": {
+    "recall@5": 0.843,
+    "mrr": 0.889,
+    "ndcg@10": 0.85,
+    "n": 9
+   },
+   "reqs<4": {
+    "recall@5": 0.843,
+    "mrr": 0.889,
+    "ndcg@10": 0.85,
+    "n": 9
+   },
+   "persona:fullstack": {
+    "recall@5": 0.764,
+    "mrr": 0.819,
+    "ndcg@10": 0.78,
+    "n": 23
+   },
+   "persona:data_analyst": {
+    "recall@5": 0.801,
+    "mrr": 0.848,
+    "ndcg@10": 0.828,
+    "n": 23
+   },
+   "latency_ms_mean": 4886.7
+  }
+ },
+ "ablation": {
+  "v4 without decompose": {
+   "recall@5": 0.921,
+   "mrr": 1.0,
+   "ndcg@10": 0.966,
+   "n": 69
+  },
+  "v4 without hybrid": {
+   "recall@5": 0.766,
+   "mrr": 0.85,
+   "ndcg@10": 0.797,
+   "n": 69
+  },
+  "v4 without rerank": {
+   "recall@5": 0.376,
+   "mrr": 0.408,
+   "ndcg@10": 0.431,
+   "n": 69
+  },
+  "v4 without outcome": {
+   "recall@5": 0.76,
+   "mrr": 0.836,
+   "ndcg@10": 0.815,
+   "n": 69
+  }
+ },
+ "best_by_recall5": "v2_hybrid"
+}

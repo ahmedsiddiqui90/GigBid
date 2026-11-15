@@ -8,7 +8,6 @@ from agent.mcp_client import MarketplaceDown
 from agent.nodes._base import node, tool
 from agent.nodes.analyst import heuristic_spec
 
-
 GENERIC = {"developer", "engineer", "expert", "specialist", "project", "need", "needed", "help", "build", "looking",
            "freelancer", "job", "work", "experienced", "senior", "junior", "website", "app", "application", "the", "and",
            "for", "with", "consultant", "required", "remote", "opportunity", "long", "term", "company", "business"}

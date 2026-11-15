@@ -27,11 +27,10 @@ async def verifier(state: dict) -> dict:
         fixed.append(rt)
         all_checks += [c.model_dump() for c in checks]
     d["cover_letter"], d["screening_answers"] = fixed[0], fixed[1:]
-    # Re-check the repaired text: what remains is the "after" number we report.
-    for t in fixed:
-        checks, u = await verify_claims(t, ev)
-        us.append(u)
-        after += unsupported_count(checks)
+    # Residual check without a second LLM pass (saves verifier tokens): an unsupported claim still present in the
+    # repaired text counts as unsupported "after".
+    joined = " ".join(fixed).lower()
+    after = sum(c["label"] == "unsupported" and c["claim"].lower() in joined for c in all_checks)
     d["cited_ids"] = sorted(set(re.findall(r"\[([a-z]{2,4}-[\w-]+)\]", " ".join(fixed))))
     return {"draft": d, "verification": {"unsupported_before": before, "unsupported_after": after, "checks": all_checks},
             "usage": [x.dict() for x in us]}

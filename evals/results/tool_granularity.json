@@ -1,0 +1,29 @@
+{
+ "generated_at": "2026-11-15 20:48:47",
+ "model": "openai/gpt-oss-20b",
+ "n_tasks": 40,
+ "results": {
+  "fine": {
+   "n_tools": 17,
+   "tool_selection_accuracy": 0.95,
+   "argument_accuracy": 0.925,
+   "tokens_per_task": 570.5,
+   "errors": 2
+  },
+  "coarse": {
+   "n_tools": 2,
+   "tool_selection_accuracy": 0.925,
+   "argument_accuracy": 0.9,
+   "tokens_per_task": 388.1,
+   "errors": 0
+  },
+  "ours": {
+   "n_tools": 8,
+   "tool_selection_accuracy": 0.975,
+   "argument_accuracy": 0.975,
+   "tokens_per_task": 473.5,
+   "errors": 1
+  }
+ },
+ "hypothesis": "our rewritten set beats fine (selection) and coarse (arguments)"
+}

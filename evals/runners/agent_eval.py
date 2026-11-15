@@ -144,6 +144,8 @@ async def main(a) -> None:
     from agent.graphs.bid_graph import build_bid_graph
     from agent.settings import config
 
+    if a.all_small:  # model comparison: every node on the small open model
+        config().profiles["open"]["nodes"] = {"default": config().profiles["open"]["nodes"]["default"]}
     graph = build_bid_graph(InMemorySaver(), InMemoryStore())
     labels = dev_labels()
     if a.kinds:
@@ -168,7 +170,7 @@ async def main(a) -> None:
         print(f"[{i + 1}/{len(labels)}] {lab['job_id']} gold={lab['decision']} pred={(st.get('decision') or {}).get('action')} "
               f"status={st.get('status')} {r['latency_s']:.1f}s", flush=True)
     res = score(out)
-    meta = {"profile": config().profile, "variant": a.variant or config().retrieval["variant"],
+    meta = {"profile": config().profile, "nodes": config().profiles.get(config().profile, {}).get("nodes"), "variant": a.variant or config().retrieval["variant"],
             "defences": os.environ.get("GIGBID_DISABLE_DEFENCES") != "1", "kinds": a.kinds, "per_persona": a.per_persona}
     p = save(a.name, {"config": meta, **res})
     print(p, {k: res[k] for k in ("decision", "scam", "price_in_band", "proposals", "outcome")}, res["injection"]["attack_success_rate"])
@@ -181,6 +183,7 @@ if __name__ == "__main__":
     ap.add_argument("--variant")
     ap.add_argument("--kinds")
     ap.add_argument("--per-persona", type=int, default=0)
+    ap.add_argument("--all-small", action="store_true", help="all nodes on the small open model")
     ap.add_argument("--stride", type=int, default=0, help="take every Nth dev job (keeps the mix of job kinds)")
     args = ap.parse_args()
     if sys.platform == "win32":

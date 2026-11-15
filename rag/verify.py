@@ -92,7 +92,6 @@ def heuristic_check(claim: str, evidence: dict[str, dict]) -> ClaimCheck:
         return ClaimCheck(claim=claim, cited=cited, label="unsupported", reason="cites evidence that does not exist")
     ev_text = " ".join(e.get("snippet", e.get("text", "")) + " " + " ".join(e.get("skills", [])) for e in pool).lower()
     words = _words(CITE.sub("", claim))
-    nums = _numbers(claim)
     if not words:
         return ClaimCheck(claim=claim, cited=cited, label="supported", reason="no factual content")
     overlap = len([w for w in words if w in ev_text]) / len(words)
