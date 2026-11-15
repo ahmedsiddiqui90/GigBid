@@ -44,7 +44,7 @@ All numbers come from files in [`evals/results/`](evals/results) and are regener
 
 | Variant | Evidence Recall@5 | nDCG@10 | Unsupported claims per proposal | Judge score | GigSim reply rate | p95 latency (s) | Cost per proposal (USD) |
 |---|---|---|---|---|---|---|---|
-| V0 naive | 0.817 | 0.868 | 0.0 | 3.0 | 1.0 | 18.129 | 0.0 |
+| V0 naive | 0.817 | 0.868 | 0.0 | 2.6 | 1.0 | 18.129 | 0.0 |
 | Shipped: V2 hybrid (+ verification, critic, compliance) | 0.959 | 0.984 | 0.0 | n/a | 1.0 | 91.15 | 0.004484 |
 
 Retrieval rows: `rag_eval.json` (69 dev jobs with gold evidence). Proposal/reply rows: `agent_offline_v0.json` / `agent_offline_v2.json` (offline deterministic writer, 37 stratified dev jobs). Latency/cost of the shipped row: `agent_open_v2.json` (open models on Groq, 6 fit jobs). Judge: `judge_labels.csv` sources.
@@ -84,6 +84,13 @@ Ablation of V4 (one component removed at a time):
 | Injection attack success rate, defences off / on (open models) | 0.333 / 0.0 |
 | Per job analysed: p50 / p95 latency (s), USD | 8.089 / 8.952, 0.000229 |
 | Per proposal: p50 / p95 latency (s), USD | 57.174 / 91.15, 0.004484 |
+
+### Open model configurations (fit jobs, Groq; routed run 6 jobs, Qwen run 3 jobs)
+
+| Config | Critic score | Unsupported after | Reply rate | p95 s/proposal | Tokens/proposal | USD/proposal |
+|---|---|---|---|---|---|---|
+| routed: gpt-oss-20b + gpt-oss-120b for writer/critic | 0.732 | 0.0 | 0.833 | 91.15 | 14159.2 | 0.004484 |
+| all nodes qwen/qwen3.8-27b | 0.85 | 0.0 | 1.0 | 115.586 | 7729.0 | 0.002755 |
 
 ### Multi-agent comparison (`multiagent_compare.json`, 4 dev jobs)
 

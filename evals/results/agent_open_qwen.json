@@ -1,0 +1,130 @@
+{
+ "generated_at": "2026-11-15 22:08:11",
+ "config": {
+  "profile": "open",
+  "nodes": {
+   "default": "qwen/qwen3.8-27b"
+  },
+  "variant": "v2_hybrid",
+  "split": "dev",
+  "defences": true,
+  "kinds": "fit",
+  "per_persona": 1
+ },
+ "n_jobs": 3,
+ "n_proposals": 3,
+ "decision": {
+  "bid": {
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1": 1.0
+  },
+  "accuracy": 1.0,
+  "confusion": {
+   "tp": 3,
+   "fp": 0,
+   "fn": 0,
+   "tn": 0
+  },
+  "by_kind": {
+   "fit": {
+    "n": 3,
+    "correct": 3,
+    "accuracy": 1.0
+   }
+  }
+ },
+ "scam": {
+  "precision": 0.0,
+  "recall": 0.0,
+  "f1": 0.0
+ },
+ "price_in_band": 1.0,
+ "proposals": {
+  "unsupported_before_per_proposal": 0.0,
+  "unsupported_after_per_proposal": 0.0,
+  "critic_mean": 0.85,
+  "words_mean": 190.3,
+  "revisions_mean": 0.0
+ },
+ "outcome": {
+  "reply_rate": 1.0,
+  "interview_rate": 1.0,
+  "hire_rate": 0.667,
+  "reply_rate_by_persona": {
+   "ai_ml": 1.0,
+   "fullstack": 1.0,
+   "data_analyst": 1.0
+  }
+ },
+ "injection": {
+  "n": 0,
+  "attack_success_rate": null,
+  "cases": []
+ },
+ "cost_latency": {
+  "per_job_analysed": {
+   "p50_s": 14.897,
+   "p95_s": 45.476,
+   "tokens_mean": 1886.0,
+   "usd_mean": 0.000677
+  },
+  "per_proposal": {
+   "p50_s": 100.278,
+   "p95_s": 115.586,
+   "tokens_mean": 7729.0,
+   "usd_mean": 0.002755
+  }
+ },
+ "decision_failures": [],
+ "proposals_detail": [
+  {
+   "job_id": "dev-ai_ml-001",
+   "kind": "fit",
+   "persona": "ai_ml",
+   "words": 193,
+   "unsupported_before": 0,
+   "unsupported_after": 0,
+   "critic": 0.85,
+   "revisions": 0,
+   "replied": true,
+   "interview": true,
+   "hire": true,
+   "sim_score": 0.844,
+   "strategy": "evidence_first",
+   "text": "Your need for a reliable MLOps platform in a healthcare environment requires strict reproducibility and speed. I previously built a similar MLOps platform for a healthcare company, designing the solution using MLflow, CI/CD, and Kubernetes [cs-ai_ml-mlops]. That project cut model release time from two weeks to one day with reproducible pipelines [rd-ai_ml-mlops]. The client confirmed the work was delivered on time and met all technical requirements [rv-ai_ml-mlops]. I will apply this exact stack to your YOLO models, ensuring Dockerized containers run smoothly on your Kubernetes cluster. The deliverables will include a working solution, comprehensive documentation, and a final handover call within the six-week timeline. My approach focuses on evidence-based implementation, avoiding guesswork in favor of proven, tested configurations. You can review the core module code to see how MLflow autologging is integrated for tracking [code-ai_ml-mlops]. I am confident this setup will streamline your model deployment process. Let us discuss how to structure the initial sprint to ensure immediate progress. I am ready to start immediately and provide the requested documentation. This proposal aligns with your fixed budget and specific technical needs. I look forward to building a robust infrastructure for your healthcare data."
+  },
+  {
+   "job_id": "dev-fullstack-038",
+   "kind": "fit",
+   "persona": "fullstack",
+   "words": 161,
+   "unsupported_before": 0,
+   "unsupported_after": 0,
+   "critic": 0.85,
+   "revisions": 0,
+   "replied": true,
+   "interview": true,
+   "hire": true,
+   "sim_score": 0.845,
+   "strategy": "question_first",
+   "text": "Your fintech platform requires robust, cost-efficient AWS infrastructure managed via code. I have previously delivered AWS infrastructure as code for a fintech client, utilizing Docker and CI/CD to ensure reliability [cs-fullstack-aws]. That project successfully cut monthly cloud spend by 35% [cs-fullstack-aws]. My background includes full-stack development with Next.js, Node, and Django, ensuring seamless integration between backend infrastructure and frontend requirements [cv-fullstack]. I am proficient in Terraform, Docker, and CI/CD pipelines, which aligns perfectly with your technical stack [cv-fullstack]. I also have experience building secure authentication services for SaaS companies, adding SSO and MFA for enterprise tenants [cs-fullstack-auth]. This security focus is critical for fintech applications handling sensitive data. I can deliver a working solution, comprehensive documentation, and a handover call within your two-week timeline. My proposed rate is $998.0, which reflects the specialized nature of fintech infrastructure. I am ready to start immediately and ensure a smooth handover process. Let's discuss how I can help stabilize and optimize your AWS environment."
+  },
+  {
+   "job_id": "dev-data_analyst-075",
+   "kind": "fit",
+   "persona": "data_analyst",
+   "words": 217,
+   "unsupported_before": 0,
+   "unsupported_after": 0,
+   "critic": 0.85,
+   "revisions": 0,
+   "replied": true,
+   "interview": true,
+   "hire": false,
+   "sim_score": 0.77,
+   "strategy": "question_first",
+   "text": "Your SaaS platform requires a robust dbt warehouse to support Snowflake and Power BI reporting. I have delivered a similar dbt warehouse models project for a SaaS company, building 85 tested models that cut dashboard query time by 70% [cs-data_analyst-dbt]. My technical notes confirm the use of dbt, Snowflake, SQL, and data modeling in production environments [rd-data_analyst-dbt]. I also have direct experience with Power BI, having replaced 12 weekly Excel reports with a single dashboard for a retail client [cs-data_analyst-sales_bi]. This project aligns with my core skills in SQL, dbt, and BI dashboards [cv-data_analyst]. I propose a fixed price of $2002.00 for the three-week timeline. This covers the working solution, comprehensive documentation, and a final handover call. I will ensure all models are tested and optimized for your Snowflake environment. My approach focuses on reliable data modeling and clear SQL implementation. I am ready to start immediately and deliver the required artifacts within the specified timeframe. This proposal addresses your specific need for a working solution and documentation. I look forward to discussing how I can support your data infrastructure goals. Let's schedule a call to review the technical requirements and confirm the scope. I am confident in my ability to meet your expectations for this dbt project. Thank you for considering my application for this role."
+  }
+ ]
+}

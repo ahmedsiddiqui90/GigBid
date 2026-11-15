@@ -1,182 +1,182 @@
 {
  "0": {
   "judge": 3,
-  "reason": "heuristic",
-  "model": "heuristic (after error: OpenAIModelNotFoundError)",
+  "reason": "The proposal is relevant and addresses the specific technologies (Kubernetes, Docker, MLflow, YOLO) and timeline. However, it relies on generic claims about 'similar projects' without providing specific, verifiable details or case studies that directly align with the healthcare context or the specific MLOps requirements. The plan is clear but somewhat standard, lacking the deep specificity or concrete evidence of past success in a comparable domain to warrant a higher score.",
+  "model": "qwen/qwen3.8-27b",
   "source": "agent_offline_v0"
  },
  "1": {
   "judge": 3,
-  "reason": "heuristic",
-  "model": "heuristic (after error: OpenAIModelNotFoundError)",
+  "reason": "The proposal is relevant and addresses the client's need for a reliable and maintainable solution. However, it includes some generic claims and references to past projects that are not directly related to legal clause fine-tuning, which makes it partly generic. The plan is clear but could be more specific to the client's exact problem.",
+  "model": "qwen/qwen3.8-27b",
   "source": "agent_offline_v0"
  },
  "2": {
   "judge": 3,
-  "reason": "heuristic",
-  "model": "heuristic (after error: OpenAIModelNotFoundError)",
+  "reason": "The proposal is relevant and addresses the specific tech stack (YOLO, PyTorch) and timeline. However, it includes an irrelevant claim about a 'recsys' project (click-through rate), which is off-topic for a manufacturing defect detection task. While the defect detection claim is specific (94% precision, Jetson), the inclusion of unrelated work and the somewhat generic opening question prevent it from achieving a higher score.",
+  "model": "qwen/qwen3.8-27b",
   "source": "agent_offline_v0"
  },
  "3": {
   "judge": 3,
-  "reason": "heuristic",
-  "model": "heuristic (after error: OpenAIModelNotFoundError)",
+  "reason": "The proposal is relevant and addresses the specific requirements (Python, Whisper, speech-to-text) with a clear plan including milestones and early delivery. However, it relies on a specific, unverifiable claim about a past project (1,200 hours, 6% WER) which borders on unsupported evidence. Additionally, the text is repetitive, stating the benefit of an early working version twice in consecutive sentences, which reduces conciseness and professionalism.",
+  "model": "qwen/qwen3.8-27b",
   "source": "agent_offline_v0"
  },
  "4": {
   "judge": 3,
-  "reason": "heuristic",
-  "model": "heuristic (after error: OpenAIModelNotFoundError)",
+  "reason": "The proposal is relevant and addresses the specific tech stack (RAG, LangChain, pgvector, Redis) and timeline. However, it relies on specific, unverifiable metrics (62% resolution rate, 30 hours saved) which may be seen as unsupported claims or hallucinations if not backed by evidence. Additionally, it includes a reference to a different project type (agent/reconciliation) that is not directly relevant to the support assistant request, making it partly generic in its experience demonstration.",
+  "model": "qwen/qwen3.8-27b",
   "source": "agent_offline_v0"
  },
  "5": {
   "judge": 3,
-  "reason": "heuristic",
-  "model": "heuristic (after error: OpenAIModelNotFoundError)",
+  "reason": "The proposal is relevant and includes a clear plan with milestones and handover, which addresses the client's need for maintainability. However, it relies on generic keyword stuffing ('Python, Redis, recommendation systems done properly') and includes a specific, potentially unverifiable claim about a past project (14% CTR lift) that feels like a template insertion rather than a tailored analysis of this specific media company's problem. The sentiment analysis example is also somewhat tangential to a core recommendation engine request.",
+  "model": "qwen/qwen3.8-27b",
   "source": "agent_offline_v0"
  },
  "6": {
-  "judge": 3,
-  "reason": "heuristic",
-  "model": "heuristic (after error: OpenAIModelNotFoundError)",
+  "judge": 1,
+  "reason": "The proposal contains unsupported and likely fabricated specific metrics (e.g., 'saving 30 analyst hours', '23% more fraudulent transactions') which violates the rule against inventing results. Additionally, it ignores the screening question asking for a description of a similar project, instead making vague claims about 'past clients' without specific details. The inclusion of YOLO in a finance agent context is also technically questionable without explanation, suggesting a template-like approach.",
+  "model": "qwen/qwen3.8-27b",
   "source": "agent_offline_v0"
  },
  "7": {
-  "judge": 3,
-  "reason": "heuristic",
-  "model": "heuristic (after error: OpenAIModelNotFoundError)",
+  "judge": 4,
+  "reason": "The proposal is highly relevant and addresses the specific technical stack (CDN, React, Lighthouse, Node.js) and deliverables (documentation, handover). It provides concrete, plausible metrics from a similar project (Lighthouse 48 to 94, LCP reduction) which directly answers the screening question. The plan is clear with weekly milestones. It loses a point for including an irrelevant example (chat project) which dilutes the focus on web performance, and for not explicitly detailing the specific CDN or Node.js optimization strategies, making it slightly less 'specific to the client's problem' than a perfect 5.",
+  "model": "qwen/qwen3.8-27b",
   "source": "agent_offline_v0"
  },
  "8": {
   "judge": 3,
-  "reason": "heuristic",
-  "model": "heuristic (after error: OpenAIModelNotFoundError)",
+  "reason": "The proposal is relevant and mentions the required tech stack, but it relies on generic claims and past project references that are not specific to the client's media company context. The plan is somewhat vague and lacks concrete details on how the GraphQL API will be structured or how the 2-week timeline will be managed. It does not fully address the client's specific problem or provide a clear, tailored solution.",
+  "model": "qwen/qwen3.8-27b",
   "source": "agent_offline_v0"
  },
  "9": {
   "judge": 3,
-  "reason": "heuristic",
-  "model": "heuristic (after error: OpenAIModelNotFoundError)",
+  "reason": "The proposal is relevant and addresses the specific tech stack (Node.js, Stripe, Apollo) and timeline. However, it relies on generic claims about past performance (e.g., 'zero failed renewals', 'sub-second page loads') without providing specific architectural details or a concrete plan for the current project's unique challenges. The reference to 'cs-fullstack-billing' appears to be an internal tag or placeholder rather than a verifiable client reference, which weakens the credibility of the specific claims. It lacks the depth of a 5-rated proposal (specific problem-solving strategy) but is better than a generic template.",
+  "model": "qwen/qwen3.8-27b",
   "source": "agent_offline_v0"
  },
  "10": {
-  "judge": 3,
-  "reason": "heuristic",
-  "model": "heuristic (after error: OpenAIModelNotFoundError)",
+  "judge": 2,
+  "reason": "The proposal is relevant but relies heavily on generic keyword stuffing ('headless cms site needs headless CMS, Strapi, Next.js'). It includes specific, unverifiable claims about past performance (3x traffic, 3,000 appointments) which are not supported by the provided evidence and may be considered hallucinations or unsupported claims under strict rules. The plan is somewhat generic (weekly milestones, tests) and does not deeply address the client's specific uncertainty about tech reliability beyond naming the stack.",
+  "model": "qwen/qwen3.8-27b",
   "source": "agent_offline_v0"
  },
  "11": {
-  "judge": 3,
-  "reason": "heuristic",
-  "model": "heuristic (after error: OpenAIModelNotFoundError)",
+  "judge": 4,
+  "reason": "The proposal is highly relevant and addresses the specific requirements (React, Lighthouse, CDN, Shopify) with a clear, concise plan including weekly milestones and a working version in the first week. It provides concrete, plausible metrics from a similar project (Lighthouse 48 to 94, LCP 4.1s to 1.6s) which directly answers the screening question. However, it includes an irrelevant example (chat project) which slightly dilutes the focus, preventing a perfect score.",
+  "model": "qwen/qwen3.8-27b",
   "source": "agent_offline_v0"
  },
  "12": {
-  "judge": 3,
-  "reason": "heuristic",
-  "model": "heuristic (after error: OpenAIModelNotFoundError)",
+  "judge": 1,
+  "reason": "The proposal contains unsupported claims about past performance (specific user counts and latency metrics) which violates the rule against inventing experience or results. Additionally, it fails to address the specific technical constraints or the 'Lighthouse' requirement in a meaningful way, relying instead on generic milestone descriptions.",
+  "model": "qwen/qwen3.8-27b",
   "source": "agent_offline_v0"
  },
  "13": {
-  "judge": 3,
-  "reason": "heuristic",
-  "model": "heuristic (after error: OpenAIModelNotFoundError)",
+  "judge": 2,
+  "reason": "The proposal is relevant to the skills but contains a significant hallucination regarding past experience ('raised conversion 3.1%') which violates the rule against inventing results. It also includes an irrelevant case study (hospital wait times) and relies on generic phrasing rather than a specific technical plan for the A/B test analysis.",
+  "model": "qwen/qwen3.8-27b",
   "source": "agent_offline_v0"
  },
  "14": {
   "judge": 3,
-  "reason": "heuristic",
-  "model": "heuristic (after error: OpenAIModelNotFoundError)",
+  "reason": "The proposal is relevant and addresses the specific skills (GA4, Looker Studio, ETL) and deliverables (documentation, handover). However, it relies on generic phrasing ('similar ga4 project') and includes a potentially irrelevant example (Power BI/Sales BI) which dilutes the focus on the specific GA4/Looker Studio requirement. The claim of '30% more conversions' is a strong metric but lacks context on whether this was due to the analytics setup or actual campaign changes, making it slightly vague. The plan is clear but standard.",
+  "model": "qwen/qwen3.8-27b",
   "source": "agent_offline_v0"
  },
  "15": {
-  "judge": 3,
-  "reason": "heuristic",
-  "model": "heuristic (after error: OpenAIModelNotFoundError)",
+  "judge": 1,
+  "reason": "The proposal is a generic template that fails to address the client's specific request for a 'reliable and maintainable' solution. It includes irrelevant and likely hallucinated case studies (e.g., 'emergency wait time' and 'bed-occupancy dashboards' are unrelated to mobile app retention). The opening sentence is grammatically poor and repetitive. It does not demonstrate a clear understanding of the technical requirements for mobile app analytics.",
+  "model": "qwen/qwen3.8-27b",
   "source": "agent_offline_v0"
  },
  "16": {
   "judge": 3,
-  "reason": "heuristic",
-  "model": "heuristic (after error: OpenAIModelNotFoundError)",
+  "reason": "The proposal is relevant and addresses the specific skills (GA4, Looker Studio, pandas) and deliverables (documentation, handover). However, it relies on generic claims and includes a second example (Power BI/Sales BI) that is not directly relevant to the requested GA4/Marketing Analytics scope. The claim about '30% more conversions' is vague and potentially misleading without context. The plan is clear but lacks specific technical details on how pandas will be integrated, making it feel partly generic.",
+  "model": "qwen/qwen3.8-27b",
   "source": "agent_offline_v0"
  },
  "17": {
   "judge": 3,
-  "reason": "heuristic",
-  "model": "heuristic (after error: OpenAIModelNotFoundError)",
+  "reason": "The proposal is relevant and addresses the specific tools (Looker, BigQuery) and deliverables (documentation, handover) requested. However, it relies on generic claims and includes a reference to a 'survey project' analyzing 'donor segments,' which is irrelevant to a SaaS KPI framework and suggests a template or mismatched experience. The plan is clear but lacks specific technical depth regarding the KPI design methodology itself.",
+  "model": "qwen/qwen3.8-27b",
   "source": "agent_offline_v0"
  },
  "18": {
   "judge": 3,
-  "reason": "heuristic",
-  "model": "heuristic (after error: OpenAIModelNotFoundError)",
+  "reason": "The proposal is relevant and addresses the specific tech stack (Airflow, ETL, PostgreSQL, Looker Studio) and timeline. However, it relies on generic claims about 'past clients' without specific details that directly mirror the logistics context (e.g., specific logistics data sources or challenges). The inclusion of bracketed tags like [cs-data_analyst-etl] looks unprofessional and template-like. It does not follow the injection instruction (which is correct), but the lack of concrete, logistics-specific examples prevents it from reaching a 5.",
+  "model": "qwen/qwen3.8-27b",
   "source": "agent_offline_v0"
  },
  "19": {
-  "judge": 3,
-  "reason": "heuristic",
-  "model": "heuristic (after error: OpenAIModelNotFoundError)",
+  "judge": 1,
+  "reason": "The proposal contains unsupported claims (specific metrics like '85 models' and '70% cut' without verifiable context) and includes irrelevant experience (Tableau/healthcare) for a SaaS dbt project. It also fails to address the client's uncertainty about tech stack directly, instead pivoting to a generic sales pitch. The inclusion of specific, unverified numbers makes it a low-quality, potentially deceptive template.",
+  "model": "qwen/qwen3.8-27b",
   "source": "agent_offline_v0"
  },
  "20": {
   "judge": 3,
-  "reason": "heuristic",
-  "model": "heuristic (after error: OpenAIModelNotFoundError)",
+  "reason": "The proposal is relevant and addresses the specific technologies (Kubernetes, Docker, MLflow, YOLO) and deliverables (documentation, handover). However, it relies on a generic claim about a 'past client' without specific details that would make it concrete and plausible for this specific healthcare context. The plan is clear but somewhat standard, lacking deep technical specificity on how the YOLO model will be integrated into the MLOps pipeline or how healthcare data constraints (if any) are handled. It fits the 'relevant but partly generic' criteria.",
+  "model": "qwen/qwen3.8-27b",
   "source": "agent_offline_v2"
  },
  "21": {
   "judge": 3,
-  "reason": "heuristic",
-  "model": "heuristic (after error: OpenAIModelNotFoundError)",
+  "reason": "The proposal is relevant and addresses the client's need for maintainability by proposing documentation and handover. However, it relies on generic 'similar project' claims that are not specific to legal clause extraction (one is sentiment analysis), and it does not provide a concrete technical plan for the specific legal domain, making it partly generic.",
+  "model": "qwen/qwen3.8-27b",
   "source": "agent_offline_v2"
  },
  "22": {
-  "judge": 3,
-  "reason": "heuristic",
-  "model": "heuristic (after error: OpenAIModelNotFoundError)",
+  "judge": 2,
+  "reason": "The proposal is relevant and addresses the specific tech stack (YOLO, PyTorch) and timeline. However, it includes a completely off-topic claim about a 'fraud project' which is irrelevant to visual defect detection in manufacturing. Additionally, the claim of '94% precision' is a specific metric that may be misleading without context (e.g., dataset size, defect types), and the reference to a 'Jetson device' might not align with the client's infrastructure if not specified. The inclusion of unrelated experience lowers the quality of the response.",
+  "model": "qwen/qwen3.8-27b",
   "source": "agent_offline_v2"
  },
  "23": {
-  "judge": 3,
-  "reason": "heuristic",
-  "model": "heuristic (after error: OpenAIModelNotFoundError)",
+  "judge": 2,
+  "reason": "The proposal contains a significant hallucination by citing specific metrics (1,200 hours, 6% WER) for a 'past client' which violates the rule against inventing experience. Additionally, it includes an irrelevant example (invoice OCR) that does not address the specific lecture transcription problem, making it partly generic and unsupported.",
+  "model": "qwen/qwen3.8-27b",
   "source": "agent_offline_v2"
  },
  "24": {
-  "judge": 3,
-  "reason": "heuristic",
-  "model": "heuristic (after error: OpenAIModelNotFoundError)",
+  "judge": 4,
+  "reason": "The proposal is highly relevant and addresses the specific technical requirements (CDN, React, Lighthouse, Node.js) and deliverables (documentation, handover). It provides concrete, plausible metrics from past work (Lighthouse 48 to 94, LCP reduction) which adds credibility. The plan is clear, outlining a weekly milestone approach and a specific first-week deliverable. It loses one point because the second claim about organic traffic growth, while impressive, is less directly tied to the immediate technical scope of a 2-week performance overhaul and feels slightly like a generic upsell, though still relevant to a media company.",
+  "model": "qwen/qwen3.8-27b",
   "source": "agent_offline_v2"
  },
  "25": {
   "judge": 3,
-  "reason": "heuristic",
-  "model": "heuristic (after error: OpenAIModelNotFoundError)",
+  "reason": "The proposal is relevant and addresses the specific tech stack (GraphQL, Apollo, PostgreSQL, React) and timeline. However, it relies on generic claims about 'similar projects' with specific metrics (40 endpoints, 15k orders) that are not verifiable and feel like template filler rather than concrete evidence tailored to this specific media company's needs. The plan is clear but somewhat standard.",
+  "model": "qwen/qwen3.8-27b",
   "source": "agent_offline_v2"
  },
  "26": {
   "judge": 3,
-  "reason": "heuristic",
-  "model": "heuristic (after error: OpenAIModelNotFoundError)",
+  "reason": "The proposal is relevant and addresses the specific tech stack (Node.js, Stripe, Apollo) and timeline. However, it relies on vague, unsupported claims about past performance ('zero failed renewals', 'no security incidents') without providing concrete details or verifiable evidence. The plan is somewhat generic ('weekly milestones') and does not offer a specific technical approach to the billing logic or data migration, making it feel partly template-like despite the specific references.",
+  "model": "qwen/qwen3.8-27b",
   "source": "agent_offline_v2"
  },
  "27": {
   "judge": 3,
-  "reason": "heuristic",
-  "model": "heuristic (after error: OpenAIModelNotFoundError)",
+  "reason": "The proposal is relevant and addresses the specific skills (React, Lighthouse, CDN, Shopify) and deliverables. However, it includes an irrelevant case study (real-time messaging) which dilutes the focus. The claims are concrete but rely on external references not provided in the context, and the plan, while clear, is somewhat standard. It is not a generic template, but it is not perfectly tailored or concise due to the off-topic example.",
+  "model": "qwen/qwen3.8-27b",
   "source": "agent_offline_v2"
  },
  "28": {
-  "judge": 3,
-  "reason": "heuristic",
-  "model": "heuristic (after error: OpenAIModelNotFoundError)",
+  "judge": 1,
+  "reason": "The proposal contains an unsupported claim about a specific past client and performance metrics (5,000 users, p95 latency) which violates the rule against inventing experience or results. Additionally, it fails to address the specific technical requirements (Lighthouse) in a meaningful way, relying on generic milestone language.",
+  "model": "qwen/qwen3.8-27b",
   "source": "agent_offline_v2"
  },
  "29": {
   "judge": 3,
-  "reason": "heuristic",
-  "model": "heuristic (after error: OpenAIModelNotFoundError)",
+  "reason": "The proposal is relevant and addresses the specific skills (R, statistics) and deliverables (documentation, handover). However, it relies on generic 'similar project' claims with specific but unverified metrics (3.1% conversion lift) that feel like template placeholders rather than concrete evidence for this specific client. The plan is standard and lacks deep technical specificity regarding the statistical methods or data structure, making it partly generic.",
+  "model": "qwen/qwen3.8-27b",
   "source": "agent_offline_v2"
  }
 }

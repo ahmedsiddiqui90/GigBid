@@ -109,10 +109,21 @@ us the templated jobs are too easy rather than that the system is perfect.
 sentences excluded), each claim labelled supported / partial / unsupported against its cited evidence, unsupported
 claims removed and unverifiable numbers or technology names stripped before the Critic sees the draft. A
 deterministic override catches what a lenient model accepts (a draft claiming PyTorch for a project whose evidence
-never mentions it). Before/after rates on open-model drafts are in section 5's table.
+never mentions it). On open-model drafts (gpt-oss-120b writer, 6 fit jobs) unsupported claims per proposal fell from
+1.0 before verification to 0.0 after; on the injection jobs from 1.333 to 0.0 [`agent_open_v2.json`, `agent_open_inj_on.json`].
 
 **Judge calibration.** 30 proposals scored by the LLM judge are in `evals/datasets/judge_labels.csv` for blind human
-labelling; kappa is computed by `evals/runners/judge_calibration.py --kappa` (see section 10 for status).
+labelling; kappa is computed by `evals/runners/judge_calibration.py --kappa`. The judge is qwen/qwen3.8-27b, a different
+model family from the writer. Human labels were not complete at submission time, so no kappa is reported and no judge score is used as evidence.
+
+**Open model choice.** Two open configurations on dev fit jobs [`agent_open_v2.json`, `agent_open_qwen.json`]:
+
+| Config | Proposals | Critic score | Unsupported before verification | Reply rate | p95 s | Tokens | USD |
+|---|---|---|---|---|---|---|---|
+| routed gpt-oss-20b / gpt-oss-120b (writer, critic) | 6 | 0.732 | 1.0 | 0.833 | 91.15 | 14159.2 | 0.004484 |
+| all nodes qwen/qwen3.8-27b | 3 | 0.85 | 0.0 | 1.0 | 115.586 | 7729.0 | 0.002755 |
+
+The routed gpt-oss configuration ships: it is cheaper per token and both run on hardware we do not own; on this free tier the deciding factor is the separate daily quota, so Qwen is kept as the fallback model.
 
 
 # 5. R&D question C: single agent vs prebuilt supervisor vs our graph
@@ -181,7 +192,7 @@ verification"): the Connects formula only sees the job budget, so that would nee
 Two proposal strategies (`evidence_first`, `question_first`) are assigned per job by a seeded hash, stored with the
 proposal and compared on GigSim reply rate with a two-proportion z-test and Fisher's exact test.
 
-Reply rate evidence_first 35/35 (1.0) vs question_first 33/34 (0.971); difference 0.029, z = 1.022, p = 0.3068 (z-test), p = 0.4928 (Fisher). Not significant at 0.05; with these sample sizes the minimum detectable difference at 80% power is 0.081, so the test can only rule out large effects [`ab_test.json`]. The arm is visible per proposal in the studio and per arm in Analytics.
+Reply rate evidence_first 31/31 (1.0) vs question_first 20/21 (0.952); difference 0.048, z = 1.227, p = 0.2199 (z-test), p = 0.4038 (Fisher). Not significant at 0.05; with these sample sizes the minimum detectable difference at 80% power is 0.109, so the test can only rule out large effects [`ab_test.json`]. The arm is visible per proposal in the studio and per arm in Analytics.
 
 # 8. Failure analysis
 
