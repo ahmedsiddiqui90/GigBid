@@ -17,3 +17,5 @@ apps/web/playwright-report/
 *.log
 .DS_Store
 tests/unit/_gigsim_state_test.json
+.cache/
+logs/
